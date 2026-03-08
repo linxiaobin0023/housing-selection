@@ -1,0 +1,6452 @@
+[
+  {
+    "id": "A-48-4801",
+    "building": "嘉禧苑A栋",
+    "floor": 48,
+    "room_number": "4801",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2069.39,
+    "status": "available"
+  },
+  {
+    "id": "A-48-4802",
+    "building": "嘉禧苑A栋",
+    "floor": 48,
+    "room_number": "4802",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1982.71,
+    "status": "available"
+  },
+  {
+    "id": "A-48-4803",
+    "building": "嘉禧苑A栋",
+    "floor": 48,
+    "room_number": "4803",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1982.71,
+    "status": "available"
+  },
+  {
+    "id": "A-48-4804",
+    "building": "嘉禧苑A栋",
+    "floor": 48,
+    "room_number": "4804",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 2069.39,
+    "status": "available"
+  },
+  {
+    "id": "A-48-4805",
+    "building": "嘉禧苑A栋",
+    "floor": 48,
+    "room_number": "4805",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 2072.54,
+    "status": "available"
+  },
+  {
+    "id": "A-47-4701",
+    "building": "嘉禧苑A栋",
+    "floor": 47,
+    "room_number": "4701",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2069.39,
+    "status": "available"
+  },
+  {
+    "id": "A-47-4702",
+    "building": "嘉禧苑A栋",
+    "floor": 47,
+    "room_number": "4702",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1982.71,
+    "status": "available"
+  },
+  {
+    "id": "A-47-4703",
+    "building": "嘉禧苑A栋",
+    "floor": 47,
+    "room_number": "4703",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1982.71,
+    "status": "available"
+  },
+  {
+    "id": "A-47-4704",
+    "building": "嘉禧苑A栋",
+    "floor": 47,
+    "room_number": "4704",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1982.71,
+    "status": "available"
+  },
+  {
+    "id": "A-47-4705",
+    "building": "嘉禧苑A栋",
+    "floor": 47,
+    "room_number": "4705",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 2072.54,
+    "status": "available"
+  },
+  {
+    "id": "A-46-4601",
+    "building": "嘉禧苑A栋",
+    "floor": 46,
+    "room_number": "4601",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2069.39,
+    "status": "available"
+  },
+  {
+    "id": "A-46-4602",
+    "building": "嘉禧苑A栋",
+    "floor": 46,
+    "room_number": "4602",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1982.71,
+    "status": "available"
+  },
+  {
+    "id": "A-46-4603",
+    "building": "嘉禧苑A栋",
+    "floor": 46,
+    "room_number": "4603",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1982.71,
+    "status": "available"
+  },
+  {
+    "id": "A-46-4604",
+    "building": "嘉禧苑A栋",
+    "floor": 46,
+    "room_number": "4604",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1982.71,
+    "status": "available"
+  },
+  {
+    "id": "A-46-4605",
+    "building": "嘉禧苑A栋",
+    "floor": 46,
+    "room_number": "4605",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 2072.54,
+    "status": "available"
+  },
+  {
+    "id": "A-45-4501",
+    "building": "嘉禧苑A栋",
+    "floor": 45,
+    "room_number": "4501",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2069.39,
+    "status": "available"
+  },
+  {
+    "id": "A-45-4502",
+    "building": "嘉禧苑A栋",
+    "floor": 45,
+    "room_number": "4502",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1982.71,
+    "status": "available"
+  },
+  {
+    "id": "A-45-4503",
+    "building": "嘉禧苑A栋",
+    "floor": 45,
+    "room_number": "4503",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1982.71,
+    "status": "available"
+  },
+  {
+    "id": "A-45-4504",
+    "building": "嘉禧苑A栋",
+    "floor": 45,
+    "room_number": "4504",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 2026.05,
+    "status": "available"
+  },
+  {
+    "id": "A-45-4505",
+    "building": "嘉禧苑A栋",
+    "floor": 45,
+    "room_number": "4505",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 2029.13,
+    "status": "available"
+  },
+  {
+    "id": "A-44-4401",
+    "building": "嘉禧苑A栋",
+    "floor": 44,
+    "room_number": "4401",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2069.39,
+    "status": "available"
+  },
+  {
+    "id": "A-44-4402",
+    "building": "嘉禧苑A栋",
+    "floor": 44,
+    "room_number": "4402",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1982.71,
+    "status": "available"
+  },
+  {
+    "id": "A-44-4403",
+    "building": "嘉禧苑A栋",
+    "floor": 44,
+    "room_number": "4403",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1982.71,
+    "status": "available"
+  },
+  {
+    "id": "A-44-4404",
+    "building": "嘉禧苑A栋",
+    "floor": 44,
+    "room_number": "4404",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 2026.05,
+    "status": "available"
+  },
+  {
+    "id": "A-44-4405",
+    "building": "嘉禧苑A栋",
+    "floor": 44,
+    "room_number": "4405",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 2029.13,
+    "status": "available"
+  },
+  {
+    "id": "A-43-4301",
+    "building": "嘉禧苑A栋",
+    "floor": 43,
+    "room_number": "4301",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2069.39,
+    "status": "available"
+  },
+  {
+    "id": "A-43-4302",
+    "building": "嘉禧苑A栋",
+    "floor": 43,
+    "room_number": "4302",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1939.37,
+    "status": "available"
+  },
+  {
+    "id": "A-43-4303",
+    "building": "嘉禧苑A栋",
+    "floor": 43,
+    "room_number": "4303",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1939.37,
+    "status": "available"
+  },
+  {
+    "id": "A-43-4304",
+    "building": "嘉禧苑A栋",
+    "floor": 43,
+    "room_number": "4304",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 2026.05,
+    "status": "available"
+  },
+  {
+    "id": "A-43-4305",
+    "building": "嘉禧苑A栋",
+    "floor": 43,
+    "room_number": "4305",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 2029.13,
+    "status": "available"
+  },
+  {
+    "id": "A-42-4201",
+    "building": "嘉禧苑A栋",
+    "floor": 42,
+    "room_number": "4201",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2069.39,
+    "status": "available"
+  },
+  {
+    "id": "A-42-4202",
+    "building": "嘉禧苑A栋",
+    "floor": 42,
+    "room_number": "4202",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1939.37,
+    "status": "available"
+  },
+  {
+    "id": "A-42-4203",
+    "building": "嘉禧苑A栋",
+    "floor": 42,
+    "room_number": "4203",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1939.37,
+    "status": "available"
+  },
+  {
+    "id": "A-42-4204",
+    "building": "嘉禧苑A栋",
+    "floor": 42,
+    "room_number": "4204",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 2026.05,
+    "status": "available"
+  },
+  {
+    "id": "A-42-4205",
+    "building": "嘉禧苑A栋",
+    "floor": 42,
+    "room_number": "4205",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 2029.13,
+    "status": "available"
+  },
+  {
+    "id": "A-41-4101",
+    "building": "嘉禧苑A栋",
+    "floor": 41,
+    "room_number": "4101",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2026.05,
+    "status": "available"
+  },
+  {
+    "id": "A-41-4102",
+    "building": "嘉禧苑A栋",
+    "floor": 41,
+    "room_number": "4102",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1939.37,
+    "status": "available"
+  },
+  {
+    "id": "A-41-4103",
+    "building": "嘉禧苑A栋",
+    "floor": 41,
+    "room_number": "4103",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1939.37,
+    "status": "available"
+  },
+  {
+    "id": "A-41-4104",
+    "building": "嘉禧苑A栋",
+    "floor": 41,
+    "room_number": "4104",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 2026.05,
+    "status": "available"
+  },
+  {
+    "id": "A-41-4105",
+    "building": "嘉禧苑A栋",
+    "floor": 41,
+    "room_number": "4105",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 2029.13,
+    "status": "available"
+  },
+  {
+    "id": "A-40-4001",
+    "building": "嘉禧苑A栋",
+    "floor": 40,
+    "room_number": "4001",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2026.05,
+    "status": "available"
+  },
+  {
+    "id": "A-40-4002",
+    "building": "嘉禧苑A栋",
+    "floor": 40,
+    "room_number": "4002",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1939.37,
+    "status": "available"
+  },
+  {
+    "id": "A-40-4003",
+    "building": "嘉禧苑A栋",
+    "floor": 40,
+    "room_number": "4003",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1939.37,
+    "status": "available"
+  },
+  {
+    "id": "A-40-4004",
+    "building": "嘉禧苑A栋",
+    "floor": 40,
+    "room_number": "4004",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1982.71,
+    "status": "available"
+  },
+  {
+    "id": "A-40-4005",
+    "building": "嘉禧苑A栋",
+    "floor": 40,
+    "room_number": "4005",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 2026.43,
+    "status": "available"
+  },
+  {
+    "id": "A-39-3901",
+    "building": "嘉禧苑A栋",
+    "floor": 39,
+    "room_number": "3901",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2026.05,
+    "status": "available"
+  },
+  {
+    "id": "A-39-3902",
+    "building": "嘉禧苑A栋",
+    "floor": 39,
+    "room_number": "3902",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1939.37,
+    "status": "available"
+  },
+  {
+    "id": "A-39-3903",
+    "building": "嘉禧苑A栋",
+    "floor": 39,
+    "room_number": "3903",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1939.37,
+    "status": "available"
+  },
+  {
+    "id": "A-39-3904",
+    "building": "嘉禧苑A栋",
+    "floor": 39,
+    "room_number": "3904",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1982.71,
+    "status": "available"
+  },
+  {
+    "id": "A-39-3905",
+    "building": "嘉禧苑A栋",
+    "floor": 39,
+    "room_number": "3905",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1985.73,
+    "status": "available"
+  },
+  {
+    "id": "A-38-3801",
+    "building": "嘉禧苑A栋",
+    "floor": 38,
+    "room_number": "3801",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2026.05,
+    "status": "available"
+  },
+  {
+    "id": "A-38-3802",
+    "building": "嘉禧苑A栋",
+    "floor": 38,
+    "room_number": "3802",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1896.03,
+    "status": "available"
+  },
+  {
+    "id": "A-38-3803",
+    "building": "嘉禧苑A栋",
+    "floor": 38,
+    "room_number": "3803",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1896.03,
+    "status": "available"
+  },
+  {
+    "id": "A-38-3804",
+    "building": "嘉禧苑A栋",
+    "floor": 38,
+    "room_number": "3804",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1982.71,
+    "status": "available"
+  },
+  {
+    "id": "A-38-3805",
+    "building": "嘉禧苑A栋",
+    "floor": 38,
+    "room_number": "3805",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1985.73,
+    "status": "available"
+  },
+  {
+    "id": "A-37-3701",
+    "building": "嘉禧苑A栋",
+    "floor": 37,
+    "room_number": "3701",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2026.05,
+    "status": "available"
+  },
+  {
+    "id": "A-37-3702",
+    "building": "嘉禧苑A栋",
+    "floor": 37,
+    "room_number": "3702",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1896.03,
+    "status": "available"
+  },
+  {
+    "id": "A-37-3703",
+    "building": "嘉禧苑A栋",
+    "floor": 37,
+    "room_number": "3703",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1896.03,
+    "status": "available"
+  },
+  {
+    "id": "A-37-3704",
+    "building": "嘉禧苑A栋",
+    "floor": 37,
+    "room_number": "3704",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1982.71,
+    "status": "available"
+  },
+  {
+    "id": "A-37-3705",
+    "building": "嘉禧苑A栋",
+    "floor": 37,
+    "room_number": "3705",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1985.73,
+    "status": "available"
+  },
+  {
+    "id": "A-36-3601",
+    "building": "嘉禧苑A栋",
+    "floor": 36,
+    "room_number": "3601",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1982.71,
+    "status": "available"
+  },
+  {
+    "id": "A-36-3602",
+    "building": "嘉禧苑A栋",
+    "floor": 36,
+    "room_number": "3602",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1896.03,
+    "status": "available"
+  },
+  {
+    "id": "A-36-3603",
+    "building": "嘉禧苑A栋",
+    "floor": 36,
+    "room_number": "3603",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1896.03,
+    "status": "available"
+  },
+  {
+    "id": "A-36-3604",
+    "building": "嘉禧苑A栋",
+    "floor": 36,
+    "room_number": "3604",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1982.71,
+    "status": "available"
+  },
+  {
+    "id": "A-36-3605",
+    "building": "嘉禧苑A栋",
+    "floor": 36,
+    "room_number": "3605",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1985.73,
+    "status": "available"
+  },
+  {
+    "id": "A-35-3501",
+    "building": "嘉禧苑A栋",
+    "floor": 35,
+    "room_number": "3501",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1982.71,
+    "status": "available"
+  },
+  {
+    "id": "A-35-3502",
+    "building": "嘉禧苑A栋",
+    "floor": 35,
+    "room_number": "3502",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1896.03,
+    "status": "available"
+  },
+  {
+    "id": "A-35-3503",
+    "building": "嘉禧苑A栋",
+    "floor": 35,
+    "room_number": "3503",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1896.03,
+    "status": "available"
+  },
+  {
+    "id": "A-35-3504",
+    "building": "嘉禧苑A栋",
+    "floor": 35,
+    "room_number": "3504",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1939.37,
+    "status": "available"
+  },
+  {
+    "id": "A-35-3505",
+    "building": "嘉禧苑A栋",
+    "floor": 35,
+    "room_number": "3505",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1942.33,
+    "status": "available"
+  },
+  {
+    "id": "A-34-3401",
+    "building": "嘉禧苑A栋",
+    "floor": 34,
+    "room_number": "3401",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1982.71,
+    "status": "available"
+  },
+  {
+    "id": "A-34-3402",
+    "building": "嘉禧苑A栋",
+    "floor": 34,
+    "room_number": "3402",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1896.03,
+    "status": "available"
+  },
+  {
+    "id": "A-34-3403",
+    "building": "嘉禧苑A栋",
+    "floor": 34,
+    "room_number": "3403",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1896.03,
+    "status": "available"
+  },
+  {
+    "id": "A-34-3404",
+    "building": "嘉禧苑A栋",
+    "floor": 34,
+    "room_number": "3404",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1939.37,
+    "status": "available"
+  },
+  {
+    "id": "A-34-3405",
+    "building": "嘉禧苑A栋",
+    "floor": 34,
+    "room_number": "3405",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1942.33,
+    "status": "available"
+  },
+  {
+    "id": "A-33-3301",
+    "building": "嘉禧苑A栋",
+    "floor": 33,
+    "room_number": "3301",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1982.71,
+    "status": "available"
+  },
+  {
+    "id": "A-33-3302",
+    "building": "嘉禧苑A栋",
+    "floor": 33,
+    "room_number": "3302",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1896.03,
+    "status": "available"
+  },
+  {
+    "id": "A-33-3303",
+    "building": "嘉禧苑A栋",
+    "floor": 33,
+    "room_number": "3303",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1896.03,
+    "status": "available"
+  },
+  {
+    "id": "A-33-3304",
+    "building": "嘉禧苑A栋",
+    "floor": 33,
+    "room_number": "3304",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1939.37,
+    "status": "available"
+  },
+  {
+    "id": "A-33-3305",
+    "building": "嘉禧苑A栋",
+    "floor": 33,
+    "room_number": "3305",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1942.33,
+    "status": "available"
+  },
+  {
+    "id": "A-31-3101",
+    "building": "嘉禧苑A栋",
+    "floor": 31,
+    "room_number": "3101",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1931.86,
+    "status": "available"
+  },
+  {
+    "id": "A-31-3102",
+    "building": "嘉禧苑A栋",
+    "floor": 31,
+    "room_number": "3102",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1847.05,
+    "status": "available"
+  },
+  {
+    "id": "A-31-3103",
+    "building": "嘉禧苑A栋",
+    "floor": 31,
+    "room_number": "3103",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1845.52,
+    "status": "available"
+  },
+  {
+    "id": "A-31-3104",
+    "building": "嘉禧苑A栋",
+    "floor": 31,
+    "room_number": "3104",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1888.95,
+    "status": "available"
+  },
+  {
+    "id": "A-31-3105",
+    "building": "嘉禧苑A栋",
+    "floor": 31,
+    "room_number": "3105",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1893.15,
+    "status": "available"
+  },
+  {
+    "id": "A-30-3001",
+    "building": "嘉禧苑A栋",
+    "floor": 30,
+    "room_number": "3001",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1931.86,
+    "status": "available"
+  },
+  {
+    "id": "A-30-3002",
+    "building": "嘉禧苑A栋",
+    "floor": 30,
+    "room_number": "3002",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1847.05,
+    "status": "available"
+  },
+  {
+    "id": "A-30-3003",
+    "building": "嘉禧苑A栋",
+    "floor": 30,
+    "room_number": "3003",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1845.52,
+    "status": "available"
+  },
+  {
+    "id": "A-30-3004",
+    "building": "嘉禧苑A栋",
+    "floor": 30,
+    "room_number": "3004",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1888.95,
+    "status": "available"
+  },
+  {
+    "id": "A-30-3005",
+    "building": "嘉禧苑A栋",
+    "floor": 30,
+    "room_number": "3005",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1893.15,
+    "status": "available"
+  },
+  {
+    "id": "A-29-2901",
+    "building": "嘉禧苑A栋",
+    "floor": 29,
+    "room_number": "2901",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1931.86,
+    "status": "available"
+  },
+  {
+    "id": "A-29-2902",
+    "building": "嘉禧苑A栋",
+    "floor": 29,
+    "room_number": "2902",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1847.05,
+    "status": "available"
+  },
+  {
+    "id": "A-29-2903",
+    "building": "嘉禧苑A栋",
+    "floor": 29,
+    "room_number": "2903",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1845.52,
+    "status": "available"
+  },
+  {
+    "id": "A-29-2904",
+    "building": "嘉禧苑A栋",
+    "floor": 29,
+    "room_number": "2904",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1888.95,
+    "status": "available"
+  },
+  {
+    "id": "A-29-2905",
+    "building": "嘉禧苑A栋",
+    "floor": 29,
+    "room_number": "2905",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1893.15,
+    "status": "available"
+  },
+  {
+    "id": "A-28-2801",
+    "building": "嘉禧苑A栋",
+    "floor": 28,
+    "room_number": "2801",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1931.86,
+    "status": "available"
+  },
+  {
+    "id": "A-28-2802",
+    "building": "嘉禧苑A栋",
+    "floor": 28,
+    "room_number": "2802",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1847.05,
+    "status": "available"
+  },
+  {
+    "id": "A-28-2803",
+    "building": "嘉禧苑A栋",
+    "floor": 28,
+    "room_number": "2803",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1845.52,
+    "status": "available"
+  },
+  {
+    "id": "A-28-2804",
+    "building": "嘉禧苑A栋",
+    "floor": 28,
+    "room_number": "2804",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1888.95,
+    "status": "available"
+  },
+  {
+    "id": "A-28-2805",
+    "building": "嘉禧苑A栋",
+    "floor": 28,
+    "room_number": "2805",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1893.15,
+    "status": "available"
+  },
+  {
+    "id": "A-27-2701",
+    "building": "嘉禧苑A栋",
+    "floor": 27,
+    "room_number": "2701",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1931.86,
+    "status": "available"
+  },
+  {
+    "id": "A-27-2702",
+    "building": "嘉禧苑A栋",
+    "floor": 27,
+    "room_number": "2702",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1803.85,
+    "status": "available"
+  },
+  {
+    "id": "A-27-2703",
+    "building": "嘉禧苑A栋",
+    "floor": 27,
+    "room_number": "2703",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1802.35,
+    "status": "available"
+  },
+  {
+    "id": "A-27-2704",
+    "building": "嘉禧苑A栋",
+    "floor": 27,
+    "room_number": "2704",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1888.95,
+    "status": "available"
+  },
+  {
+    "id": "A-27-2705",
+    "building": "嘉禧苑A栋",
+    "floor": 27,
+    "room_number": "2705",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1893.15,
+    "status": "available"
+  },
+  {
+    "id": "A-26-2601",
+    "building": "嘉禧苑A栋",
+    "floor": 26,
+    "room_number": "2601",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1888.69,
+    "status": "available"
+  },
+  {
+    "id": "A-26-2602",
+    "building": "嘉禧苑A栋",
+    "floor": 26,
+    "room_number": "2602",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1803.85,
+    "status": "available"
+  },
+  {
+    "id": "A-26-2603",
+    "building": "嘉禧苑A栋",
+    "floor": 26,
+    "room_number": "2603",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1802.35,
+    "status": "available"
+  },
+  {
+    "id": "A-26-2604",
+    "building": "嘉禧苑A栋",
+    "floor": 26,
+    "room_number": "2604",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1888.95,
+    "status": "available"
+  },
+  {
+    "id": "A-26-2605",
+    "building": "嘉禧苑A栋",
+    "floor": 26,
+    "room_number": "2605",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1893.15,
+    "status": "available"
+  },
+  {
+    "id": "A-25-2501",
+    "building": "嘉禧苑A栋",
+    "floor": 25,
+    "room_number": "2501",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1888.69,
+    "status": "available"
+  },
+  {
+    "id": "A-25-2502",
+    "building": "嘉禧苑A栋",
+    "floor": 25,
+    "room_number": "2502",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1803.85,
+    "status": "available"
+  },
+  {
+    "id": "A-25-2503",
+    "building": "嘉禧苑A栋",
+    "floor": 25,
+    "room_number": "2503",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1802.35,
+    "status": "available"
+  },
+  {
+    "id": "A-25-2504",
+    "building": "嘉禧苑A栋",
+    "floor": 25,
+    "room_number": "2504",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1888.95,
+    "status": "available"
+  },
+  {
+    "id": "A-25-2505",
+    "building": "嘉禧苑A栋",
+    "floor": 25,
+    "room_number": "2505",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1893.15,
+    "status": "available"
+  },
+  {
+    "id": "A-24-2401",
+    "building": "嘉禧苑A栋",
+    "floor": 24,
+    "room_number": "2401",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1888.69,
+    "status": "available"
+  },
+  {
+    "id": "A-24-2402",
+    "building": "嘉禧苑A栋",
+    "floor": 24,
+    "room_number": "2402",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1803.85,
+    "status": "available"
+  },
+  {
+    "id": "A-24-2403",
+    "building": "嘉禧苑A栋",
+    "floor": 24,
+    "room_number": "2403",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1802.35,
+    "status": "available"
+  },
+  {
+    "id": "A-24-2404",
+    "building": "嘉禧苑A栋",
+    "floor": 24,
+    "room_number": "2404",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1888.95,
+    "status": "available"
+  },
+  {
+    "id": "A-24-2405",
+    "building": "嘉禧苑A栋",
+    "floor": 24,
+    "room_number": "2405",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1893.15,
+    "status": "available"
+  },
+  {
+    "id": "A-23-2301",
+    "building": "嘉禧苑A栋",
+    "floor": 23,
+    "room_number": "2301",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1888.69,
+    "status": "available"
+  },
+  {
+    "id": "A-23-2302",
+    "building": "嘉禧苑A栋",
+    "floor": 23,
+    "room_number": "2302",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1803.85,
+    "status": "available"
+  },
+  {
+    "id": "A-23-2303",
+    "building": "嘉禧苑A栋",
+    "floor": 23,
+    "room_number": "2303",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1802.35,
+    "status": "available"
+  },
+  {
+    "id": "A-23-2304",
+    "building": "嘉禧苑A栋",
+    "floor": 23,
+    "room_number": "2304",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1845.77,
+    "status": "available"
+  },
+  {
+    "id": "A-23-2305",
+    "building": "嘉禧苑A栋",
+    "floor": 23,
+    "room_number": "2305",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1849.87,
+    "status": "available"
+  },
+  {
+    "id": "A-22-2201",
+    "building": "嘉禧苑A栋",
+    "floor": 22,
+    "room_number": "2201",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1888.69,
+    "status": "available"
+  },
+  {
+    "id": "A-22-2202",
+    "building": "嘉禧苑A栋",
+    "floor": 22,
+    "room_number": "2202",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1803.85,
+    "status": "available"
+  },
+  {
+    "id": "A-22-2203",
+    "building": "嘉禧苑A栋",
+    "floor": 22,
+    "room_number": "2203",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1802.35,
+    "status": "available"
+  },
+  {
+    "id": "A-22-2204",
+    "building": "嘉禧苑A栋",
+    "floor": 22,
+    "room_number": "2204",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1845.77,
+    "status": "available"
+  },
+  {
+    "id": "A-22-2205",
+    "building": "嘉禧苑A栋",
+    "floor": 22,
+    "room_number": "2205",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1849.87,
+    "status": "available"
+  },
+  {
+    "id": "A-21-2101",
+    "building": "嘉禧苑A栋",
+    "floor": 21,
+    "room_number": "2101",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1888.69,
+    "status": "available"
+  },
+  {
+    "id": "A-21-2102",
+    "building": "嘉禧苑A栋",
+    "floor": 21,
+    "room_number": "2102",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1803.85,
+    "status": "available"
+  },
+  {
+    "id": "A-21-2103",
+    "building": "嘉禧苑A栋",
+    "floor": 21,
+    "room_number": "2103",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1802.35,
+    "status": "available"
+  },
+  {
+    "id": "A-21-2104",
+    "building": "嘉禧苑A栋",
+    "floor": 21,
+    "room_number": "2104",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1845.77,
+    "status": "available"
+  },
+  {
+    "id": "A-21-2105",
+    "building": "嘉禧苑A栋",
+    "floor": 21,
+    "room_number": "2105",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1849.87,
+    "status": "available"
+  },
+  {
+    "id": "A-20-2001",
+    "building": "嘉禧苑A栋",
+    "floor": 20,
+    "room_number": "2001",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1888.69,
+    "status": "available"
+  },
+  {
+    "id": "A-20-2002",
+    "building": "嘉禧苑A栋",
+    "floor": 20,
+    "room_number": "2002",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1760.64,
+    "status": "available"
+  },
+  {
+    "id": "A-20-2003",
+    "building": "嘉禧苑A栋",
+    "floor": 20,
+    "room_number": "2003",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1759.18,
+    "status": "available"
+  },
+  {
+    "id": "A-20-2004",
+    "building": "嘉禧苑A栋",
+    "floor": 20,
+    "room_number": "2004",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1845.77,
+    "status": "available"
+  },
+  {
+    "id": "A-20-2005",
+    "building": "嘉禧苑A栋",
+    "floor": 20,
+    "room_number": "2005",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1849.87,
+    "status": "available"
+  },
+  {
+    "id": "A-19-1901",
+    "building": "嘉禧苑A栋",
+    "floor": 19,
+    "room_number": "1901",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1827.52,
+    "status": "available"
+  },
+  {
+    "id": "A-19-1902",
+    "building": "嘉禧苑A栋",
+    "floor": 19,
+    "room_number": "1902",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1760.64,
+    "status": "available"
+  },
+  {
+    "id": "A-19-1903",
+    "building": "嘉禧苑A栋",
+    "floor": 19,
+    "room_number": "1903",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1759.18,
+    "status": "available"
+  },
+  {
+    "id": "A-19-1904",
+    "building": "嘉禧苑A栋",
+    "floor": 19,
+    "room_number": "1904",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1845.77,
+    "status": "available"
+  },
+  {
+    "id": "A-19-1905",
+    "building": "嘉禧苑A栋",
+    "floor": 19,
+    "room_number": "1905",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1849.87,
+    "status": "available"
+  },
+  {
+    "id": "A-18-1801",
+    "building": "嘉禧苑A栋",
+    "floor": 18,
+    "room_number": "1801",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1845.52,
+    "status": "available"
+  },
+  {
+    "id": "A-18-1802",
+    "building": "嘉禧苑A栋",
+    "floor": 18,
+    "room_number": "1802",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1760.64,
+    "status": "available"
+  },
+  {
+    "id": "A-18-1803",
+    "building": "嘉禧苑A栋",
+    "floor": 18,
+    "room_number": "1803",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1759.18,
+    "status": "available"
+  },
+  {
+    "id": "A-18-1804",
+    "building": "嘉禧苑A栋",
+    "floor": 18,
+    "room_number": "1804",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1802.6,
+    "status": "available"
+  },
+  {
+    "id": "A-18-1805",
+    "building": "嘉禧苑A栋",
+    "floor": 18,
+    "room_number": "1805",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1806.6,
+    "status": "available"
+  },
+  {
+    "id": "A-17-1701",
+    "building": "嘉禧苑A栋",
+    "floor": 17,
+    "room_number": "1701",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1827.52,
+    "status": "available"
+  },
+  {
+    "id": "A-17-1702",
+    "building": "嘉禧苑A栋",
+    "floor": 17,
+    "room_number": "1702",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1760.64,
+    "status": "available"
+  },
+  {
+    "id": "A-17-1703",
+    "building": "嘉禧苑A栋",
+    "floor": 17,
+    "room_number": "1703",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1759.18,
+    "status": "available"
+  },
+  {
+    "id": "A-17-1704",
+    "building": "嘉禧苑A栋",
+    "floor": 17,
+    "room_number": "1704",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1802.6,
+    "status": "available"
+  },
+  {
+    "id": "A-17-1705",
+    "building": "嘉禧苑A栋",
+    "floor": 17,
+    "room_number": "1705",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1806.6,
+    "status": "available"
+  },
+  {
+    "id": "A-16-1601",
+    "building": "嘉禧苑A栋",
+    "floor": 16,
+    "room_number": "1601",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1845.52,
+    "status": "available"
+  },
+  {
+    "id": "A-16-1602",
+    "building": "嘉禧苑A栋",
+    "floor": 16,
+    "room_number": "1602",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1760.64,
+    "status": "available"
+  },
+  {
+    "id": "A-16-1603",
+    "building": "嘉禧苑A栋",
+    "floor": 16,
+    "room_number": "1603",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1759.18,
+    "status": "available"
+  },
+  {
+    "id": "A-16-1604",
+    "building": "嘉禧苑A栋",
+    "floor": 16,
+    "room_number": "1604",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1802.6,
+    "status": "available"
+  },
+  {
+    "id": "A-16-1605",
+    "building": "嘉禧苑A栋",
+    "floor": 16,
+    "room_number": "1605",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1806.6,
+    "status": "available"
+  },
+  {
+    "id": "A-14-1401",
+    "building": "嘉禧苑A栋",
+    "floor": 14,
+    "room_number": "1401",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1791.83,
+    "status": "available"
+  },
+  {
+    "id": "A-14-1402",
+    "building": "嘉禧苑A栋",
+    "floor": 14,
+    "room_number": "1402",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1707.43,
+    "status": "available"
+  },
+  {
+    "id": "A-14-1403",
+    "building": "嘉禧苑A栋",
+    "floor": 14,
+    "room_number": "1403",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1705.99,
+    "status": "available"
+  },
+  {
+    "id": "A-14-1404",
+    "building": "嘉禧苑A栋",
+    "floor": 14,
+    "room_number": "1404",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1791.83,
+    "status": "available"
+  },
+  {
+    "id": "A-14-1405",
+    "building": "嘉禧苑A栋",
+    "floor": 14,
+    "room_number": "1405",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1795.83,
+    "status": "available"
+  },
+  {
+    "id": "A-13-1301",
+    "building": "嘉禧苑A栋",
+    "floor": 13,
+    "room_number": "1301",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1791.83,
+    "status": "available"
+  },
+  {
+    "id": "A-13-1302",
+    "building": "嘉禧苑A栋",
+    "floor": 13,
+    "room_number": "1302",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1707.43,
+    "status": "available"
+  },
+  {
+    "id": "A-13-1303",
+    "building": "嘉禧苑A栋",
+    "floor": 13,
+    "room_number": "1303",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1705.99,
+    "status": "available"
+  },
+  {
+    "id": "A-13-1304",
+    "building": "嘉禧苑A栋",
+    "floor": 13,
+    "room_number": "1304",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1748.91,
+    "status": "available"
+  },
+  {
+    "id": "A-13-1305",
+    "building": "嘉禧苑A栋",
+    "floor": 13,
+    "room_number": "1305",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1752.82,
+    "status": "available"
+  },
+  {
+    "id": "A-12-1201",
+    "building": "嘉禧苑A栋",
+    "floor": 12,
+    "room_number": "1201",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1791.83,
+    "status": "available"
+  },
+  {
+    "id": "A-12-1202",
+    "building": "嘉禧苑A栋",
+    "floor": 12,
+    "room_number": "1202",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1707.43,
+    "status": "available"
+  },
+  {
+    "id": "A-12-1203",
+    "building": "嘉禧苑A栋",
+    "floor": 12,
+    "room_number": "1203",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1705.99,
+    "status": "available"
+  },
+  {
+    "id": "A-12-1204",
+    "building": "嘉禧苑A栋",
+    "floor": 12,
+    "room_number": "1204",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1748.91,
+    "status": "available"
+  },
+  {
+    "id": "A-12-1205",
+    "building": "嘉禧苑A栋",
+    "floor": 12,
+    "room_number": "1205",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1752.82,
+    "status": "available"
+  },
+  {
+    "id": "A-11-1101",
+    "building": "嘉禧苑A栋",
+    "floor": 11,
+    "room_number": "1101",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1791.83,
+    "status": "available"
+  },
+  {
+    "id": "A-11-1102",
+    "building": "嘉禧苑A栋",
+    "floor": 11,
+    "room_number": "1102",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1707.43,
+    "status": "available"
+  },
+  {
+    "id": "A-11-1103",
+    "building": "嘉禧苑A栋",
+    "floor": 11,
+    "room_number": "1103",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1705.99,
+    "status": "available"
+  },
+  {
+    "id": "A-11-1104",
+    "building": "嘉禧苑A栋",
+    "floor": 11,
+    "room_number": "1104",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1748.91,
+    "status": "available"
+  },
+  {
+    "id": "A-11-1105",
+    "building": "嘉禧苑A栋",
+    "floor": 11,
+    "room_number": "1105",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1752.82,
+    "status": "available"
+  },
+  {
+    "id": "A-10-1001",
+    "building": "嘉禧苑A栋",
+    "floor": 10,
+    "room_number": "1001",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1791.83,
+    "status": "available"
+  },
+  {
+    "id": "A-10-1002",
+    "building": "嘉禧苑A栋",
+    "floor": 10,
+    "room_number": "1002",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1707.43,
+    "status": "available"
+  },
+  {
+    "id": "A-10-1003",
+    "building": "嘉禧苑A栋",
+    "floor": 10,
+    "room_number": "1003",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1705.99,
+    "status": "available"
+  },
+  {
+    "id": "A-10-1004",
+    "building": "嘉禧苑A栋",
+    "floor": 10,
+    "room_number": "1004",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1748.91,
+    "status": "available"
+  },
+  {
+    "id": "A-10-1005",
+    "building": "嘉禧苑A栋",
+    "floor": 10,
+    "room_number": "1005",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1752.82,
+    "status": "available"
+  },
+  {
+    "id": "A-9-901",
+    "building": "嘉禧苑A栋",
+    "floor": 9,
+    "room_number": "901",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1742.55,
+    "status": "available"
+  },
+  {
+    "id": "A-9-902",
+    "building": "嘉禧苑A栋",
+    "floor": 9,
+    "room_number": "902",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1659.82,
+    "status": "available"
+  },
+  {
+    "id": "A-9-903",
+    "building": "嘉禧苑A栋",
+    "floor": 9,
+    "room_number": "903",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1657.03,
+    "status": "available"
+  },
+  {
+    "id": "A-9-904",
+    "building": "嘉禧苑A栋",
+    "floor": 9,
+    "room_number": "904",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1742.55,
+    "status": "available"
+  },
+  {
+    "id": "A-9-905",
+    "building": "嘉禧苑A栋",
+    "floor": 9,
+    "room_number": "905",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1748.05,
+    "status": "available"
+  },
+  {
+    "id": "A-8-801",
+    "building": "嘉禧苑A栋",
+    "floor": 8,
+    "room_number": "801",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1742.55,
+    "status": "available"
+  },
+  {
+    "id": "A-8-802",
+    "building": "嘉禧苑A栋",
+    "floor": 8,
+    "room_number": "802",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1659.82,
+    "status": "available"
+  },
+  {
+    "id": "A-8-803",
+    "building": "嘉禧苑A栋",
+    "floor": 8,
+    "room_number": "803",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1657.03,
+    "status": "available"
+  },
+  {
+    "id": "A-8-804",
+    "building": "嘉禧苑A栋",
+    "floor": 8,
+    "room_number": "804",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1742.55,
+    "status": "available"
+  },
+  {
+    "id": "A-8-805",
+    "building": "嘉禧苑A栋",
+    "floor": 8,
+    "room_number": "805",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1746.46,
+    "status": "available"
+  },
+  {
+    "id": "A-7-701",
+    "building": "嘉禧苑A栋",
+    "floor": 7,
+    "room_number": "701",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1742.55,
+    "status": "available"
+  },
+  {
+    "id": "A-7-702",
+    "building": "嘉禧苑A栋",
+    "floor": 7,
+    "room_number": "702",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1659.82,
+    "status": "available"
+  },
+  {
+    "id": "A-7-703",
+    "building": "嘉禧苑A栋",
+    "floor": 7,
+    "room_number": "703",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1657.03,
+    "status": "available"
+  },
+  {
+    "id": "A-7-704",
+    "building": "嘉禧苑A栋",
+    "floor": 7,
+    "room_number": "704",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1699.79,
+    "status": "available"
+  },
+  {
+    "id": "A-7-705",
+    "building": "嘉禧苑A栋",
+    "floor": 7,
+    "room_number": "705",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1703.6,
+    "status": "available"
+  },
+  {
+    "id": "A-6-601",
+    "building": "嘉禧苑A栋",
+    "floor": 6,
+    "room_number": "601",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1742.55,
+    "status": "available"
+  },
+  {
+    "id": "A-6-602",
+    "building": "嘉禧苑A栋",
+    "floor": 6,
+    "room_number": "602",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1659.82,
+    "status": "available"
+  },
+  {
+    "id": "A-6-603",
+    "building": "嘉禧苑A栋",
+    "floor": 6,
+    "room_number": "603",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1657.03,
+    "status": "available"
+  },
+  {
+    "id": "A-6-604",
+    "building": "嘉禧苑A栋",
+    "floor": 6,
+    "room_number": "604",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1699.79,
+    "status": "available"
+  },
+  {
+    "id": "A-6-605",
+    "building": "嘉禧苑A栋",
+    "floor": 6,
+    "room_number": "605",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1703.6,
+    "status": "available"
+  },
+  {
+    "id": "A-5-501",
+    "building": "嘉禧苑A栋",
+    "floor": 5,
+    "room_number": "501",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1742.55,
+    "status": "available"
+  },
+  {
+    "id": "A-5-502",
+    "building": "嘉禧苑A栋",
+    "floor": 5,
+    "room_number": "502",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1659.82,
+    "status": "available"
+  },
+  {
+    "id": "A-5-503",
+    "building": "嘉禧苑A栋",
+    "floor": 5,
+    "room_number": "503",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1657.03,
+    "status": "available"
+  },
+  {
+    "id": "A-5-504",
+    "building": "嘉禧苑A栋",
+    "floor": 5,
+    "room_number": "504",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1699.79,
+    "status": "available"
+  },
+  {
+    "id": "A-5-505",
+    "building": "嘉禧苑A栋",
+    "floor": 5,
+    "room_number": "505",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1703.6,
+    "status": "available"
+  },
+  {
+    "id": "A-4-401",
+    "building": "嘉禧苑A栋",
+    "floor": 4,
+    "room_number": "401",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1742.55,
+    "status": "available"
+  },
+  {
+    "id": "A-4-402",
+    "building": "嘉禧苑A栋",
+    "floor": 4,
+    "room_number": "402",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1659.82,
+    "status": "available"
+  },
+  {
+    "id": "A-4-403",
+    "building": "嘉禧苑A栋",
+    "floor": 4,
+    "room_number": "403",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1657.03,
+    "status": "available"
+  },
+  {
+    "id": "A-4-404",
+    "building": "嘉禧苑A栋",
+    "floor": 4,
+    "room_number": "404",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1699.79,
+    "status": "available"
+  },
+  {
+    "id": "A-4-405",
+    "building": "嘉禧苑A栋",
+    "floor": 4,
+    "room_number": "405",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1703.6,
+    "status": "available"
+  },
+  {
+    "id": "A-3-301",
+    "building": "嘉禧苑A栋",
+    "floor": 3,
+    "room_number": "301",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1742.55,
+    "status": "available"
+  },
+  {
+    "id": "A-3-302",
+    "building": "嘉禧苑A栋",
+    "floor": 3,
+    "room_number": "302",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1659.82,
+    "status": "available"
+  },
+  {
+    "id": "A-3-303",
+    "building": "嘉禧苑A栋",
+    "floor": 3,
+    "room_number": "303",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1657.03,
+    "status": "available"
+  },
+  {
+    "id": "A-3-304",
+    "building": "嘉禧苑A栋",
+    "floor": 3,
+    "room_number": "304",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1699.79,
+    "status": "available"
+  },
+  {
+    "id": "A-3-305",
+    "building": "嘉禧苑A栋",
+    "floor": 3,
+    "room_number": "305",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1703.6,
+    "status": "available"
+  },
+  {
+    "id": "B-48-4801",
+    "building": "嘉禧苑B栋",
+    "floor": 48,
+    "room_number": "4801",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2069.96,
+    "status": "available"
+  },
+  {
+    "id": "B-48-4802",
+    "building": "嘉禧苑B栋",
+    "floor": 48,
+    "room_number": "4802",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1983.26,
+    "status": "available"
+  },
+  {
+    "id": "B-48-4803",
+    "building": "嘉禧苑B栋",
+    "floor": 48,
+    "room_number": "4803",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1983.26,
+    "status": "available"
+  },
+  {
+    "id": "B-48-4804",
+    "building": "嘉禧苑B栋",
+    "floor": 48,
+    "room_number": "4804",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 2069.86,
+    "status": "available"
+  },
+  {
+    "id": "B-48-4805",
+    "building": "嘉禧苑B栋",
+    "floor": 48,
+    "room_number": "4805",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 2073.11,
+    "status": "available"
+  },
+  {
+    "id": "B-47-4701",
+    "building": "嘉禧苑B栋",
+    "floor": 47,
+    "room_number": "4701",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2069.96,
+    "status": "available"
+  },
+  {
+    "id": "B-47-4702",
+    "building": "嘉禧苑B栋",
+    "floor": 47,
+    "room_number": "4702",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1983.26,
+    "status": "available"
+  },
+  {
+    "id": "B-47-4703",
+    "building": "嘉禧苑B栋",
+    "floor": 47,
+    "room_number": "4703",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1983.26,
+    "status": "available"
+  },
+  {
+    "id": "B-47-4704",
+    "building": "嘉禧苑B栋",
+    "floor": 47,
+    "room_number": "4704",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 2069.86,
+    "status": "available"
+  },
+  {
+    "id": "B-47-4705",
+    "building": "嘉禧苑B栋",
+    "floor": 47,
+    "room_number": "4705",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 2073.11,
+    "status": "available"
+  },
+  {
+    "id": "B-46-4601",
+    "building": "嘉禧苑B栋",
+    "floor": 46,
+    "room_number": "4601",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2069.96,
+    "status": "available"
+  },
+  {
+    "id": "B-46-4602",
+    "building": "嘉禧苑B栋",
+    "floor": 46,
+    "room_number": "4602",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1983.26,
+    "status": "available"
+  },
+  {
+    "id": "B-46-4603",
+    "building": "嘉禧苑B栋",
+    "floor": 46,
+    "room_number": "4603",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1983.26,
+    "status": "available"
+  },
+  {
+    "id": "B-46-4604",
+    "building": "嘉禧苑B栋",
+    "floor": 46,
+    "room_number": "4604",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 2069.86,
+    "status": "available"
+  },
+  {
+    "id": "B-46-4605",
+    "building": "嘉禧苑B栋",
+    "floor": 46,
+    "room_number": "4605",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 2073.11,
+    "status": "available"
+  },
+  {
+    "id": "B-45-4501",
+    "building": "嘉禧苑B栋",
+    "floor": 45,
+    "room_number": "4501",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2069.96,
+    "status": "available"
+  },
+  {
+    "id": "B-45-4502",
+    "building": "嘉禧苑B栋",
+    "floor": 45,
+    "room_number": "4502",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1983.26,
+    "status": "available"
+  },
+  {
+    "id": "B-45-4503",
+    "building": "嘉禧苑B栋",
+    "floor": 45,
+    "room_number": "4503",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1983.26,
+    "status": "available"
+  },
+  {
+    "id": "B-45-4504",
+    "building": "嘉禧苑B栋",
+    "floor": 45,
+    "room_number": "4504",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 2026.61,
+    "status": "available"
+  },
+  {
+    "id": "B-45-4505",
+    "building": "嘉禧苑B栋",
+    "floor": 45,
+    "room_number": "4505",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 2029.7,
+    "status": "available"
+  },
+  {
+    "id": "B-44-4401",
+    "building": "嘉禧苑B栋",
+    "floor": 44,
+    "room_number": "4401",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2069.96,
+    "status": "available"
+  },
+  {
+    "id": "B-44-4402",
+    "building": "嘉禧苑B栋",
+    "floor": 44,
+    "room_number": "4402",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1983.26,
+    "status": "available"
+  },
+  {
+    "id": "B-44-4403",
+    "building": "嘉禧苑B栋",
+    "floor": 44,
+    "room_number": "4403",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1983.26,
+    "status": "available"
+  },
+  {
+    "id": "B-44-4404",
+    "building": "嘉禧苑B栋",
+    "floor": 44,
+    "room_number": "4404",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 2026.61,
+    "status": "available"
+  },
+  {
+    "id": "B-44-4405",
+    "building": "嘉禧苑B栋",
+    "floor": 44,
+    "room_number": "4405",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 2029.7,
+    "status": "available"
+  },
+  {
+    "id": "B-43-4301",
+    "building": "嘉禧苑B栋",
+    "floor": 43,
+    "room_number": "4301",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2069.96,
+    "status": "available"
+  },
+  {
+    "id": "B-43-4302",
+    "building": "嘉禧苑B栋",
+    "floor": 43,
+    "room_number": "4302",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1939.91,
+    "status": "available"
+  },
+  {
+    "id": "B-43-4303",
+    "building": "嘉禧苑B栋",
+    "floor": 43,
+    "room_number": "4303",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1939.91,
+    "status": "available"
+  },
+  {
+    "id": "B-43-4304",
+    "building": "嘉禧苑B栋",
+    "floor": 43,
+    "room_number": "4304",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 2026.61,
+    "status": "available"
+  },
+  {
+    "id": "B-43-4305",
+    "building": "嘉禧苑B栋",
+    "floor": 43,
+    "room_number": "4305",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 2029.7,
+    "status": "available"
+  },
+  {
+    "id": "B-42-4201",
+    "building": "嘉禧苑B栋",
+    "floor": 42,
+    "room_number": "4201",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2069.96,
+    "status": "available"
+  },
+  {
+    "id": "B-42-4202",
+    "building": "嘉禧苑B栋",
+    "floor": 42,
+    "room_number": "4202",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1939.91,
+    "status": "available"
+  },
+  {
+    "id": "B-42-4203",
+    "building": "嘉禧苑B栋",
+    "floor": 42,
+    "room_number": "4203",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1939.91,
+    "status": "available"
+  },
+  {
+    "id": "B-42-4204",
+    "building": "嘉禧苑B栋",
+    "floor": 42,
+    "room_number": "4204",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 2026.61,
+    "status": "available"
+  },
+  {
+    "id": "B-42-4205",
+    "building": "嘉禧苑B栋",
+    "floor": 42,
+    "room_number": "4205",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 2029.7,
+    "status": "available"
+  },
+  {
+    "id": "B-41-4101",
+    "building": "嘉禧苑B栋",
+    "floor": 41,
+    "room_number": "4101",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2026.61,
+    "status": "available"
+  },
+  {
+    "id": "B-41-4102",
+    "building": "嘉禧苑B栋",
+    "floor": 41,
+    "room_number": "4102",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1939.91,
+    "status": "available"
+  },
+  {
+    "id": "B-41-4103",
+    "building": "嘉禧苑B栋",
+    "floor": 41,
+    "room_number": "4103",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1939.91,
+    "status": "available"
+  },
+  {
+    "id": "B-41-4104",
+    "building": "嘉禧苑B栋",
+    "floor": 41,
+    "room_number": "4104",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 2026.61,
+    "status": "available"
+  },
+  {
+    "id": "B-41-4105",
+    "building": "嘉禧苑B栋",
+    "floor": 41,
+    "room_number": "4105",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 2029.7,
+    "status": "available"
+  },
+  {
+    "id": "B-40-4001",
+    "building": "嘉禧苑B栋",
+    "floor": 40,
+    "room_number": "4001",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2026.61,
+    "status": "available"
+  },
+  {
+    "id": "B-40-4002",
+    "building": "嘉禧苑B栋",
+    "floor": 40,
+    "room_number": "4002",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1939.91,
+    "status": "available"
+  },
+  {
+    "id": "B-40-4003",
+    "building": "嘉禧苑B栋",
+    "floor": 40,
+    "room_number": "4003",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1939.91,
+    "status": "available"
+  },
+  {
+    "id": "B-40-4004",
+    "building": "嘉禧苑B栋",
+    "floor": 40,
+    "room_number": "4004",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1983.26,
+    "status": "available"
+  },
+  {
+    "id": "B-40-4005",
+    "building": "嘉禧苑B栋",
+    "floor": 40,
+    "room_number": "4005",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1986.28,
+    "status": "available"
+  },
+  {
+    "id": "B-39-3901",
+    "building": "嘉禧苑B栋",
+    "floor": 39,
+    "room_number": "3901",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2026.61,
+    "status": "available"
+  },
+  {
+    "id": "B-39-3902",
+    "building": "嘉禧苑B栋",
+    "floor": 39,
+    "room_number": "3902",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1939.91,
+    "status": "available"
+  },
+  {
+    "id": "B-39-3903",
+    "building": "嘉禧苑B栋",
+    "floor": 39,
+    "room_number": "3903",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1939.91,
+    "status": "available"
+  },
+  {
+    "id": "B-39-3904",
+    "building": "嘉禧苑B栋",
+    "floor": 39,
+    "room_number": "3904",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1983.26,
+    "status": "available"
+  },
+  {
+    "id": "B-39-3905",
+    "building": "嘉禧苑B栋",
+    "floor": 39,
+    "room_number": "3905",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1986.28,
+    "status": "available"
+  },
+  {
+    "id": "B-38-3801",
+    "building": "嘉禧苑B栋",
+    "floor": 38,
+    "room_number": "3801",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2026.61,
+    "status": "available"
+  },
+  {
+    "id": "B-38-3802",
+    "building": "嘉禧苑B栋",
+    "floor": 38,
+    "room_number": "3802",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1896.56,
+    "status": "available"
+  },
+  {
+    "id": "B-38-3803",
+    "building": "嘉禧苑B栋",
+    "floor": 38,
+    "room_number": "3803",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1896.56,
+    "status": "available"
+  },
+  {
+    "id": "B-38-3804",
+    "building": "嘉禧苑B栋",
+    "floor": 38,
+    "room_number": "3804",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1983.26,
+    "status": "available"
+  },
+  {
+    "id": "B-38-3805",
+    "building": "嘉禧苑B栋",
+    "floor": 38,
+    "room_number": "3805",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1986.28,
+    "status": "available"
+  },
+  {
+    "id": "B-37-3701",
+    "building": "嘉禧苑B栋",
+    "floor": 37,
+    "room_number": "3701",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 2026.61,
+    "status": "available"
+  },
+  {
+    "id": "B-37-3702",
+    "building": "嘉禧苑B栋",
+    "floor": 37,
+    "room_number": "3702",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1896.56,
+    "status": "available"
+  },
+  {
+    "id": "B-37-3703",
+    "building": "嘉禧苑B栋",
+    "floor": 37,
+    "room_number": "3703",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1896.56,
+    "status": "available"
+  },
+  {
+    "id": "B-37-3704",
+    "building": "嘉禧苑B栋",
+    "floor": 37,
+    "room_number": "3704",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1983.26,
+    "status": "available"
+  },
+  {
+    "id": "B-37-3705",
+    "building": "嘉禧苑B栋",
+    "floor": 37,
+    "room_number": "3705",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1986.28,
+    "status": "available"
+  },
+  {
+    "id": "B-36-3601",
+    "building": "嘉禧苑B栋",
+    "floor": 36,
+    "room_number": "3601",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1983.26,
+    "status": "available"
+  },
+  {
+    "id": "B-36-3602",
+    "building": "嘉禧苑B栋",
+    "floor": 36,
+    "room_number": "3602",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1896.56,
+    "status": "available"
+  },
+  {
+    "id": "B-36-3603",
+    "building": "嘉禧苑B栋",
+    "floor": 36,
+    "room_number": "3603",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1896.56,
+    "status": "available"
+  },
+  {
+    "id": "B-36-3604",
+    "building": "嘉禧苑B栋",
+    "floor": 36,
+    "room_number": "3604",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1983.26,
+    "status": "available"
+  },
+  {
+    "id": "B-36-3605",
+    "building": "嘉禧苑B栋",
+    "floor": 36,
+    "room_number": "3605",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1986.28,
+    "status": "available"
+  },
+  {
+    "id": "B-35-3501",
+    "building": "嘉禧苑B栋",
+    "floor": 35,
+    "room_number": "3501",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1983.26,
+    "status": "available"
+  },
+  {
+    "id": "B-35-3502",
+    "building": "嘉禧苑B栋",
+    "floor": 35,
+    "room_number": "3502",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1896.56,
+    "status": "available"
+  },
+  {
+    "id": "B-35-3503",
+    "building": "嘉禧苑B栋",
+    "floor": 35,
+    "room_number": "3503",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1896.56,
+    "status": "available"
+  },
+  {
+    "id": "B-35-3504",
+    "building": "嘉禧苑B栋",
+    "floor": 35,
+    "room_number": "3504",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1939.91,
+    "status": "available"
+  },
+  {
+    "id": "B-35-3505",
+    "building": "嘉禧苑B栋",
+    "floor": 35,
+    "room_number": "3505",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1942.86,
+    "status": "available"
+  },
+  {
+    "id": "B-34-3401",
+    "building": "嘉禧苑B栋",
+    "floor": 34,
+    "room_number": "3401",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1983.26,
+    "status": "available"
+  },
+  {
+    "id": "B-34-3402",
+    "building": "嘉禧苑B栋",
+    "floor": 34,
+    "room_number": "3402",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1896.56,
+    "status": "available"
+  },
+  {
+    "id": "B-34-3403",
+    "building": "嘉禧苑B栋",
+    "floor": 34,
+    "room_number": "3403",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1896.56,
+    "status": "available"
+  },
+  {
+    "id": "B-34-3404",
+    "building": "嘉禧苑B栋",
+    "floor": 34,
+    "room_number": "3404",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1939.91,
+    "status": "available"
+  },
+  {
+    "id": "B-34-3405",
+    "building": "嘉禧苑B栋",
+    "floor": 34,
+    "room_number": "3405",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1942.86,
+    "status": "available"
+  },
+  {
+    "id": "B-33-3301",
+    "building": "嘉禧苑B栋",
+    "floor": 33,
+    "room_number": "3301",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1983.26,
+    "status": "available"
+  },
+  {
+    "id": "B-33-3302",
+    "building": "嘉禧苑B栋",
+    "floor": 33,
+    "room_number": "3302",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1896.56,
+    "status": "available"
+  },
+  {
+    "id": "B-33-3303",
+    "building": "嘉禧苑B栋",
+    "floor": 33,
+    "room_number": "3303",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1896.56,
+    "status": "available"
+  },
+  {
+    "id": "B-33-3304",
+    "building": "嘉禧苑B栋",
+    "floor": 33,
+    "room_number": "3304",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1939.91,
+    "status": "available"
+  },
+  {
+    "id": "B-33-3305",
+    "building": "嘉禧苑B栋",
+    "floor": 33,
+    "room_number": "3305",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1942.86,
+    "status": "available"
+  },
+  {
+    "id": "B-31-3101",
+    "building": "嘉禧苑B栋",
+    "floor": 31,
+    "room_number": "3101",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1932.4,
+    "status": "available"
+  },
+  {
+    "id": "B-31-3102",
+    "building": "嘉禧苑B栋",
+    "floor": 31,
+    "room_number": "3102",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1847.57,
+    "status": "available"
+  },
+  {
+    "id": "B-31-3103",
+    "building": "嘉禧苑B栋",
+    "floor": 31,
+    "room_number": "3103",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1846.03,
+    "status": "available"
+  },
+  {
+    "id": "B-31-3104",
+    "building": "嘉禧苑B栋",
+    "floor": 31,
+    "room_number": "3104",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1932.4,
+    "status": "available"
+  },
+  {
+    "id": "B-31-3105",
+    "building": "嘉禧苑B栋",
+    "floor": 31,
+    "room_number": "3105",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1946.96,
+    "status": "available"
+  },
+  {
+    "id": "B-30-3001",
+    "building": "嘉禧苑B栋",
+    "floor": 30,
+    "room_number": "3001",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1932.4,
+    "status": "available"
+  },
+  {
+    "id": "B-30-3002",
+    "building": "嘉禧苑B栋",
+    "floor": 30,
+    "room_number": "3002",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1847.57,
+    "status": "available"
+  },
+  {
+    "id": "B-30-3003",
+    "building": "嘉禧苑B栋",
+    "floor": 30,
+    "room_number": "3003",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1846.03,
+    "status": "available"
+  },
+  {
+    "id": "B-30-3004",
+    "building": "嘉禧苑B栋",
+    "floor": 30,
+    "room_number": "3004",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1889.22,
+    "status": "available"
+  },
+  {
+    "id": "B-30-3005",
+    "building": "嘉禧苑B栋",
+    "floor": 30,
+    "room_number": "3005",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1893.67,
+    "status": "available"
+  },
+  {
+    "id": "B-29-2901",
+    "building": "嘉禧苑B栋",
+    "floor": 29,
+    "room_number": "2901",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1932.4,
+    "status": "available"
+  },
+  {
+    "id": "B-29-2902",
+    "building": "嘉禧苑B栋",
+    "floor": 29,
+    "room_number": "2902",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1847.57,
+    "status": "available"
+  },
+  {
+    "id": "B-29-2903",
+    "building": "嘉禧苑B栋",
+    "floor": 29,
+    "room_number": "2903",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1846.03,
+    "status": "available"
+  },
+  {
+    "id": "B-29-2904",
+    "building": "嘉禧苑B栋",
+    "floor": 29,
+    "room_number": "2904",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1889.22,
+    "status": "available"
+  },
+  {
+    "id": "B-29-2905",
+    "building": "嘉禧苑B栋",
+    "floor": 29,
+    "room_number": "2905",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1893.67,
+    "status": "available"
+  },
+  {
+    "id": "B-28-2801",
+    "building": "嘉禧苑B栋",
+    "floor": 28,
+    "room_number": "2801",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1932.4,
+    "status": "available"
+  },
+  {
+    "id": "B-28-2802",
+    "building": "嘉禧苑B栋",
+    "floor": 28,
+    "room_number": "2802",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1847.57,
+    "status": "available"
+  },
+  {
+    "id": "B-28-2803",
+    "building": "嘉禧苑B栋",
+    "floor": 28,
+    "room_number": "2803",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1846.03,
+    "status": "available"
+  },
+  {
+    "id": "B-28-2804",
+    "building": "嘉禧苑B栋",
+    "floor": 28,
+    "room_number": "2804",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1889.22,
+    "status": "available"
+  },
+  {
+    "id": "B-28-2805",
+    "building": "嘉禧苑B栋",
+    "floor": 28,
+    "room_number": "2805",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1893.67,
+    "status": "available"
+  },
+  {
+    "id": "B-27-2701",
+    "building": "嘉禧苑B栋",
+    "floor": 27,
+    "room_number": "2701",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1932.4,
+    "status": "available"
+  },
+  {
+    "id": "B-27-2702",
+    "building": "嘉禧苑B栋",
+    "floor": 27,
+    "room_number": "2702",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1804.35,
+    "status": "available"
+  },
+  {
+    "id": "B-27-2703",
+    "building": "嘉禧苑B栋",
+    "floor": 27,
+    "room_number": "2703",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1802.85,
+    "status": "available"
+  },
+  {
+    "id": "B-27-2704",
+    "building": "嘉禧苑B栋",
+    "floor": 27,
+    "room_number": "2704",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1889.22,
+    "status": "available"
+  },
+  {
+    "id": "B-27-2705",
+    "building": "嘉禧苑B栋",
+    "floor": 27,
+    "room_number": "2705",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1893.67,
+    "status": "available"
+  },
+  {
+    "id": "B-26-2601",
+    "building": "嘉禧苑B栋",
+    "floor": 26,
+    "room_number": "2601",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1889.22,
+    "status": "available"
+  },
+  {
+    "id": "B-26-2602",
+    "building": "嘉禧苑B栋",
+    "floor": 26,
+    "room_number": "2602",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1804.35,
+    "status": "available"
+  },
+  {
+    "id": "B-26-2603",
+    "building": "嘉禧苑B栋",
+    "floor": 26,
+    "room_number": "2603",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1802.85,
+    "status": "available"
+  },
+  {
+    "id": "B-26-2604",
+    "building": "嘉禧苑B栋",
+    "floor": 26,
+    "room_number": "2604",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1889.22,
+    "status": "available"
+  },
+  {
+    "id": "B-26-2605",
+    "building": "嘉禧苑B栋",
+    "floor": 26,
+    "room_number": "2605",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1893.67,
+    "status": "available"
+  },
+  {
+    "id": "B-25-2501",
+    "building": "嘉禧苑B栋",
+    "floor": 25,
+    "room_number": "2501",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1889.22,
+    "status": "available"
+  },
+  {
+    "id": "B-25-2502",
+    "building": "嘉禧苑B栋",
+    "floor": 25,
+    "room_number": "2502",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1804.35,
+    "status": "available"
+  },
+  {
+    "id": "B-25-2503",
+    "building": "嘉禧苑B栋",
+    "floor": 25,
+    "room_number": "2503",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1802.85,
+    "status": "available"
+  },
+  {
+    "id": "B-25-2504",
+    "building": "嘉禧苑B栋",
+    "floor": 25,
+    "room_number": "2504",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1889.22,
+    "status": "available"
+  },
+  {
+    "id": "B-25-2505",
+    "building": "嘉禧苑B栋",
+    "floor": 25,
+    "room_number": "2505",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1893.67,
+    "status": "available"
+  },
+  {
+    "id": "B-24-2401",
+    "building": "嘉禧苑B栋",
+    "floor": 24,
+    "room_number": "2401",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1889.22,
+    "status": "available"
+  },
+  {
+    "id": "B-24-2402",
+    "building": "嘉禧苑B栋",
+    "floor": 24,
+    "room_number": "2402",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1804.35,
+    "status": "available"
+  },
+  {
+    "id": "B-24-2403",
+    "building": "嘉禧苑B栋",
+    "floor": 24,
+    "room_number": "2403",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1802.85,
+    "status": "available"
+  },
+  {
+    "id": "B-24-2404",
+    "building": "嘉禧苑B栋",
+    "floor": 24,
+    "room_number": "2404",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1889.22,
+    "status": "available"
+  },
+  {
+    "id": "B-24-2405",
+    "building": "嘉禧苑B栋",
+    "floor": 24,
+    "room_number": "2405",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1893.67,
+    "status": "available"
+  },
+  {
+    "id": "B-23-2301",
+    "building": "嘉禧苑B栋",
+    "floor": 23,
+    "room_number": "2301",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1889.22,
+    "status": "available"
+  },
+  {
+    "id": "B-23-2302",
+    "building": "嘉禧苑B栋",
+    "floor": 23,
+    "room_number": "2302",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1804.35,
+    "status": "available"
+  },
+  {
+    "id": "B-23-2303",
+    "building": "嘉禧苑B栋",
+    "floor": 23,
+    "room_number": "2303",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1802.85,
+    "status": "available"
+  },
+  {
+    "id": "B-23-2304",
+    "building": "嘉禧苑B栋",
+    "floor": 23,
+    "room_number": "2304",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1846.03,
+    "status": "available"
+  },
+  {
+    "id": "B-23-2305",
+    "building": "嘉禧苑B栋",
+    "floor": 23,
+    "room_number": "2305",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1850.39,
+    "status": "available"
+  },
+  {
+    "id": "B-22-2201",
+    "building": "嘉禧苑B栋",
+    "floor": 22,
+    "room_number": "2201",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1889.22,
+    "status": "available"
+  },
+  {
+    "id": "B-22-2202",
+    "building": "嘉禧苑B栋",
+    "floor": 22,
+    "room_number": "2202",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1804.35,
+    "status": "available"
+  },
+  {
+    "id": "B-22-2203",
+    "building": "嘉禧苑B栋",
+    "floor": 22,
+    "room_number": "2203",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1802.85,
+    "status": "available"
+  },
+  {
+    "id": "B-22-2204",
+    "building": "嘉禧苑B栋",
+    "floor": 22,
+    "room_number": "2204",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1846.03,
+    "status": "available"
+  },
+  {
+    "id": "B-22-2205",
+    "building": "嘉禧苑B栋",
+    "floor": 22,
+    "room_number": "2205",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1850.39,
+    "status": "available"
+  },
+  {
+    "id": "B-21-2101",
+    "building": "嘉禧苑B栋",
+    "floor": 21,
+    "room_number": "2101",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1889.22,
+    "status": "available"
+  },
+  {
+    "id": "B-21-2102",
+    "building": "嘉禧苑B栋",
+    "floor": 21,
+    "room_number": "2102",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1804.35,
+    "status": "available"
+  },
+  {
+    "id": "B-21-2103",
+    "building": "嘉禧苑B栋",
+    "floor": 21,
+    "room_number": "2103",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1802.85,
+    "status": "available"
+  },
+  {
+    "id": "B-21-2104",
+    "building": "嘉禧苑B栋",
+    "floor": 21,
+    "room_number": "2104",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1846.03,
+    "status": "available"
+  },
+  {
+    "id": "B-21-2105",
+    "building": "嘉禧苑B栋",
+    "floor": 21,
+    "room_number": "2105",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1850.39,
+    "status": "available"
+  },
+  {
+    "id": "B-20-2001",
+    "building": "嘉禧苑B栋",
+    "floor": 20,
+    "room_number": "2001",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1889.22,
+    "status": "available"
+  },
+  {
+    "id": "B-20-2002",
+    "building": "嘉禧苑B栋",
+    "floor": 20,
+    "room_number": "2002",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1761.13,
+    "status": "available"
+  },
+  {
+    "id": "B-20-2003",
+    "building": "嘉禧苑B栋",
+    "floor": 20,
+    "room_number": "2003",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1759.67,
+    "status": "available"
+  },
+  {
+    "id": "B-20-2004",
+    "building": "嘉禧苑B栋",
+    "floor": 20,
+    "room_number": "2004",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1846.03,
+    "status": "available"
+  },
+  {
+    "id": "B-20-2005",
+    "building": "嘉禧苑B栋",
+    "floor": 20,
+    "room_number": "2005",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1850.39,
+    "status": "available"
+  },
+  {
+    "id": "B-19-1901",
+    "building": "嘉禧苑B栋",
+    "floor": 19,
+    "room_number": "1901",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1846.03,
+    "status": "available"
+  },
+  {
+    "id": "B-19-1902",
+    "building": "嘉禧苑B栋",
+    "floor": 19,
+    "room_number": "1902",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1761.13,
+    "status": "available"
+  },
+  {
+    "id": "B-19-1903",
+    "building": "嘉禧苑B栋",
+    "floor": 19,
+    "room_number": "1903",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1759.67,
+    "status": "available"
+  },
+  {
+    "id": "B-19-1904",
+    "building": "嘉禧苑B栋",
+    "floor": 19,
+    "room_number": "1904",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1846.03,
+    "status": "available"
+  },
+  {
+    "id": "B-19-1905",
+    "building": "嘉禧苑B栋",
+    "floor": 19,
+    "room_number": "1905",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1850.39,
+    "status": "available"
+  },
+  {
+    "id": "B-18-1801",
+    "building": "嘉禧苑B栋",
+    "floor": 18,
+    "room_number": "1801",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1846.03,
+    "status": "available"
+  },
+  {
+    "id": "B-18-1802",
+    "building": "嘉禧苑B栋",
+    "floor": 18,
+    "room_number": "1802",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1761.13,
+    "status": "available"
+  },
+  {
+    "id": "B-18-1803",
+    "building": "嘉禧苑B栋",
+    "floor": 18,
+    "room_number": "1803",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1759.67,
+    "status": "available"
+  },
+  {
+    "id": "B-18-1804",
+    "building": "嘉禧苑B栋",
+    "floor": 18,
+    "room_number": "1804",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1802.85,
+    "status": "available"
+  },
+  {
+    "id": "B-18-1805",
+    "building": "嘉禧苑B栋",
+    "floor": 18,
+    "room_number": "1805",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1807.1,
+    "status": "available"
+  },
+  {
+    "id": "B-17-1701",
+    "building": "嘉禧苑B栋",
+    "floor": 17,
+    "room_number": "1701",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1846.03,
+    "status": "available"
+  },
+  {
+    "id": "B-17-1702",
+    "building": "嘉禧苑B栋",
+    "floor": 17,
+    "room_number": "1702",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1761.13,
+    "status": "available"
+  },
+  {
+    "id": "B-17-1703",
+    "building": "嘉禧苑B栋",
+    "floor": 17,
+    "room_number": "1703",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1759.67,
+    "status": "available"
+  },
+  {
+    "id": "B-17-1704",
+    "building": "嘉禧苑B栋",
+    "floor": 17,
+    "room_number": "1704",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1802.85,
+    "status": "available"
+  },
+  {
+    "id": "B-17-1705",
+    "building": "嘉禧苑B栋",
+    "floor": 17,
+    "room_number": "1705",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1807.1,
+    "status": "available"
+  },
+  {
+    "id": "B-16-1601",
+    "building": "嘉禧苑B栋",
+    "floor": 16,
+    "room_number": "1601",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1846.03,
+    "status": "available"
+  },
+  {
+    "id": "B-16-1602",
+    "building": "嘉禧苑B栋",
+    "floor": 16,
+    "room_number": "1602",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1761.13,
+    "status": "available"
+  },
+  {
+    "id": "B-16-1603",
+    "building": "嘉禧苑B栋",
+    "floor": 16,
+    "room_number": "1603",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1759.67,
+    "status": "available"
+  },
+  {
+    "id": "B-16-1604",
+    "building": "嘉禧苑B栋",
+    "floor": 16,
+    "room_number": "1604",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1802.85,
+    "status": "available"
+  },
+  {
+    "id": "B-16-1605",
+    "building": "嘉禧苑B栋",
+    "floor": 16,
+    "room_number": "1605",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1807.1,
+    "status": "available"
+  },
+  {
+    "id": "B-14-1401",
+    "building": "嘉禧苑B栋",
+    "floor": 14,
+    "room_number": "1401",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1792.33,
+    "status": "available"
+  },
+  {
+    "id": "B-14-1402",
+    "building": "嘉禧苑B栋",
+    "floor": 14,
+    "room_number": "1402",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1707.89,
+    "status": "available"
+  },
+  {
+    "id": "B-14-1403",
+    "building": "嘉禧苑B栋",
+    "floor": 14,
+    "room_number": "1403",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1706.47,
+    "status": "available"
+  },
+  {
+    "id": "B-14-1404",
+    "building": "嘉禧苑B栋",
+    "floor": 14,
+    "room_number": "1404",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1749.4,
+    "status": "available"
+  },
+  {
+    "id": "B-14-1405",
+    "building": "嘉禧苑B栋",
+    "floor": 14,
+    "room_number": "1405",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1796.34,
+    "status": "available"
+  },
+  {
+    "id": "B-13-1301",
+    "building": "嘉禧苑B栋",
+    "floor": 13,
+    "room_number": "1301",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1792.33,
+    "status": "available"
+  },
+  {
+    "id": "B-13-1302",
+    "building": "嘉禧苑B栋",
+    "floor": 13,
+    "room_number": "1302",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1707.89,
+    "status": "available"
+  },
+  {
+    "id": "B-13-1303",
+    "building": "嘉禧苑B栋",
+    "floor": 13,
+    "room_number": "1303",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1706.47,
+    "status": "available"
+  },
+  {
+    "id": "B-13-1304",
+    "building": "嘉禧苑B栋",
+    "floor": 13,
+    "room_number": "1304",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1749.4,
+    "status": "available"
+  },
+  {
+    "id": "B-13-1305",
+    "building": "嘉禧苑B栋",
+    "floor": 13,
+    "room_number": "1305",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1753.31,
+    "status": "available"
+  },
+  {
+    "id": "B-12-1201",
+    "building": "嘉禧苑B栋",
+    "floor": 12,
+    "room_number": "1201",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1792.33,
+    "status": "available"
+  },
+  {
+    "id": "B-12-1202",
+    "building": "嘉禧苑B栋",
+    "floor": 12,
+    "room_number": "1202",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1707.89,
+    "status": "available"
+  },
+  {
+    "id": "B-12-1203",
+    "building": "嘉禧苑B栋",
+    "floor": 12,
+    "room_number": "1203",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1706.47,
+    "status": "available"
+  },
+  {
+    "id": "B-12-1204",
+    "building": "嘉禧苑B栋",
+    "floor": 12,
+    "room_number": "1204",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1749.4,
+    "status": "available"
+  },
+  {
+    "id": "B-12-1205",
+    "building": "嘉禧苑B栋",
+    "floor": 12,
+    "room_number": "1205",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1753.31,
+    "status": "available"
+  },
+  {
+    "id": "B-11-1101",
+    "building": "嘉禧苑B栋",
+    "floor": 11,
+    "room_number": "1101",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1792.33,
+    "status": "available"
+  },
+  {
+    "id": "B-11-1102",
+    "building": "嘉禧苑B栋",
+    "floor": 11,
+    "room_number": "1102",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1707.89,
+    "status": "available"
+  },
+  {
+    "id": "B-11-1103",
+    "building": "嘉禧苑B栋",
+    "floor": 11,
+    "room_number": "1103",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1706.47,
+    "status": "available"
+  },
+  {
+    "id": "B-11-1104",
+    "building": "嘉禧苑B栋",
+    "floor": 11,
+    "room_number": "1104",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1749.4,
+    "status": "available"
+  },
+  {
+    "id": "B-11-1105",
+    "building": "嘉禧苑B栋",
+    "floor": 11,
+    "room_number": "1105",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1753.31,
+    "status": "available"
+  },
+  {
+    "id": "B-10-1001",
+    "building": "嘉禧苑B栋",
+    "floor": 10,
+    "room_number": "1001",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1792.33,
+    "status": "available"
+  },
+  {
+    "id": "B-10-1002",
+    "building": "嘉禧苑B栋",
+    "floor": 10,
+    "room_number": "1002",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1707.89,
+    "status": "available"
+  },
+  {
+    "id": "B-10-1003",
+    "building": "嘉禧苑B栋",
+    "floor": 10,
+    "room_number": "1003",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1706.47,
+    "status": "available"
+  },
+  {
+    "id": "B-10-1004",
+    "building": "嘉禧苑B栋",
+    "floor": 10,
+    "room_number": "1004",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1749.4,
+    "status": "available"
+  },
+  {
+    "id": "B-10-1005",
+    "building": "嘉禧苑B栋",
+    "floor": 10,
+    "room_number": "1005",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1753.31,
+    "status": "available"
+  },
+  {
+    "id": "B-9-901",
+    "building": "嘉禧苑B栋",
+    "floor": 9,
+    "room_number": "901",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1743.04,
+    "status": "available"
+  },
+  {
+    "id": "B-9-902",
+    "building": "嘉禧苑B栋",
+    "floor": 9,
+    "room_number": "902",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1660.28,
+    "status": "available"
+  },
+  {
+    "id": "B-9-903",
+    "building": "嘉禧苑B栋",
+    "floor": 9,
+    "room_number": "903",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1657.49,
+    "status": "available"
+  },
+  {
+    "id": "B-9-904",
+    "building": "嘉禧苑B栋",
+    "floor": 9,
+    "room_number": "904",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1743.04,
+    "status": "available"
+  },
+  {
+    "id": "B-9-905",
+    "building": "嘉禧苑B栋",
+    "floor": 9,
+    "room_number": "905",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1746.95,
+    "status": "available"
+  },
+  {
+    "id": "B-8-801",
+    "building": "嘉禧苑B栋",
+    "floor": 8,
+    "room_number": "801",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1743.04,
+    "status": "available"
+  },
+  {
+    "id": "B-8-802",
+    "building": "嘉禧苑B栋",
+    "floor": 8,
+    "room_number": "802",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1660.28,
+    "status": "available"
+  },
+  {
+    "id": "B-8-803",
+    "building": "嘉禧苑B栋",
+    "floor": 8,
+    "room_number": "803",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1657.49,
+    "status": "available"
+  },
+  {
+    "id": "B-8-804",
+    "building": "嘉禧苑B栋",
+    "floor": 8,
+    "room_number": "804",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1743.04,
+    "status": "available"
+  },
+  {
+    "id": "B-8-805",
+    "building": "嘉禧苑B栋",
+    "floor": 8,
+    "room_number": "805",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1746.95,
+    "status": "available"
+  },
+  {
+    "id": "B-7-701",
+    "building": "嘉禧苑B栋",
+    "floor": 7,
+    "room_number": "701",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1743.04,
+    "status": "available"
+  },
+  {
+    "id": "B-7-702",
+    "building": "嘉禧苑B栋",
+    "floor": 7,
+    "room_number": "702",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1660.28,
+    "status": "available"
+  },
+  {
+    "id": "B-7-703",
+    "building": "嘉禧苑B栋",
+    "floor": 7,
+    "room_number": "703",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1657.49,
+    "status": "available"
+  },
+  {
+    "id": "B-7-704",
+    "building": "嘉禧苑B栋",
+    "floor": 7,
+    "room_number": "704",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1700.27,
+    "status": "available"
+  },
+  {
+    "id": "B-7-705",
+    "building": "嘉禧苑B栋",
+    "floor": 7,
+    "room_number": "705",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1704.08,
+    "status": "available"
+  },
+  {
+    "id": "B-6-601",
+    "building": "嘉禧苑B栋",
+    "floor": 6,
+    "room_number": "601",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1743.04,
+    "status": "available"
+  },
+  {
+    "id": "B-6-602",
+    "building": "嘉禧苑B栋",
+    "floor": 6,
+    "room_number": "602",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1660.28,
+    "status": "available"
+  },
+  {
+    "id": "B-6-603",
+    "building": "嘉禧苑B栋",
+    "floor": 6,
+    "room_number": "603",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1657.49,
+    "status": "available"
+  },
+  {
+    "id": "B-6-604",
+    "building": "嘉禧苑B栋",
+    "floor": 6,
+    "room_number": "604",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1700.27,
+    "status": "available"
+  },
+  {
+    "id": "B-6-605",
+    "building": "嘉禧苑B栋",
+    "floor": 6,
+    "room_number": "605",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1704.08,
+    "status": "available"
+  },
+  {
+    "id": "B-5-501",
+    "building": "嘉禧苑B栋",
+    "floor": 5,
+    "room_number": "501",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1743.04,
+    "status": "available"
+  },
+  {
+    "id": "B-5-502",
+    "building": "嘉禧苑B栋",
+    "floor": 5,
+    "room_number": "502",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1660.28,
+    "status": "available"
+  },
+  {
+    "id": "B-5-503",
+    "building": "嘉禧苑B栋",
+    "floor": 5,
+    "room_number": "503",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1657.49,
+    "status": "available"
+  },
+  {
+    "id": "B-5-504",
+    "building": "嘉禧苑B栋",
+    "floor": 5,
+    "room_number": "504",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1700.27,
+    "status": "available"
+  },
+  {
+    "id": "B-5-505",
+    "building": "嘉禧苑B栋",
+    "floor": 5,
+    "room_number": "505",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1704.08,
+    "status": "available"
+  },
+  {
+    "id": "B-4-401",
+    "building": "嘉禧苑B栋",
+    "floor": 4,
+    "room_number": "401",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1743.04,
+    "status": "available"
+  },
+  {
+    "id": "B-4-402",
+    "building": "嘉禧苑B栋",
+    "floor": 4,
+    "room_number": "402",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1660.28,
+    "status": "available"
+  },
+  {
+    "id": "B-4-403",
+    "building": "嘉禧苑B栋",
+    "floor": 4,
+    "room_number": "403",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1657.49,
+    "status": "available"
+  },
+  {
+    "id": "B-4-404",
+    "building": "嘉禧苑B栋",
+    "floor": 4,
+    "room_number": "404",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1700.27,
+    "status": "available"
+  },
+  {
+    "id": "B-4-405",
+    "building": "嘉禧苑B栋",
+    "floor": 4,
+    "room_number": "405",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1704.08,
+    "status": "available"
+  },
+  {
+    "id": "B-3-301",
+    "building": "嘉禧苑B栋",
+    "floor": 3,
+    "room_number": "301",
+    "room_type": "01房",
+    "direction": "正南",
+    "price": 1743.04,
+    "status": "available"
+  },
+  {
+    "id": "B-3-302",
+    "building": "嘉禧苑B栋",
+    "floor": 3,
+    "room_number": "302",
+    "room_type": "02房",
+    "direction": "正西",
+    "price": 1660.28,
+    "status": "available"
+  },
+  {
+    "id": "B-3-303",
+    "building": "嘉禧苑B栋",
+    "floor": 3,
+    "room_number": "303",
+    "room_type": "03房",
+    "direction": "正西",
+    "price": 1657.49,
+    "status": "available"
+  },
+  {
+    "id": "B-3-304",
+    "building": "嘉禧苑B栋",
+    "floor": 3,
+    "room_number": "304",
+    "room_type": "04房",
+    "direction": "正东",
+    "price": 1700.27,
+    "status": "available"
+  },
+  {
+    "id": "B-3-305",
+    "building": "嘉禧苑B栋",
+    "floor": 3,
+    "room_number": "305",
+    "room_type": "05房",
+    "direction": "正东",
+    "price": 1704.08,
+    "status": "available"
+  },
+  {
+    "id": "C-46-4601",
+    "building": "嘉禧苑C栋",
+    "floor": 46,
+    "room_number": "4601",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 2073.69,
+    "status": "available"
+  },
+  {
+    "id": "C-46-4602",
+    "building": "嘉禧苑C栋",
+    "floor": 46,
+    "room_number": "4602",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 2073.69,
+    "status": "available"
+  },
+  {
+    "id": "C-46-4603",
+    "building": "嘉禧苑C栋",
+    "floor": 46,
+    "room_number": "4603",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 2073.69,
+    "status": "available"
+  },
+  {
+    "id": "C-46-4604",
+    "building": "嘉禧苑C栋",
+    "floor": 46,
+    "room_number": "4604",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1986.28,
+    "status": "available"
+  },
+  {
+    "id": "C-46-4605",
+    "building": "嘉禧苑C栋",
+    "floor": 46,
+    "room_number": "4605",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1989.85,
+    "status": "available"
+  },
+  {
+    "id": "C-45-4501",
+    "building": "嘉禧苑C栋",
+    "floor": 45,
+    "room_number": "4501",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 2073.69,
+    "status": "available"
+  },
+  {
+    "id": "C-45-4502",
+    "building": "嘉禧苑C栋",
+    "floor": 45,
+    "room_number": "4502",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 2073.69,
+    "status": "available"
+  },
+  {
+    "id": "C-45-4503",
+    "building": "嘉禧苑C栋",
+    "floor": 45,
+    "room_number": "4503",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 2073.69,
+    "status": "available"
+  },
+  {
+    "id": "C-45-4504",
+    "building": "嘉禧苑C栋",
+    "floor": 45,
+    "room_number": "4504",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1986.28,
+    "status": "available"
+  },
+  {
+    "id": "C-45-4505",
+    "building": "嘉禧苑C栋",
+    "floor": 45,
+    "room_number": "4505",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1989.85,
+    "status": "available"
+  },
+  {
+    "id": "C-44-4401",
+    "building": "嘉禧苑C栋",
+    "floor": 44,
+    "room_number": "4401",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 2073.69,
+    "status": "available"
+  },
+  {
+    "id": "C-44-4402",
+    "building": "嘉禧苑C栋",
+    "floor": 44,
+    "room_number": "4402",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 2030.26,
+    "status": "available"
+  },
+  {
+    "id": "C-44-4403",
+    "building": "嘉禧苑C栋",
+    "floor": 44,
+    "room_number": "4403",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 2030.26,
+    "status": "available"
+  },
+  {
+    "id": "C-44-4404",
+    "building": "嘉禧苑C栋",
+    "floor": 44,
+    "room_number": "4404",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1986.28,
+    "status": "available"
+  },
+  {
+    "id": "C-44-4405",
+    "building": "嘉禧苑C栋",
+    "floor": 44,
+    "room_number": "4405",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1989.85,
+    "status": "available"
+  },
+  {
+    "id": "C-43-4301",
+    "building": "嘉禧苑C栋",
+    "floor": 43,
+    "room_number": "4301",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 2073.69,
+    "status": "available"
+  },
+  {
+    "id": "C-43-4302",
+    "building": "嘉禧苑C栋",
+    "floor": 43,
+    "room_number": "4302",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 2030.26,
+    "status": "available"
+  },
+  {
+    "id": "C-43-4303",
+    "building": "嘉禧苑C栋",
+    "floor": 43,
+    "room_number": "4303",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 2030.26,
+    "status": "available"
+  },
+  {
+    "id": "C-43-4304",
+    "building": "嘉禧苑C栋",
+    "floor": 43,
+    "room_number": "4304",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1986.28,
+    "status": "available"
+  },
+  {
+    "id": "C-43-4305",
+    "building": "嘉禧苑C栋",
+    "floor": 43,
+    "room_number": "4305",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1989.85,
+    "status": "available"
+  },
+  {
+    "id": "C-42-4201",
+    "building": "嘉禧苑C栋",
+    "floor": 42,
+    "room_number": "4201",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 2073.69,
+    "status": "available"
+  },
+  {
+    "id": "C-42-4202",
+    "building": "嘉禧苑C栋",
+    "floor": 42,
+    "room_number": "4202",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 2030.26,
+    "status": "available"
+  },
+  {
+    "id": "C-42-4203",
+    "building": "嘉禧苑C栋",
+    "floor": 42,
+    "room_number": "4203",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 2030.26,
+    "status": "available"
+  },
+  {
+    "id": "C-42-4204",
+    "building": "嘉禧苑C栋",
+    "floor": 42,
+    "room_number": "4204",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1942.86,
+    "status": "available"
+  },
+  {
+    "id": "C-42-4205",
+    "building": "嘉禧苑C栋",
+    "floor": 42,
+    "room_number": "4205",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1946.36,
+    "status": "available"
+  },
+  {
+    "id": "C-41-4101",
+    "building": "嘉禧苑C栋",
+    "floor": 41,
+    "room_number": "4101",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 2073.69,
+    "status": "available"
+  },
+  {
+    "id": "C-41-4102",
+    "building": "嘉禧苑C栋",
+    "floor": 41,
+    "room_number": "4102",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 2030.26,
+    "status": "available"
+  },
+  {
+    "id": "C-41-4103",
+    "building": "嘉禧苑C栋",
+    "floor": 41,
+    "room_number": "4103",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 2030.26,
+    "status": "available"
+  },
+  {
+    "id": "C-41-4104",
+    "building": "嘉禧苑C栋",
+    "floor": 41,
+    "room_number": "4104",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1942.86,
+    "status": "available"
+  },
+  {
+    "id": "C-41-4105",
+    "building": "嘉禧苑C栋",
+    "floor": 41,
+    "room_number": "4105",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1946.36,
+    "status": "available"
+  },
+  {
+    "id": "C-40-4001",
+    "building": "嘉禧苑C栋",
+    "floor": 40,
+    "room_number": "4001",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 2030.26,
+    "status": "available"
+  },
+  {
+    "id": "C-40-4002",
+    "building": "嘉禧苑C栋",
+    "floor": 40,
+    "room_number": "4002",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 2030.26,
+    "status": "available"
+  },
+  {
+    "id": "C-40-4003",
+    "building": "嘉禧苑C栋",
+    "floor": 40,
+    "room_number": "4003",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 2030.26,
+    "status": "available"
+  },
+  {
+    "id": "C-40-4004",
+    "building": "嘉禧苑C栋",
+    "floor": 40,
+    "room_number": "4004",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1942.86,
+    "status": "available"
+  },
+  {
+    "id": "C-40-4005",
+    "building": "嘉禧苑C栋",
+    "floor": 40,
+    "room_number": "4005",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1946.36,
+    "status": "available"
+  },
+  {
+    "id": "C-39-3901",
+    "building": "嘉禧苑C栋",
+    "floor": 39,
+    "room_number": "3901",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 2030.26,
+    "status": "available"
+  },
+  {
+    "id": "C-39-3902",
+    "building": "嘉禧苑C栋",
+    "floor": 39,
+    "room_number": "3902",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1986.83,
+    "status": "available"
+  },
+  {
+    "id": "C-39-3903",
+    "building": "嘉禧苑C栋",
+    "floor": 39,
+    "room_number": "3903",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1986.83,
+    "status": "available"
+  },
+  {
+    "id": "C-39-3904",
+    "building": "嘉禧苑C栋",
+    "floor": 39,
+    "room_number": "3904",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1942.86,
+    "status": "available"
+  },
+  {
+    "id": "C-39-3905",
+    "building": "嘉禧苑C栋",
+    "floor": 39,
+    "room_number": "3905",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1946.36,
+    "status": "available"
+  },
+  {
+    "id": "C-38-3801",
+    "building": "嘉禧苑C栋",
+    "floor": 38,
+    "room_number": "3801",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 2030.26,
+    "status": "available"
+  },
+  {
+    "id": "C-38-3802",
+    "building": "嘉禧苑C栋",
+    "floor": 38,
+    "room_number": "3802",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1986.83,
+    "status": "available"
+  },
+  {
+    "id": "C-38-3803",
+    "building": "嘉禧苑C栋",
+    "floor": 38,
+    "room_number": "3803",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1986.83,
+    "status": "available"
+  },
+  {
+    "id": "C-38-3804",
+    "building": "嘉禧苑C栋",
+    "floor": 38,
+    "room_number": "3804",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1942.86,
+    "status": "available"
+  },
+  {
+    "id": "C-38-3805",
+    "building": "嘉禧苑C栋",
+    "floor": 38,
+    "room_number": "3805",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1946.36,
+    "status": "available"
+  },
+  {
+    "id": "C-37-3701",
+    "building": "嘉禧苑C栋",
+    "floor": 37,
+    "room_number": "3701",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 2030.26,
+    "status": "available"
+  },
+  {
+    "id": "C-37-3702",
+    "building": "嘉禧苑C栋",
+    "floor": 37,
+    "room_number": "3702",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1986.83,
+    "status": "available"
+  },
+  {
+    "id": "C-37-3703",
+    "building": "嘉禧苑C栋",
+    "floor": 37,
+    "room_number": "3703",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1986.83,
+    "status": "available"
+  },
+  {
+    "id": "C-37-3704",
+    "building": "嘉禧苑C栋",
+    "floor": 37,
+    "room_number": "3704",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1899.45,
+    "status": "available"
+  },
+  {
+    "id": "C-37-3705",
+    "building": "嘉禧苑C栋",
+    "floor": 37,
+    "room_number": "3705",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1902.86,
+    "status": "available"
+  },
+  {
+    "id": "C-36-3601",
+    "building": "嘉禧苑C栋",
+    "floor": 36,
+    "room_number": "3601",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 2030.26,
+    "status": "available"
+  },
+  {
+    "id": "C-36-3602",
+    "building": "嘉禧苑C栋",
+    "floor": 36,
+    "room_number": "3602",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1986.83,
+    "status": "available"
+  },
+  {
+    "id": "C-36-3603",
+    "building": "嘉禧苑C栋",
+    "floor": 36,
+    "room_number": "3603",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1986.83,
+    "status": "available"
+  },
+  {
+    "id": "C-36-3604",
+    "building": "嘉禧苑C栋",
+    "floor": 36,
+    "room_number": "3604",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1899.45,
+    "status": "available"
+  },
+  {
+    "id": "C-36-3605",
+    "building": "嘉禧苑C栋",
+    "floor": 36,
+    "room_number": "3605",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1902.86,
+    "status": "available"
+  },
+  {
+    "id": "C-35-3501",
+    "building": "嘉禧苑C栋",
+    "floor": 35,
+    "room_number": "3501",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1986.83,
+    "status": "available"
+  },
+  {
+    "id": "C-35-3502",
+    "building": "嘉禧苑C栋",
+    "floor": 35,
+    "room_number": "3502",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1986.83,
+    "status": "available"
+  },
+  {
+    "id": "C-35-3503",
+    "building": "嘉禧苑C栋",
+    "floor": 35,
+    "room_number": "3503",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1986.83,
+    "status": "available"
+  },
+  {
+    "id": "C-35-3504",
+    "building": "嘉禧苑C栋",
+    "floor": 35,
+    "room_number": "3504",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1899.45,
+    "status": "available"
+  },
+  {
+    "id": "C-35-3505",
+    "building": "嘉禧苑C栋",
+    "floor": 35,
+    "room_number": "3505",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1902.86,
+    "status": "available"
+  },
+  {
+    "id": "C-34-3401",
+    "building": "嘉禧苑C栋",
+    "floor": 34,
+    "room_number": "3401",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1986.83,
+    "status": "available"
+  },
+  {
+    "id": "C-34-3402",
+    "building": "嘉禧苑C栋",
+    "floor": 34,
+    "room_number": "3402",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1943.4,
+    "status": "available"
+  },
+  {
+    "id": "C-34-3403",
+    "building": "嘉禧苑C栋",
+    "floor": 34,
+    "room_number": "3403",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1943.4,
+    "status": "available"
+  },
+  {
+    "id": "C-34-3404",
+    "building": "嘉禧苑C栋",
+    "floor": 34,
+    "room_number": "3404",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1899.45,
+    "status": "available"
+  },
+  {
+    "id": "C-34-3405",
+    "building": "嘉禧苑C栋",
+    "floor": 34,
+    "room_number": "3405",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1902.86,
+    "status": "available"
+  },
+  {
+    "id": "C-33-3301",
+    "building": "嘉禧苑C栋",
+    "floor": 33,
+    "room_number": "3301",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1986.83,
+    "status": "available"
+  },
+  {
+    "id": "C-33-3302",
+    "building": "嘉禧苑C栋",
+    "floor": 33,
+    "room_number": "3302",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1943.4,
+    "status": "available"
+  },
+  {
+    "id": "C-33-3303",
+    "building": "嘉禧苑C栋",
+    "floor": 33,
+    "room_number": "3303",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1943.4,
+    "status": "available"
+  },
+  {
+    "id": "C-33-3304",
+    "building": "嘉禧苑C栋",
+    "floor": 33,
+    "room_number": "3304",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1899.45,
+    "status": "available"
+  },
+  {
+    "id": "C-33-3305",
+    "building": "嘉禧苑C栋",
+    "floor": 33,
+    "room_number": "3305",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1902.86,
+    "status": "available"
+  },
+  {
+    "id": "C-31-3101",
+    "building": "嘉禧苑C栋",
+    "floor": 31,
+    "room_number": "3101",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1979.15,
+    "status": "available"
+  },
+  {
+    "id": "C-31-3102",
+    "building": "嘉禧苑C栋",
+    "floor": 31,
+    "room_number": "3102",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1937.49,
+    "status": "available"
+  },
+  {
+    "id": "C-31-3103",
+    "building": "嘉禧苑C栋",
+    "floor": 31,
+    "room_number": "3103",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1935.89,
+    "status": "available"
+  },
+  {
+    "id": "C-31-3104",
+    "building": "嘉禧苑C栋",
+    "floor": 31,
+    "room_number": "3104",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1849.37,
+    "status": "available"
+  },
+  {
+    "id": "C-31-3105",
+    "building": "嘉禧苑C栋",
+    "floor": 31,
+    "room_number": "3105",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1853.47,
+    "status": "available"
+  },
+  {
+    "id": "C-30-3001",
+    "building": "嘉禧苑C栋",
+    "floor": 30,
+    "room_number": "3001",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1935.89,
+    "status": "available"
+  },
+  {
+    "id": "C-30-3002",
+    "building": "嘉禧苑C栋",
+    "floor": 30,
+    "room_number": "3002",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1937.49,
+    "status": "available"
+  },
+  {
+    "id": "C-30-3003",
+    "building": "嘉禧苑C栋",
+    "floor": 30,
+    "room_number": "3003",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1935.89,
+    "status": "available"
+  },
+  {
+    "id": "C-30-3004",
+    "building": "嘉禧苑C栋",
+    "floor": 30,
+    "room_number": "3004",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1849.37,
+    "status": "available"
+  },
+  {
+    "id": "C-30-3005",
+    "building": "嘉禧苑C栋",
+    "floor": 30,
+    "room_number": "3005",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1853.47,
+    "status": "available"
+  },
+  {
+    "id": "C-29-2901",
+    "building": "嘉禧苑C栋",
+    "floor": 29,
+    "room_number": "2901",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1935.89,
+    "status": "available"
+  },
+  {
+    "id": "C-29-2902",
+    "building": "嘉禧苑C栋",
+    "floor": 29,
+    "room_number": "2902",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1894.2,
+    "status": "available"
+  },
+  {
+    "id": "C-29-2903",
+    "building": "嘉禧苑C栋",
+    "floor": 29,
+    "room_number": "2903",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1892.63,
+    "status": "available"
+  },
+  {
+    "id": "C-29-2904",
+    "building": "嘉禧苑C栋",
+    "floor": 29,
+    "room_number": "2904",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1849.37,
+    "status": "available"
+  },
+  {
+    "id": "C-29-2905",
+    "building": "嘉禧苑C栋",
+    "floor": 29,
+    "room_number": "2905",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1853.47,
+    "status": "available"
+  },
+  {
+    "id": "C-28-2801",
+    "building": "嘉禧苑C栋",
+    "floor": 28,
+    "room_number": "2801",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1935.89,
+    "status": "available"
+  },
+  {
+    "id": "C-28-2802",
+    "building": "嘉禧苑C栋",
+    "floor": 28,
+    "room_number": "2802",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1894.2,
+    "status": "available"
+  },
+  {
+    "id": "C-28-2803",
+    "building": "嘉禧苑C栋",
+    "floor": 28,
+    "room_number": "2803",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1892.63,
+    "status": "available"
+  },
+  {
+    "id": "C-28-2804",
+    "building": "嘉禧苑C栋",
+    "floor": 28,
+    "room_number": "2804",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1849.37,
+    "status": "available"
+  },
+  {
+    "id": "C-28-2805",
+    "building": "嘉禧苑C栋",
+    "floor": 28,
+    "room_number": "2805",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1853.47,
+    "status": "available"
+  },
+  {
+    "id": "C-27-2701",
+    "building": "嘉禧苑C栋",
+    "floor": 27,
+    "room_number": "2701",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1935.89,
+    "status": "available"
+  },
+  {
+    "id": "C-27-2702",
+    "building": "嘉禧苑C栋",
+    "floor": 27,
+    "room_number": "2702",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1894.2,
+    "status": "available"
+  },
+  {
+    "id": "C-27-2703",
+    "building": "嘉禧苑C栋",
+    "floor": 27,
+    "room_number": "2703",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1892.63,
+    "status": "available"
+  },
+  {
+    "id": "C-27-2704",
+    "building": "嘉禧苑C栋",
+    "floor": 27,
+    "room_number": "2704",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1849.37,
+    "status": "available"
+  },
+  {
+    "id": "C-27-2705",
+    "building": "嘉禧苑C栋",
+    "floor": 27,
+    "room_number": "2705",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1853.47,
+    "status": "available"
+  },
+  {
+    "id": "C-26-2601",
+    "building": "嘉禧苑C栋",
+    "floor": 26,
+    "room_number": "2601",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1935.89,
+    "status": "available"
+  },
+  {
+    "id": "C-26-2602",
+    "building": "嘉禧苑C栋",
+    "floor": 26,
+    "room_number": "2602",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1894.2,
+    "status": "available"
+  },
+  {
+    "id": "C-26-2603",
+    "building": "嘉禧苑C栋",
+    "floor": 26,
+    "room_number": "2603",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1892.63,
+    "status": "available"
+  },
+  {
+    "id": "C-26-2604",
+    "building": "嘉禧苑C栋",
+    "floor": 26,
+    "room_number": "2604",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1806.11,
+    "status": "available"
+  },
+  {
+    "id": "C-26-2605",
+    "building": "嘉禧苑C栋",
+    "floor": 26,
+    "room_number": "2605",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1810.12,
+    "status": "available"
+  },
+  {
+    "id": "C-25-2501",
+    "building": "嘉禧苑C栋",
+    "floor": 25,
+    "room_number": "2501",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1892.63,
+    "status": "available"
+  },
+  {
+    "id": "C-25-2502",
+    "building": "嘉禧苑C栋",
+    "floor": 25,
+    "room_number": "2502",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1894.2,
+    "status": "available"
+  },
+  {
+    "id": "C-25-2503",
+    "building": "嘉禧苑C栋",
+    "floor": 25,
+    "room_number": "2503",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1892.63,
+    "status": "available"
+  },
+  {
+    "id": "C-25-2504",
+    "building": "嘉禧苑C栋",
+    "floor": 25,
+    "room_number": "2504",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1806.11,
+    "status": "available"
+  },
+  {
+    "id": "C-25-2505",
+    "building": "嘉禧苑C栋",
+    "floor": 25,
+    "room_number": "2505",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1810.12,
+    "status": "available"
+  },
+  {
+    "id": "C-24-2401",
+    "building": "嘉禧苑C栋",
+    "floor": 24,
+    "room_number": "2401",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1892.63,
+    "status": "available"
+  },
+  {
+    "id": "C-24-2402",
+    "building": "嘉禧苑C栋",
+    "floor": 24,
+    "room_number": "2402",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1894.2,
+    "status": "available"
+  },
+  {
+    "id": "C-24-2403",
+    "building": "嘉禧苑C栋",
+    "floor": 24,
+    "room_number": "2403",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1892.63,
+    "status": "available"
+  },
+  {
+    "id": "C-24-2404",
+    "building": "嘉禧苑C栋",
+    "floor": 24,
+    "room_number": "2404",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1806.11,
+    "status": "available"
+  },
+  {
+    "id": "C-24-2405",
+    "building": "嘉禧苑C栋",
+    "floor": 24,
+    "room_number": "2405",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1810.12,
+    "status": "available"
+  },
+  {
+    "id": "C-23-2301",
+    "building": "嘉禧苑C栋",
+    "floor": 23,
+    "room_number": "2301",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1892.63,
+    "status": "available"
+  },
+  {
+    "id": "C-23-2302",
+    "building": "嘉禧苑C栋",
+    "floor": 23,
+    "room_number": "2302",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1850.9,
+    "status": "available"
+  },
+  {
+    "id": "C-23-2303",
+    "building": "嘉禧苑C栋",
+    "floor": 23,
+    "room_number": "2303",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1850.9,
+    "status": "available"
+  },
+  {
+    "id": "C-23-2304",
+    "building": "嘉禧苑C栋",
+    "floor": 23,
+    "room_number": "2304",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1806.11,
+    "status": "available"
+  },
+  {
+    "id": "C-23-2305",
+    "building": "嘉禧苑C栋",
+    "floor": 23,
+    "room_number": "2305",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1810.12,
+    "status": "available"
+  },
+  {
+    "id": "C-22-2201",
+    "building": "嘉禧苑C栋",
+    "floor": 22,
+    "room_number": "2201",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1892.63,
+    "status": "available"
+  },
+  {
+    "id": "C-22-2202",
+    "building": "嘉禧苑C栋",
+    "floor": 22,
+    "room_number": "2202",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1850.9,
+    "status": "available"
+  },
+  {
+    "id": "C-22-2203",
+    "building": "嘉禧苑C栋",
+    "floor": 22,
+    "room_number": "2203",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1850.9,
+    "status": "available"
+  },
+  {
+    "id": "C-22-2204",
+    "building": "嘉禧苑C栋",
+    "floor": 22,
+    "room_number": "2204",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1806.11,
+    "status": "available"
+  },
+  {
+    "id": "C-22-2205",
+    "building": "嘉禧苑C栋",
+    "floor": 22,
+    "room_number": "2205",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1810.12,
+    "status": "available"
+  },
+  {
+    "id": "C-21-2101",
+    "building": "嘉禧苑C栋",
+    "floor": 21,
+    "room_number": "2101",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1892.63,
+    "status": "available"
+  },
+  {
+    "id": "C-21-2102",
+    "building": "嘉禧苑C栋",
+    "floor": 21,
+    "room_number": "2102",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1850.9,
+    "status": "available"
+  },
+  {
+    "id": "C-21-2103",
+    "building": "嘉禧苑C栋",
+    "floor": 21,
+    "room_number": "2103",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1850.9,
+    "status": "available"
+  },
+  {
+    "id": "C-21-2104",
+    "building": "嘉禧苑C栋",
+    "floor": 21,
+    "room_number": "2104",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1806.11,
+    "status": "available"
+  },
+  {
+    "id": "C-21-2105",
+    "building": "嘉禧苑C栋",
+    "floor": 21,
+    "room_number": "2105",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1810.12,
+    "status": "available"
+  },
+  {
+    "id": "C-20-2001",
+    "building": "嘉禧苑C栋",
+    "floor": 20,
+    "room_number": "2001",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1892.63,
+    "status": "available"
+  },
+  {
+    "id": "C-20-2002",
+    "building": "嘉禧苑C栋",
+    "floor": 20,
+    "room_number": "2002",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1850.9,
+    "status": "available"
+  },
+  {
+    "id": "C-20-2003",
+    "building": "嘉禧苑C栋",
+    "floor": 20,
+    "room_number": "2003",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1850.9,
+    "status": "available"
+  },
+  {
+    "id": "C-20-2004",
+    "building": "嘉禧苑C栋",
+    "floor": 20,
+    "room_number": "2004",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1762.85,
+    "status": "available"
+  },
+  {
+    "id": "C-20-2005",
+    "building": "嘉禧苑C栋",
+    "floor": 20,
+    "room_number": "2005",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1766.76,
+    "status": "available"
+  },
+  {
+    "id": "C-19-1901",
+    "building": "嘉禧苑C栋",
+    "floor": 19,
+    "room_number": "1901",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1849.37,
+    "status": "available"
+  },
+  {
+    "id": "C-19-1902",
+    "building": "嘉禧苑C栋",
+    "floor": 19,
+    "room_number": "1902",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1850.9,
+    "status": "available"
+  },
+  {
+    "id": "C-19-1903",
+    "building": "嘉禧苑C栋",
+    "floor": 19,
+    "room_number": "1903",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1849.37,
+    "status": "available"
+  },
+  {
+    "id": "C-19-1904",
+    "building": "嘉禧苑C栋",
+    "floor": 19,
+    "room_number": "1904",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1762.85,
+    "status": "available"
+  },
+  {
+    "id": "C-19-1905",
+    "building": "嘉禧苑C栋",
+    "floor": 19,
+    "room_number": "1905",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1766.76,
+    "status": "available"
+  },
+  {
+    "id": "C-18-1801",
+    "building": "嘉禧苑C栋",
+    "floor": 18,
+    "room_number": "1801",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1849.08,
+    "status": "available"
+  },
+  {
+    "id": "C-18-1802",
+    "building": "嘉禧苑C栋",
+    "floor": 18,
+    "room_number": "1802",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1807.61,
+    "status": "available"
+  },
+  {
+    "id": "C-18-1803",
+    "building": "嘉禧苑C栋",
+    "floor": 18,
+    "room_number": "1803",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1806.11,
+    "status": "available"
+  },
+  {
+    "id": "C-18-1804",
+    "building": "嘉禧苑C栋",
+    "floor": 18,
+    "room_number": "1804",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1762.85,
+    "status": "available"
+  },
+  {
+    "id": "C-18-1805",
+    "building": "嘉禧苑C栋",
+    "floor": 18,
+    "room_number": "1805",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1766.76,
+    "status": "available"
+  },
+  {
+    "id": "C-17-1701",
+    "building": "嘉禧苑C栋",
+    "floor": 17,
+    "room_number": "1701",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1849.08,
+    "status": "available"
+  },
+  {
+    "id": "C-17-1702",
+    "building": "嘉禧苑C栋",
+    "floor": 17,
+    "room_number": "1702",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1807.61,
+    "status": "available"
+  },
+  {
+    "id": "C-17-1703",
+    "building": "嘉禧苑C栋",
+    "floor": 17,
+    "room_number": "1703",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1806.11,
+    "status": "available"
+  },
+  {
+    "id": "C-17-1704",
+    "building": "嘉禧苑C栋",
+    "floor": 17,
+    "room_number": "1704",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1762.85,
+    "status": "available"
+  },
+  {
+    "id": "C-17-1705",
+    "building": "嘉禧苑C栋",
+    "floor": 17,
+    "room_number": "1705",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1766.76,
+    "status": "available"
+  },
+  {
+    "id": "C-16-1601",
+    "building": "嘉禧苑C栋",
+    "floor": 16,
+    "room_number": "1601",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1849.08,
+    "status": "available"
+  },
+  {
+    "id": "C-16-1602",
+    "building": "嘉禧苑C栋",
+    "floor": 16,
+    "room_number": "1602",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1807.61,
+    "status": "available"
+  },
+  {
+    "id": "C-16-1603",
+    "building": "嘉禧苑C栋",
+    "floor": 16,
+    "room_number": "1603",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1806.11,
+    "status": "available"
+  },
+  {
+    "id": "C-16-1604",
+    "building": "嘉禧苑C栋",
+    "floor": 16,
+    "room_number": "1604",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1762.85,
+    "status": "available"
+  },
+  {
+    "id": "C-16-1605",
+    "building": "嘉禧苑C栋",
+    "floor": 16,
+    "room_number": "1605",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1766.76,
+    "status": "available"
+  },
+  {
+    "id": "C-14-1401",
+    "building": "嘉禧苑C栋",
+    "floor": 14,
+    "room_number": "1401",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1795.09,
+    "status": "available"
+  },
+  {
+    "id": "C-14-1402",
+    "building": "嘉禧苑C栋",
+    "floor": 14,
+    "room_number": "1402",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1797.08,
+    "status": "available"
+  },
+  {
+    "id": "C-14-1403",
+    "building": "嘉禧苑C栋",
+    "floor": 14,
+    "room_number": "1403",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1795.33,
+    "status": "available"
+  },
+  {
+    "id": "C-14-1404",
+    "building": "嘉禧苑C栋",
+    "floor": 14,
+    "room_number": "1404",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1709.57,
+    "status": "available"
+  },
+  {
+    "id": "C-14-1405",
+    "building": "嘉禧苑C栋",
+    "floor": 14,
+    "room_number": "1405",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1713.39,
+    "status": "available"
+  },
+  {
+    "id": "C-13-1301",
+    "building": "嘉禧苑C栋",
+    "floor": 13,
+    "room_number": "1301",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1795.59,
+    "status": "available"
+  },
+  {
+    "id": "C-13-1302",
+    "building": "嘉禧苑C栋",
+    "floor": 13,
+    "room_number": "1302",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1754.04,
+    "status": "available"
+  },
+  {
+    "id": "C-13-1303",
+    "building": "嘉禧苑C栋",
+    "floor": 13,
+    "room_number": "1303",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1752.33,
+    "status": "available"
+  },
+  {
+    "id": "C-13-1304",
+    "building": "嘉禧苑C栋",
+    "floor": 13,
+    "room_number": "1304",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1709.57,
+    "status": "available"
+  },
+  {
+    "id": "C-13-1305",
+    "building": "嘉禧苑C栋",
+    "floor": 13,
+    "room_number": "1305",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1713.39,
+    "status": "available"
+  },
+  {
+    "id": "C-12-1201",
+    "building": "嘉禧苑C栋",
+    "floor": 12,
+    "room_number": "1201",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1795.59,
+    "status": "available"
+  },
+  {
+    "id": "C-12-1202",
+    "building": "嘉禧苑C栋",
+    "floor": 12,
+    "room_number": "1202",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1754.04,
+    "status": "available"
+  },
+  {
+    "id": "C-12-1203",
+    "building": "嘉禧苑C栋",
+    "floor": 12,
+    "room_number": "1203",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1752.33,
+    "status": "available"
+  },
+  {
+    "id": "C-12-1204",
+    "building": "嘉禧苑C栋",
+    "floor": 12,
+    "room_number": "1204",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1709.57,
+    "status": "available"
+  },
+  {
+    "id": "C-12-1205",
+    "building": "嘉禧苑C栋",
+    "floor": 12,
+    "room_number": "1205",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1713.39,
+    "status": "available"
+  },
+  {
+    "id": "C-11-1101",
+    "building": "嘉禧苑C栋",
+    "floor": 11,
+    "room_number": "1101",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1795.59,
+    "status": "available"
+  },
+  {
+    "id": "C-11-1102",
+    "building": "嘉禧苑C栋",
+    "floor": 11,
+    "room_number": "1102",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1754.04,
+    "status": "available"
+  },
+  {
+    "id": "C-11-1103",
+    "building": "嘉禧苑C栋",
+    "floor": 11,
+    "room_number": "1103",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1752.33,
+    "status": "available"
+  },
+  {
+    "id": "C-11-1104",
+    "building": "嘉禧苑C栋",
+    "floor": 11,
+    "room_number": "1104",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1709.57,
+    "status": "available"
+  },
+  {
+    "id": "C-11-1105",
+    "building": "嘉禧苑C栋",
+    "floor": 11,
+    "room_number": "1105",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1713.39,
+    "status": "available"
+  },
+  {
+    "id": "C-10-1001",
+    "building": "嘉禧苑C栋",
+    "floor": 10,
+    "room_number": "1001",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1795.59,
+    "status": "available"
+  },
+  {
+    "id": "C-10-1002",
+    "building": "嘉禧苑C栋",
+    "floor": 10,
+    "room_number": "1002",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1754.04,
+    "status": "available"
+  },
+  {
+    "id": "C-10-1003",
+    "building": "嘉禧苑C栋",
+    "floor": 10,
+    "room_number": "1003",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1752.33,
+    "status": "available"
+  },
+  {
+    "id": "C-10-1004",
+    "building": "嘉禧苑C栋",
+    "floor": 10,
+    "room_number": "1004",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1709.57,
+    "status": "available"
+  },
+  {
+    "id": "C-10-1005",
+    "building": "嘉禧苑C栋",
+    "floor": 10,
+    "room_number": "1005",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1713.39,
+    "status": "available"
+  },
+  {
+    "id": "C-9-901",
+    "building": "嘉禧苑C栋",
+    "floor": 9,
+    "room_number": "901",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1745.97,
+    "status": "available"
+  },
+  {
+    "id": "C-9-902",
+    "building": "嘉禧苑C栋",
+    "floor": 9,
+    "room_number": "902",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1749.15,
+    "status": "available"
+  },
+  {
+    "id": "C-9-903",
+    "building": "嘉禧苑C栋",
+    "floor": 9,
+    "room_number": "903",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1756.32,
+    "status": "available"
+  },
+  {
+    "id": "C-9-904",
+    "building": "嘉禧苑C栋",
+    "floor": 9,
+    "room_number": "904",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1660.52,
+    "status": "available"
+  },
+  {
+    "id": "C-9-905",
+    "building": "嘉禧苑C栋",
+    "floor": 9,
+    "room_number": "905",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1664.23,
+    "status": "available"
+  },
+  {
+    "id": "C-8-801",
+    "building": "嘉禧苑C栋",
+    "floor": 8,
+    "room_number": "801",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1745.97,
+    "status": "available"
+  },
+  {
+    "id": "C-8-802",
+    "building": "嘉禧苑C栋",
+    "floor": 8,
+    "room_number": "802",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1749.15,
+    "status": "available"
+  },
+  {
+    "id": "C-8-803",
+    "building": "嘉禧苑C栋",
+    "floor": 8,
+    "room_number": "803",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1756.32,
+    "status": "available"
+  },
+  {
+    "id": "C-8-804",
+    "building": "嘉禧苑C栋",
+    "floor": 8,
+    "room_number": "804",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1660.52,
+    "status": "available"
+  },
+  {
+    "id": "C-8-805",
+    "building": "嘉禧苑C栋",
+    "floor": 8,
+    "room_number": "805",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1664.23,
+    "status": "available"
+  },
+  {
+    "id": "C-7-701",
+    "building": "嘉禧苑C栋",
+    "floor": 7,
+    "room_number": "701",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1745.97,
+    "status": "available"
+  },
+  {
+    "id": "C-7-702",
+    "building": "嘉禧苑C栋",
+    "floor": 7,
+    "room_number": "702",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1706.23,
+    "status": "available"
+  },
+  {
+    "id": "C-7-703",
+    "building": "嘉禧苑C栋",
+    "floor": 7,
+    "room_number": "703",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1713.47,
+    "status": "available"
+  },
+  {
+    "id": "C-7-704",
+    "building": "嘉禧苑C栋",
+    "floor": 7,
+    "room_number": "704",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1660.52,
+    "status": "available"
+  },
+  {
+    "id": "C-7-705",
+    "building": "嘉禧苑C栋",
+    "floor": 7,
+    "room_number": "705",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1664.23,
+    "status": "available"
+  },
+  {
+    "id": "C-6-601",
+    "building": "嘉禧苑C栋",
+    "floor": 6,
+    "room_number": "601",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1745.97,
+    "status": "available"
+  },
+  {
+    "id": "C-6-602",
+    "building": "嘉禧苑C栋",
+    "floor": 6,
+    "room_number": "602",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1706.23,
+    "status": "available"
+  },
+  {
+    "id": "C-6-603",
+    "building": "嘉禧苑C栋",
+    "floor": 6,
+    "room_number": "603",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1713.47,
+    "status": "available"
+  },
+  {
+    "id": "C-6-604",
+    "building": "嘉禧苑C栋",
+    "floor": 6,
+    "room_number": "604",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1660.52,
+    "status": "available"
+  },
+  {
+    "id": "C-6-605",
+    "building": "嘉禧苑C栋",
+    "floor": 6,
+    "room_number": "605",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1664.23,
+    "status": "available"
+  },
+  {
+    "id": "C-5-501",
+    "building": "嘉禧苑C栋",
+    "floor": 5,
+    "room_number": "501",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1745.97,
+    "status": "available"
+  },
+  {
+    "id": "C-5-502",
+    "building": "嘉禧苑C栋",
+    "floor": 5,
+    "room_number": "502",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1706.23,
+    "status": "available"
+  },
+  {
+    "id": "C-5-503",
+    "building": "嘉禧苑C栋",
+    "floor": 5,
+    "room_number": "503",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1713.47,
+    "status": "available"
+  },
+  {
+    "id": "C-5-504",
+    "building": "嘉禧苑C栋",
+    "floor": 5,
+    "room_number": "504",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1660.52,
+    "status": "available"
+  },
+  {
+    "id": "C-5-505",
+    "building": "嘉禧苑C栋",
+    "floor": 5,
+    "room_number": "505",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1664.23,
+    "status": "available"
+  },
+  {
+    "id": "C-4-401",
+    "building": "嘉禧苑C栋",
+    "floor": 4,
+    "room_number": "401",
+    "room_type": "01房",
+    "direction": "东南",
+    "price": 1745.97,
+    "status": "available"
+  },
+  {
+    "id": "C-4-402",
+    "building": "嘉禧苑C栋",
+    "floor": 4,
+    "room_number": "402",
+    "room_type": "02房",
+    "direction": "西南",
+    "price": 1706.23,
+    "status": "available"
+  },
+  {
+    "id": "C-4-403",
+    "building": "嘉禧苑C栋",
+    "floor": 4,
+    "room_number": "403",
+    "room_type": "03房",
+    "direction": "西南",
+    "price": 1713.47,
+    "status": "available"
+  },
+  {
+    "id": "C-4-404",
+    "building": "嘉禧苑C栋",
+    "floor": 4,
+    "room_number": "404",
+    "room_type": "04房",
+    "direction": "东北",
+    "price": 1660.52,
+    "status": "available"
+  },
+  {
+    "id": "C-4-405",
+    "building": "嘉禧苑C栋",
+    "floor": 4,
+    "room_number": "405",
+    "room_type": "05房",
+    "direction": "东北",
+    "price": 1664.23,
+    "status": "available"
+  }
+]

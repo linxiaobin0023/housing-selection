@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>嘉禧苑选房系统</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@capacitor/core@5/dist/capacitor.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .filters {
+            background: white;
+            border-radius: 20px;
+            padding: 24px 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+        }
+
+        .filter-row {
+            display: flex;
+            gap: 16px;
+            align-items: flex-end;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .filter-group label {
+            font-weight: 600;
+            color: #555;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .filter-group select {
+            padding: 12px 16px;
+            border: 2px solid #f0f0f0;
+            border-radius: 12px;
+            font-size: 14px;
+            transition: all 0.3s;
+            width: 100%;
+            background: #fafafa;
+            color: #333;
+        }
+
+        .filter-group select:hover {
+            border-color: #d0d0d0;
+            background: #f5f5f5;
+        }
+
+        .filter-group select:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+        }
+
+        .filter-actions {
+            display: flex;
+            gap: 12px;
+            align-items: flex-end;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border: none;
+            border-radius: 12px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #f5f5f5;
+            color: #666;
+        }
+
+        .btn-secondary:hover {
+            background: #e8e8f8;
+            transform: translateY(-2px);
+        }
+
+        .preferred-section {
+            background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
+            border-radius: 20px;
+            padding: 24px 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.1);
+            border: 2px solid rgba(102, 126, 234, 0.15);
+        }
+
+        .preferred-section h3 {
+            font-size: 1.1rem;
+            color: #667eea;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .preferred-section h3::before {
+            content: '⭐';
+        }
+
+        .preferred-options {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .preferred-option {
+            padding: 12px 20px;
+            border: 2px solid #d0d8f0;
+            border-radius: 12px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 14px;
+            color: #555;
+            font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            min-width: 80px;
+        }
+
+        .preferred-option:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
+            transform: translateY(-2px);
+        }
+
+        .preferred-option.selected {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-color: #667eea;
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .preferred-option.selected:hover {
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .preferred-option .count {
+            font-size: 12px;
+            opacity: 0.7;
+            font-weight: 600;
+        }
+
+        .preferred-option.selected .count {
+            opacity: 0.9;
+        }
+
+        .house-card.preferred {
+            background: linear-gradient(135deg, #e6f0ff 0%, #f0f7ff 100%);
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2), 0 8px 25px rgba(102, 126, 234, 0.15);
+        }
+
+        .house-card.preferred::before {
+            content: '⭐';
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            font-size: 12px;
+        }
+
+        .house-card.preferred:hover {
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3), 0 12px 35px rgba(102, 126, 234, 0.25);
+        }
+
+        .view-toggle-inline {
+            position: absolute;
+            top: 28px;
+            right: 28px;
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .view-toggle-inline button {
+            padding: 10px 20px;
+            border: 2px solid #e0e0e0;
+            background: white;
+            color: #666;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .view-toggle-inline button:hover {
+            border-color: #667eea;
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .view-toggle-inline button.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: #667eea;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        /* 悬浮统计按钮 */
+        .fab-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 12px;
+        }
+
+        .fab-button {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fab-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(102, 126, 234, 0.5);
+        }
+
+        .fab-button.active {
+            transform: rotate(45deg);
+        }
+
+        .fab-panel {
+            background: white;
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            min-width: 320px;
+            max-width: 400px;
+            opacity: 0;
+            transform: translateY(20px) scale(0.95);
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fab-panel.open {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        .fab-panel h3 {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .fab-panel h3::before {
+            content: '📊';
+        }
+
+        .fab-stats {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .fab-stat-card {
+            flex: 1;
+            background: linear-gradient(135deg, #f8f9ff 0%, #f0f3ff 100%);
+            border-radius: 12px;
+            padding: 12px 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .fab-stat-card:hover {
+            transform: translateY(-3px);
+            border-color: #667eea;
+        }
+
+        .fab-stat-card.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .fab-stat-card .number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .fab-stat-card .label {
+            font-size: 0.75rem;
+            opacity: 0.8;
+        }
+
+        .fab-preferred {
+            border-top: 1px solid #e8e8e8;
+            padding-top: 16px;
+        }
+
+        .fab-preferred h4 {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .fab-preferred h4::before {
+            content: '⭐';
+        }
+
+        .fab-preferred-options {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .fab-preferred-option {
+            padding: 8px 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 13px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            min-width: 50px;
+        }
+
+        .fab-preferred-option:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+
+        .fab-preferred-option.selected {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-color: #667eea;
+            color: white;
+        }
+
+        .fab-preferred-option .count {
+            font-size: 11px;
+            opacity: 0.7;
+        }
+
+        /* OCR功能样式 */
+        .fab-ocr {
+            border-top: 1px solid #e8e8e8;
+            padding-top: 16px;
+            margin-top: 16px;
+        }
+
+        .fab-ocr h4 {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .fab-ocr h4::before {
+            content: '📷';
+        }
+
+        .ocr-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .ocr-btn {
+            flex: 1;
+            padding: 10px 12px;
+            border: 2px dashed #667eea;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #f8f9ff 0%, #f0f3ff 100%);
+            color: #667eea;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .ocr-btn:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-style: solid;
+        }
+
+        .ocr-input {
+            display: none;
+        }
+
+        /* OCR结果弹窗 */
+        .ocr-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .ocr-modal.open {
+            display: flex;
+        }
+
+        .ocr-modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 28px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: modalSlideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .ocr-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .ocr-modal-header h3 {
+            font-size: 1.1rem;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ocr-modal-close {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: none;
+            background: #f0f0f0;
+            color: #666;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .ocr-modal-close:hover {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        .ocr-preview {
+            width: 100%;
+            max-height: 200px;
+            object-fit: contain;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            background: #f8f8f8;
+        }
+
+        .ocr-status {
+            padding: 12px 16px;
+            border-radius: 10px;
+            background: #f0f7ff;
+            color: #667eea;
+            font-size: 14px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ocr-status.processing::before {
+            content: '⏳';
+        }
+
+        .ocr-status.success {
+            background: #f6ffed;
+            color: #52c41a;
+        }
+
+        .ocr-status.success::before {
+            content: '✅';
+        }
+
+        .ocr-status.error {
+            background: #fff2f0;
+            color: #ff4d4f;
+        }
+
+        .ocr-status.error::before {
+            content: '❌';
+        }
+
+        .ocr-results {
+            margin-bottom: 16px;
+        }
+
+        .ocr-result-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px;
+            border-radius: 10px;
+            background: #f8f9ff;
+            margin-bottom: 8px;
+            border: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .ocr-result-item:hover {
+            border-color: #667eea;
+        }
+
+        .ocr-result-item.matched {
+            background: #f6ffed;
+            border-color: #95de64;
+        }
+
+        .ocr-result-item.not-found {
+            background: #fff2f0;
+            border-color: #ffccc7;
+        }
+
+        .ocr-result-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .ocr-result-room {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .ocr-result-status {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .ocr-result-checkbox {
+            width: 20px;
+            height: 20px;
+            accent-color: #667eea;
+        }
+
+        .ocr-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .ocr-action-btn {
+            flex: 1;
+            padding: 12px 20px;
+            border-radius: 10px;
+            border: none;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .ocr-action-btn.primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .ocr-action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .ocr-action-btn.secondary {
+            background: #f0f0f0;
+            color: #666;
+        }
+
+        .ocr-action-btn.secondary:hover {
+            background: #e0e0e0;
+        }
+
+        .houses-container {
+            background: white;
+            border-radius: 24px;
+            padding: 28px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        .remaining-btn {
+            position: absolute;
+            top: 28px;
+            right: 28px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #ff4d4f 0%, #ff7875 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(255, 77, 79, 0.3);
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .remaining-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 77, 79, 0.4);
+        }
+
+        .remaining-btn.active {
+            background: linear-gradient(135deg, #52c41a 0%, #73d13d 100%);
+            box-shadow: 0 4px 15px rgba(82, 196, 26, 0.3);
+        }
+
+        .remaining-btn.active:hover {
+            box-shadow: 0 8px 25px rgba(82, 196, 26, 0.4);
+        }
+
+        .building-section {
+            margin-bottom: 40px;
+        }
+
+        .building-title {
+            font-size: 1.6rem;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid transparent;
+            border-image: linear-gradient(90deg, #667eea, #764ba2) 1;
+            display: inline-block;
+            font-weight: 700;
+        }
+
+        .floor-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            padding: 12px 16px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 14px;
+            border: 1px solid #f0f0f0;
+        }
+
+        .floor-label {
+            width: 50px;
+            font-weight: 700;
+            color: #888;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .rooms-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            flex: 1;
+        }
+
+        .house-card {
+            padding: 14px 18px;
+            border-radius: 14px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            min-width: 110px;
+            text-align: center;
+            border: 2px solid transparent;
+            user-select: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .house-card::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .house-card:active::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        .house-card:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .house-card.available {
+            background: linear-gradient(135deg, #f6ffed 0%, #ffffff 100%);
+            border-color: #95de64;
+            color: #389e0d;
+        }
+
+        .house-card.available:hover {
+            border-color: #73d13d;
+            box-shadow: 0 12px 30px rgba(56, 158, 13, 0.2);
+        }
+
+        .house-card.selected {
+            background: linear-gradient(135deg, #ff4d4f 0%, #ff7875 100%);
+            border-color: #ff4d4f;
+            color: white;
+            box-shadow: 0 8px 25px rgba(255, 77, 79, 0.4);
+        }
+
+        .house-card.selected:hover {
+            box-shadow: 0 12px 35px rgba(255, 77, 79, 0.5);
+        }
+
+        .house-card.reserved {
+            background: linear-gradient(135deg, #fff7e6 0%, #ffffff 100%);
+            border-color: #ffc53d;
+            color: #d46b08;
+        }
+
+        .house-card.reserved:hover {
+            border-color: #faad14;
+            box-shadow: 0 12px 30px rgba(250, 173, 20, 0.2);
+        }
+
+        .house-card .room-number {
+            font-weight: 800;
+            font-size: 15px;
+            margin-bottom: 6px;
+        }
+
+        .house-card .room-info {
+            font-size: 11px;
+            opacity: 0.85;
+            font-weight: 500;
+        }
+
+        .house-card .price {
+            font-size: 13px;
+            font-weight: 700;
+            margin-top: 6px;
+            letter-spacing: 0.3px;
+        }
+
+        .list-view {
+            display: none;
+        }
+
+        .list-view.active {
+            display: block;
+        }
+
+        .houses-grid {
+            display: none;
+        }
+
+        .houses-grid.active {
+            display: block;
+        }
+
+        .houses-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .houses-table th,
+        .houses-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .houses-table th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .houses-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .houses-table tr.selected {
+            background: #ff4d4f !important;
+            color: white;
+        }
+
+        .houses-table tr.selected td {
+            color: white;
+        }
+
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .status-badge.available {
+            background: #f6ffed;
+            color: #52c41a;
+        }
+
+        .status-badge.selected {
+            background: white;
+            color: #ff4d4f;
+        }
+
+        .status-badge.reserved {
+            background: #fff7e6;
+            color: #faad14;
+        }
+
+        .houses-table tr.selected .status-badge {
+            background: white;
+            color: #ff4d4f;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+        }
+
+        .empty-state svg {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            opacity: 0.3;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .stat-card {
+                padding: 15px 20px;
+                min-width: 120px;
+            }
+
+            .stat-card .number {
+                font-size: 2rem;
+            }
+
+            .filter-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-group {
+                width: 100%;
+            }
+
+            .filter-group select,
+            .filter-group input {
+                width: 100%;
+            }
+
+            .remaining-btn {
+                position: static;
+                margin-bottom: 15px;
+                display: block;
+                width: 100%;
+            }
+
+            .floor-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .floor-label {
+                margin-bottom: 10px;
+            }
+
+            .rooms-row {
+                width: 100%;
+            }
+
+            .house-card {
+                flex: 1;
+                min-width: calc(50% - 5px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏠 嘉禧苑保障性租赁住房选房系统</h1>
+            <p>光明区第四批次面向个人配租</p>
+        </header>
+
+        <div class="filters">
+            <div class="filter-row">
+                <div class="filter-group">
+                    <label>楼栋:</label>
+                    <select id="buildingFilter">
+                        <option value="">全部楼栋</option>
+                        <option value="嘉禧苑A栋">嘉禧苑A栋</option>
+                        <option value="嘉禧苑B栋">嘉禧苑B栋</option>
+                        <option value="嘉禧苑C栋">嘉禧苑C栋</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>楼层:</label>
+                    <select id="floorFilter">
+                        <option value="">全部楼层</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>房型:</label>
+                    <select id="roomTypeFilter">
+                        <option value="">全部房型</option>
+                        <option value="01房">01房</option>
+                        <option value="02房">02房</option>
+                        <option value="03房">03房</option>
+                        <option value="04房">04房</option>
+                        <option value="05房">05房</option>
+                    </select>
+                </div>
+                <div class="filter-actions">
+                    <button class="btn btn-secondary" onclick="resetFilters()">重置</button>
+                    <button class="btn btn-primary" onclick="applyFilters()">筛选</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="preferred-section">
+            <h3>意向房型</h3>
+            <div class="preferred-options">
+                <div class="preferred-option" onclick="togglePreferredType('01房')">
+                    <span>01房</span>
+                    <span class="count" id="count-01">0套</span>
+                </div>
+                <div class="preferred-option" onclick="togglePreferredType('02房')">
+                    <span>02房</span>
+                    <span class="count" id="count-02">0套</span>
+                </div>
+                <div class="preferred-option" onclick="togglePreferredType('03房')">
+                    <span>03房</span>
+                    <span class="count" id="count-03">0套</span>
+                </div>
+                <div class="preferred-option" onclick="togglePreferredType('04房')">
+                    <span>04房</span>
+                    <span class="count" id="count-04">0套</span>
+                </div>
+                <div class="preferred-option" onclick="togglePreferredType('05房')">
+                    <span>05房</span>
+                    <span class="count" id="count-05">0套</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="houses-container">
+            <div class="view-toggle-inline">
+                <button class="active" onclick="switchView('grid')">🏢 楼栋视图</button>
+                <button onclick="switchView('list')">📋 列表视图</button>
+            </div>
+            <div id="gridView" class="houses-grid active"></div>
+            <div id="listView" class="list-view"></div>
+        </div>
+    </div>
+
+    <!-- 悬浮统计按钮 -->
+    <div class="fab-container">
+        <div class="fab-panel" id="fabPanel">
+            <h3>房源统计</h3>
+            <div class="fab-stats">
+                <div class="fab-stat-card" onclick="fabShowStatHouses('all')" id="fabStatAll">
+                    <div class="number" id="fabAllCount">0</div>
+                    <div class="label">全部</div>
+                </div>
+                <div class="fab-stat-card" onclick="fabShowStatHouses('selected')" id="fabStatSelected">
+                    <div class="number" id="fabSelectedCount">0</div>
+                    <div class="label">已选</div>
+                </div>
+                <div class="fab-stat-card" onclick="fabShowStatHouses('remaining')" id="fabStatRemaining">
+                    <div class="number" id="fabRemainingCount">0</div>
+                    <div class="label">剩余</div>
+                </div>
+            </div>
+            <div class="fab-preferred">
+                <h4>意向房型</h4>
+                <div class="fab-preferred-options">
+                    <div class="fab-preferred-option" onclick="fabTogglePreferredType('01房')" id="fabPref01">
+                        <span>01房</span>
+                        <span class="count" id="fabCount01">0套</span>
+                    </div>
+                    <div class="fab-preferred-option" onclick="fabTogglePreferredType('02房')" id="fabPref02">
+                        <span>02房</span>
+                        <span class="count" id="fabCount02">0套</span>
+                    </div>
+                    <div class="fab-preferred-option" onclick="fabTogglePreferredType('03房')" id="fabPref03">
+                        <span>03房</span>
+                        <span class="count" id="fabCount03">0套</span>
+                    </div>
+                    <div class="fab-preferred-option" onclick="fabTogglePreferredType('04房')" id="fabPref04">
+                        <span>04房</span>
+                        <span class="count" id="fabCount04">0套</span>
+                    </div>
+                    <div class="fab-preferred-option" onclick="fabTogglePreferredType('05房')" id="fabPref05">
+                        <span>05房</span>
+                        <span class="count" id="fabCount05">0套</span>
+                    </div>
+                </div>
+            </div>
+            <div class="fab-ocr">
+                <h4>OCR识别已选房源</h4>
+                <div class="ocr-buttons">
+                    <button class="ocr-btn" onclick="document.getElementById('ocrFileInput').click()">
+                        📁 上传照片
+                    </button>
+                    <button class="ocr-btn" onclick="document.getElementById('ocrCameraInput').click()">
+                        📷 拍照识别
+                    </button>
+                </div>
+                <input type="file" id="ocrFileInput" class="ocr-input" accept="image/*" onchange="handleOCRImage(event)">
+                <input type="file" id="ocrCameraInput" class="ocr-input" accept="image/*" capture="environment" onchange="handleOCRImage(event)">
+            </div>
+        </div>
+        <button class="fab-button" id="fabButton" onclick="toggleFabPanel()">+</button>
+    </div>
+
+    <!-- OCR结果弹窗 -->
+    <div class="ocr-modal" id="ocrModal">
+        <div class="ocr-modal-content">
+            <div class="ocr-modal-header">
+                <h3>🔍 OCR识别结果</h3>
+                <button class="ocr-modal-close" onclick="closeOCRModal()">×</button>
+            </div>
+            <img id="ocrPreview" class="ocr-preview" alt="预览">
+            <div class="ocr-status processing" id="ocrStatus">正在识别图片中的房号...</div>
+            <div class="ocr-results" id="ocrResults"></div>
+            <div class="ocr-actions" id="ocrActions" style="display: none;">
+                <button class="ocr-action-btn secondary" onclick="closeOCRModal()">取消</button>
+                <button class="ocr-action-btn primary" onclick="applyOCRResults()">确认更新</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入Tesseract.js OCR库 -->
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
+
+    <script>
+        let housesData = [];
+        let currentView = 'grid';
+        let showRemainingOnly = false;
+
+        // 加载数据
+        async function loadData() {
+            try {
+                const response = await fetch('houses_data.json');
+                housesData = await response.json();
+                initFloorFilter();
+                updateStats();
+                renderGridView();
+                renderListView();
+            } catch (error) {
+                console.error('加载数据失败:', error);
+            }
+        }
+
+        // 初始化楼层筛选
+        function initFloorFilter() {
+            const floors = [...new Set(housesData.map(h => h.floor))].sort((a, b) => b - a);
+            const floorFilter = document.getElementById('floorFilter');
+            floors.forEach(floor => {
+                const option = document.createElement('option');
+                option.value = floor;
+                option.textContent = floor + '层';
+                floorFilter.appendChild(option);
+            });
+        }
+
+        // 更新统计
+        function updateStats() {
+            const all = housesData.length;
+            const selected = housesData.filter(h => h.status === 'selected').length;
+            const reserved = housesData.filter(h => h.status === 'reserved').length;
+            const available = housesData.filter(h => h.status === 'available').length;
+
+            // 更新意向房型剩余房源数
+            const roomTypes = ['01房', '02房', '03房', '04房', '05房'];
+            roomTypes.forEach((type, index) => {
+                const count = housesData.filter(h =>
+                    h.room_type === type &&
+                    (h.status === 'available' || h.status === 'reserved')
+                ).length;
+                const countEl = document.getElementById(`count-0${index + 1}`);
+                if (countEl) {
+                    countEl.textContent = `${count}套`;
+                }
+                // 更新悬浮面板中的数量
+                const fabCountEl = document.getElementById(`fabCount0${index + 1}`);
+                if (fabCountEl) {
+                    fabCountEl.textContent = `${count}套`;
+                }
+            });
+
+            // 更新悬浮面板中的统计
+            document.getElementById('fabAllCount').textContent = all;
+            document.getElementById('fabSelectedCount').textContent = selected;
+            document.getElementById('fabRemainingCount').textContent = available + reserved;
+        }
+
+        // 当前统计筛选状态
+        let currentStatFilter = null;
+
+        // 意向房型
+        let preferredRoomTypes = [];
+
+        // 切换意向房型
+        function togglePreferredType(roomType) {
+            const option = document.querySelector(`.preferred-option[onclick="togglePreferredType('${roomType}')"]`);
+            
+            if (preferredRoomTypes.includes(roomType)) {
+                // 取消选择
+                preferredRoomTypes = preferredRoomTypes.filter(t => t !== roomType);
+                option.classList.remove('selected');
+            } else {
+                // 添加选择
+                preferredRoomTypes.push(roomType);
+                option.classList.add('selected');
+            }
+            
+            renderGridView();
+            renderListView();
+        }
+
+        // 切换剩余房源视图
+        function toggleRemainingView() {
+            showRemainingOnly = !showRemainingOnly;
+            const btn = document.getElementById('remainingBtn');
+            
+            if (showRemainingOnly) {
+                btn.classList.add('active');
+                btn.textContent = '🟢 显示全部';
+            } else {
+                btn.classList.remove('active');
+                btn.textContent = '🔴 剩余房源';
+            }
+            
+            renderGridView();
+            renderListView();
+        }
+
+        // 点击统计卡片展示对应数据
+        function showStatHouses(statType) {
+            // 移除所有卡片的active状态
+            document.querySelectorAll('.stat-card').forEach(card => {
+                card.classList.remove('active');
+            });
+            
+            // 如果点击的是当前已选中的，则取消筛选
+            if (currentStatFilter === statType) {
+                currentStatFilter = null;
+                renderGridView();
+                renderListView();
+                return;
+            }
+            
+            // 设置当前筛选状态
+            currentStatFilter = statType;
+            
+            // 添加active状态到当前卡片
+             const cardId = {
+                 'all': 'statAll',
+                 'selected': 'statSelected',
+                 'remaining': 'statRemaining'
+             }[statType];
+             document.getElementById(cardId).classList.add('active');
+            
+            renderGridView();
+            renderListView();
+        }
+
+        // 悬浮面板展开/收缩
+        let fabPanelOpen = false;
+        function toggleFabPanel() {
+            fabPanelOpen = !fabPanelOpen;
+            const panel = document.getElementById('fabPanel');
+            const button = document.getElementById('fabButton');
+
+            if (fabPanelOpen) {
+                panel.classList.add('open');
+                button.classList.add('active');
+            } else {
+                panel.classList.remove('open');
+                button.classList.remove('active');
+            }
+        }
+
+        // 悬浮面板统计卡片点击
+        function fabShowStatHouses(statType) {
+            // 移除所有卡片的active状态
+            document.querySelectorAll('.fab-stat-card').forEach(card => {
+                card.classList.remove('active');
+            });
+
+            // 如果点击的是当前已选中的，则取消筛选
+            if (currentStatFilter === statType) {
+                currentStatFilter = null;
+                renderGridView();
+                renderListView();
+                return;
+            }
+
+            // 设置当前筛选状态
+            currentStatFilter = statType;
+
+            // 添加active状态到当前卡片
+            const cardId = {
+                'all': 'fabStatAll',
+                'selected': 'fabStatSelected',
+                'remaining': 'fabStatRemaining'
+            }[statType];
+            document.getElementById(cardId).classList.add('active');
+
+            renderGridView();
+            renderListView();
+        }
+
+        // 悬浮面板意向房型切换
+        function fabTogglePreferredType(roomType) {
+            const option = document.getElementById(`fabPref${roomType.replace('房', '')}`);
+
+            if (preferredRoomTypes.includes(roomType)) {
+                // 取消选择
+                preferredRoomTypes = preferredRoomTypes.filter(t => t !== roomType);
+                option.classList.remove('selected');
+            } else {
+                // 添加选择
+                preferredRoomTypes.push(roomType);
+                option.classList.add('selected');
+            }
+
+            // 同步更新主界面的意向房型
+            const mainOption = document.querySelector(`.preferred-option[onclick="togglePreferredType('${roomType}')"]`);
+            if (mainOption) {
+                if (preferredRoomTypes.includes(roomType)) {
+                    mainOption.classList.add('selected');
+                } else {
+                    mainOption.classList.remove('selected');
+                }
+            }
+
+            renderGridView();
+            renderListView();
+        }
+
+        // OCR识别结果存储（包含房号和是否被划掉的状态）
+        let ocrDetectedRooms = [];
+
+        // 处理OCR图片
+        async function handleOCRImage(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            // 显示预览
+            const preview = document.getElementById('ocrPreview');
+            preview.src = URL.createObjectURL(file);
+
+            // 打开弹窗
+            document.getElementById('ocrModal').classList.add('open');
+            document.getElementById('ocrStatus').className = 'ocr-status processing';
+            document.getElementById('ocrStatus').textContent = '正在识别图片中的房号...';
+            document.getElementById('ocrResults').innerHTML = '';
+            document.getElementById('ocrActions').style.display = 'none';
+
+            try {
+                // 创建图片对象用于分析
+                const img = new Image();
+                img.src = URL.createObjectURL(file);
+                await new Promise(resolve => { img.onload = resolve; });
+
+                // 创建canvas进行图像分析
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                canvas.width = img.width;
+                canvas.height = img.height;
+                ctx.drawImage(img, 0, 0);
+
+                // 使用Tesseract.js进行OCR识别
+                const result = await Tesseract.recognize(
+                    file,
+                    'chi_sim+eng',
+                    {
+                        logger: m => {
+                            console.log(m);
+                            if (m.status === 'recognizing text') {
+                                document.getElementById('ocrStatus').textContent = `正在识别... ${Math.round(m.progress * 100)}%`;
+                            }
+                        }
+                    }
+                );
+
+                // 解析识别结果
+                const text = result.data.text;
+                const words = result.data.words;
+                console.log('OCR识别结果:', text);
+                console.log('识别到的文字块:', words);
+
+                // 分析每个房号是否被划掉
+                const detectedRooms = [];
+
+                words.forEach(word => {
+                    const text = word.text.trim();
+                    // 匹配房号格式
+                    const roomMatch = text.match(/(?:[ABC][-\s]?)?(\d{4})/);
+                    if (roomMatch) {
+                        const roomNumber = roomMatch[1];
+                        if (roomNumber.length === 4) {
+                            // 获取文字区域的图像数据
+                            const bbox = word.bbox;
+                            const padding = 10;
+                            const x = Math.max(0, bbox.x0 - padding);
+                            const y = Math.max(0, bbox.y0 - padding);
+                            const w = Math.min(img.width - x, bbox.x1 - bbox.x0 + padding * 2);
+                            const h = Math.min(img.height - y, bbox.y1 - bbox.y0 + padding * 2);
+
+                            // 分析该区域是否有划线
+                            const isCrossedOut = analyzeCrossedOut(ctx, x, y, w, h);
+
+                            detectedRooms.push({
+                                roomNumber: roomNumber,
+                                isCrossedOut: isCrossedOut,
+                                fullText: text
+                            });
+                        }
+                    }
+                });
+
+                // 去重，保留划掉状态的记录
+                const uniqueRooms = [];
+                const seen = new Set();
+                detectedRooms.forEach(room => {
+                    if (!seen.has(room.roomNumber)) {
+                        seen.add(room.roomNumber);
+                        uniqueRooms.push(room);
+                    }
+                });
+
+                ocrDetectedRooms = uniqueRooms;
+                displayOCRResultsWithStatus(ocrDetectedRooms);
+
+            } catch (error) {
+                console.error('OCR识别失败:', error);
+                document.getElementById('ocrStatus').className = 'ocr-status error';
+                document.getElementById('ocrStatus').textContent = '识别失败，请重试或手动输入';
+            }
+        }
+
+        // 分析区域是否被划掉
+        function analyzeCrossedOut(ctx, x, y, w, h) {
+            try {
+                const imageData = ctx.getImageData(x, y, w, h);
+                const data = imageData.data;
+                const width = w;
+                const height = h;
+
+                // 转换为灰度图
+                const gray = [];
+                for (let i = 0; i < data.length; i += 4) {
+                    const luminance = 0.299 * data[i] + 0.587 * data[i + 1] + 0.114 * data[i + 2];
+                    gray.push(luminance);
+                }
+
+                // 检测水平线和斜线（划掉的特征）
+                let lineCount = 0;
+                const threshold = 50; // 黑色阈值
+
+                // 检测水平线
+                for (let row = 0; row < height; row += 2) {
+                    let consecutiveDarkPixels = 0;
+                    let maxConsecutive = 0;
+                    for (let col = 0; col < width; col++) {
+                        const idx = row * width + col;
+                        if (gray[idx] < threshold) {
+                            consecutiveDarkPixels++;
+                            maxConsecutive = Math.max(maxConsecutive, consecutiveDarkPixels);
+                        } else {
+                            consecutiveDarkPixels = 0;
+                        }
+                    }
+                    // 如果有一行中有足够长的连续黑色像素，认为是一条线
+                    if (maxConsecutive > width * 0.3) {
+                        lineCount++;
+                    }
+                }
+
+                // 检测斜线（对角线方向）
+                const diagonalLines = detectDiagonalLines(gray, width, height, threshold);
+
+                // 如果检测到多条线或明显的斜线，认为被划掉
+                return lineCount >= 2 || diagonalLines >= 1;
+            } catch (e) {
+                console.error('图像分析失败:', e);
+                return false;
+            }
+        }
+
+        // 检测对角线
+        function detectDiagonalLines(gray, width, height, threshold) {
+            let diagonalCount = 0;
+
+            // 检测从左上到右下的对角线
+            for (let start = 0; start < width + height - 1; start++) {
+                let count = 0;
+                for (let i = 0; i < height; i++) {
+                    const j = start - i;
+                    if (j >= 0 && j < width) {
+                        const idx = i * width + j;
+                        if (gray[idx] < threshold) count++;
+                    }
+                }
+                if (count > Math.min(width, height) * 0.4) {
+                    diagonalCount++;
+                }
+            }
+
+            // 检测从右上到左下的对角线
+            for (let start = -height; start < width; start++) {
+                let count = 0;
+                for (let i = 0; i < height; i++) {
+                    const j = start + i;
+                    if (j >= 0 && j < width) {
+                        const idx = i * width + j;
+                        if (gray[idx] < threshold) count++;
+                    }
+                }
+                if (count > Math.min(width, height) * 0.4) {
+                    diagonalCount++;
+                }
+            }
+
+            return diagonalCount;
+        }
+
+        // 显示OCR识别结果（带划掉状态）
+        function displayOCRResultsWithStatus(rooms) {
+            const resultsContainer = document.getElementById('ocrResults');
+            const statusEl = document.getElementById('ocrStatus');
+
+            if (rooms.length === 0) {
+                statusEl.className = 'ocr-status error';
+                statusEl.textContent = '未识别到房号，请确保图片清晰并包含房号信息';
+                document.getElementById('ocrActions').style.display = 'none';
+                return;
+            }
+
+            const crossedOutCount = rooms.filter(r => r.isCrossedOut).length;
+            const remainingCount = rooms.length - crossedOutCount;
+
+            statusEl.className = 'ocr-status success';
+            statusEl.innerHTML = `识别完成：${crossedOutCount}个已选（划掉），${remainingCount}个剩余`;
+
+            let html = '';
+            rooms.forEach(room => {
+                // 在房源数据中查找匹配
+                const matchedHouse = housesData.find(h =>
+                    h.room_number.includes(room.roomNumber)
+                );
+
+                if (matchedHouse) {
+                    const status = room.isCrossedOut ? '已选（划掉）' : '剩余房源';
+                    const statusClass = room.isCrossedOut ? 'selected' : 'available';
+
+                    html += `
+                        <div class="ocr-result-item ${statusClass}">
+                            <div class="ocr-result-info">
+                                <span class="ocr-result-room">${matchedHouse.building} ${matchedHouse.room_number}</span>
+                                <span class="ocr-result-status">${status}</span>
+                            </div>
+                            <input type="checkbox" class="ocr-result-checkbox" ${room.isCrossedOut ? 'checked' : ''}
+                                   data-room="${matchedHouse.room_number}"
+                                   data-crossed="${room.isCrossedOut}"
+                                   id="ocr-check-${room.roomNumber}">
+                        </div>
+                    `;
+                } else {
+                    html += `
+                        <div class="ocr-result-item not-found">
+                            <div class="ocr-result-info">
+                                <span class="ocr-result-room">房号 ${room.roomNumber}</span>
+                                <span class="ocr-result-status">未找到对应房源</span>
+                            </div>
+                        </div>
+                    `;
+                }
+            });
+
+            resultsContainer.innerHTML = html;
+            document.getElementById('ocrActions').style.display = 'flex';
+        }
+
+        // 关闭OCR弹窗
+        function closeOCRModal() {
+            document.getElementById('ocrModal').classList.remove('open');
+            ocrDetectedRooms = [];
+            // 清空文件输入
+            document.getElementById('ocrFileInput').value = '';
+            document.getElementById('ocrCameraInput').value = '';
+        }
+
+        // 应用OCR识别结果
+        function applyOCRResults() {
+            const checkboxes = document.querySelectorAll('.ocr-result-checkbox');
+            let selectedCount = 0;
+            let availableCount = 0;
+
+            checkboxes.forEach(checkbox => {
+                const roomNumber = checkbox.dataset.room;
+                const house = housesData.find(h => h.room_number === roomNumber);
+
+                if (house) {
+                    if (checkbox.checked) {
+                        // 勾选表示已选（划掉）
+                        if (house.status !== 'selected') {
+                            house.status = 'selected';
+                            selectedCount++;
+                        }
+                    } else {
+                        // 未勾选表示剩余
+                        if (house.status === 'selected') {
+                            house.status = 'available';
+                            availableCount++;
+                        }
+                    }
+                }
+            });
+
+            // 更新显示
+            updateStats();
+            renderGridView();
+            renderListView();
+
+            // 关闭弹窗并显示成功提示
+            closeOCRModal();
+
+            // 显示成功提示
+            setTimeout(() => {
+                let msg = '';
+                if (selectedCount > 0) msg += `${selectedCount}个房源标记为已选`;
+                if (availableCount > 0) {
+                    if (msg) msg += '，';
+                    msg += `${availableCount}个房源标记为剩余`;
+                }
+                if (!msg) msg = '没有房源状态需要更新';
+                alert(`同步完成：${msg}！`);
+            }, 300);
+        }
+
+        // 获取筛选后的数据
+        function getFilteredData() {
+            const building = document.getElementById('buildingFilter').value;
+            const floor = document.getElementById('floorFilter').value;
+            const roomType = document.getElementById('roomTypeFilter').value;
+
+            return housesData.filter(h => {
+                // 如果开启剩余房源视图，只显示available和reserved
+                if (showRemainingOnly && h.status === 'selected') {
+                    return false;
+                }
+                
+                // 根据统计卡片筛选
+                if (currentStatFilter) {
+                    if (currentStatFilter === 'all') return true; // 显示全部
+                    if (currentStatFilter === 'selected' && h.status !== 'selected') return false;
+                    if (currentStatFilter === 'remaining' && (h.status === 'selected')) return false;
+                }
+                
+                if (building && h.building !== building) return false;
+                if (floor && h.floor !== parseInt(floor)) return false;
+                if (roomType && h.room_type !== roomType) return false;
+                return true;
+            });
+        }
+
+        // 点击房源切换选择状态（多选）
+        function toggleHouseSelection(houseId) {
+            const house = housesData.find(h => h.id === houseId);
+            if (!house) return;
+            
+            // 如果当前是已选状态，则取消选择
+            if (house.status === 'selected') {
+                house.status = 'available';
+            } else if (house.status === 'available') {
+                // 只有可选的房源才能被选中
+                house.status = 'selected';
+            }
+            // reserved状态的房源不能被选择
+            
+            updateStats();
+            renderGridView();
+            renderListView();
+        }
+
+        // 渲染楼栋视图
+        function renderGridView() {
+            const data = getFilteredData();
+            const container = document.getElementById('gridView');
+            
+            if (data.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        <p>暂无符合条件的房源</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const buildings = [...new Set(data.map(h => h.building))];
+            let html = '';
+
+            buildings.forEach(building => {
+                const buildingHouses = data.filter(h => h.building === building);
+                const floors = [...new Set(buildingHouses.map(h => h.floor))].sort((a, b) => b - a);
+
+                html += `
+                    <div class="building-section">
+                        <h2 class="building-title">${building}</h2>
+                        ${floors.map(floor => {
+                            const floorHouses = buildingHouses.filter(h => h.floor === floor);
+                            return `
+                                <div class="floor-row">
+                                    <div class="floor-label">${floor}层</div>
+                                    <div class="rooms-row">
+                                        ${floorHouses.map(h => {
+                                            const isPreferred = preferredRoomTypes.includes(h.room_type);
+                                            const preferredClass = isPreferred ? 'preferred' : '';
+                                            return `
+                                            <div class="house-card ${h.status} ${preferredClass}" onclick="toggleHouseSelection('${h.id}')">
+                                                <div class="room-number">${h.room_number}</div>
+                                                <div class="room-info">${h.room_type} · ${h.direction}</div>
+                                                <div class="price">¥${h.price}</div>
+                                            </div>
+                                        `}).join('')}
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+        }
+
+        // 渲染列表视图
+        function renderListView() {
+            const data = getFilteredData();
+            const container = document.getElementById('listView');
+            
+            if (data.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        <p>暂无符合条件的房源</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const statusText = {
+                'available': '可选',
+                'selected': '已选',
+                'reserved': '已预订'
+            };
+
+            let html = `
+                <table class="houses-table">
+                    <thead>
+                        <tr>
+                            <th>楼栋</th>
+                            <th>楼层</th>
+                            <th>房号</th>
+                            <th>房型</th>
+                            <th>朝向</th>
+                            <th>月租金</th>
+                            <th>状态</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${data.map(h => {
+                            const isPreferred = preferredRoomTypes.includes(h.room_type);
+                            const preferredBadge = isPreferred ? ' ⭐' : '';
+                            return `
+                            <tr class="${h.status}" onclick="toggleHouseSelection('${h.id}')" style="cursor: pointer;">
+                                <td>${h.building}</td>
+                                <td>${h.floor}层</td>
+                                <td>${h.room_number}</td>
+                                <td>${h.room_type}${preferredBadge}</td>
+                                <td>${h.direction}</td>
+                                <td>¥${h.price}</td>
+                                <td><span class="status-badge ${h.status}">${statusText[h.status]}</span></td>
+                            </tr>
+                        `}).join('')}
+                    </tbody>
+                </table>
+            `;
+
+            container.innerHTML = html;
+        }
+
+        // 切换视图
+        function switchView(view) {
+            currentView = view;
+            document.querySelectorAll('.view-toggle-inline button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            if (view === 'grid') {
+                document.getElementById('gridView').classList.add('active');
+                document.getElementById('listView').classList.remove('active');
+            } else {
+                document.getElementById('gridView').classList.remove('active');
+                document.getElementById('listView').classList.add('active');
+            }
+        }
+
+        // 应用筛选
+        function applyFilters() {
+            renderGridView();
+            renderListView();
+        }
+
+        // 重置筛选
+        function resetFilters() {
+            document.getElementById('buildingFilter').value = '';
+            document.getElementById('floorFilter').value = '';
+            document.getElementById('roomTypeFilter').value = '';
+            
+            // 如果处于剩余房源视图，也重置
+            if (showRemainingOnly) {
+                toggleRemainingView();
+            }
+            
+            // 如果处于统计卡片筛选状态，也重置
+            if (currentStatFilter) {
+                document.querySelectorAll('.stat-card').forEach(card => {
+                    card.classList.remove('active');
+                });
+                currentStatFilter = null;
+            }
+            
+            // 重置意向房型
+            preferredRoomTypes = [];
+            document.querySelectorAll('.preferred-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            
+            renderGridView();
+            renderListView();
+        }
+
+        // 初始化
+        loadData();
+    </script>
+</body>
+</html>
