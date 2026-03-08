@@ -1605,6 +1605,19 @@
                     <input type="file" id="ocrFileInput" class="ocr-input" accept="image/*" onchange="handleOCRImage(event)">
                     <input type="file" id="ocrCameraInput" class="ocr-input" accept="image/*" capture="environment" onchange="handleOCRImage(event)">
                 </div>
+                <div class="fab-data-sync" style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #e8e8e8;">
+                    <h4>数据同步</h4>
+                    <div class="ocr-buttons">
+                        <button class="ocr-btn" onclick="exportData()">
+                            💾 导出数据
+                        </button>
+                        <button class="ocr-btn" onclick="document.getElementById('importFileInput').click()">
+                            📂 导入数据
+                        </button>
+                    </div>
+                    <input type="file" id="importFileInput" class="ocr-input" accept=".json" onchange="handleImportFile(event)">
+                    <p style="font-size: 12px; color: #666; margin-top: 8px;">导出数据文件可在其他设备导入</p>
+                </div>
             </div>
         </div>
     </div>
@@ -1633,24 +1646,167 @@
 
     <!-- 引入Tesseract.js OCR库 -->
     <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
+    <!-- 引入Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.0/dist/umd/supabase.min.js"></script>
 
     <script>
+        // Supabase配置
+        const SUPABASE_CONFIG = {
+            url: 'https://pfrfvauhdtgxagnjznkh.supabase.co',
+            anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBmcmZ2YXVoZHRneGFnbmp6bmtoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI5ODI5NzksImV4cCI6MjA4ODU1ODk3OX0.wvyOqdbd_UxmGhaZW1pwJvf9Dmd9QatCPHiXoLMoHwQ'
+        };
+
+        // 初始化Supabase客户端
+        let supabaseClient = null;
+        try {
+            supabaseClient = supabase.createClient(SUPABASE_CONFIG.url, SUPABASE_CONFIG.anonKey);
+            console.log('Supabase初始化成功');
+        } catch (e) {
+            console.error('Supabase初始化失败:', e);
+        }
+
         let housesData = [];
         let currentView = 'grid';
         let showRemainingOnly = false;
+        let isOnline = false;
+        let syncInterval = null;
+
+        // 从Supabase加载数据
+        async function loadFromSupabase() {
+            if (!supabaseClient) return null;
+            try {
+                const { data, error } = await supabaseClient
+                    .from('houses_data')
+                    .select('data')
+                    .eq('id', 1)
+                    .single();
+
+                if (error) {
+                    console.error('Supabase查询错误:', error);
+                    return null;
+                }
+
+                if (data && data.data) {
+                    console.log('从Supabase加载数据成功');
+                    return data.data;
+                }
+                return null;
+            } catch (error) {
+                console.error('从Supabase加载失败:', error);
+                return null;
+            }
+        }
+
+        // 保存数据到Supabase
+        async function saveToSupabase(data) {
+            if (!supabaseClient) return false;
+            try {
+                const { error } = await supabaseClient
+                    .from('houses_data')
+                    .upsert({ id: 1, data: data, updated_at: new Date().toISOString() });
+
+                if (error) {
+                    console.error('保存到Supabase失败:', error);
+                    return false;
+                }
+
+                console.log('数据已保存到Supabase');
+                return true;
+            } catch (error) {
+                console.error('保存到Supabase失败:', error);
+                return false;
+            }
+        }
 
         // 加载数据
         async function loadData() {
+            // 首先加载本地JSON数据（基础数据）
             try {
                 const response = await fetch('houses_data.json');
                 housesData = await response.json();
-                initFloorFilter();
-                updateStats();
-                renderGridView();
-                renderListView();
-            } catch (error) {
-                console.error('加载数据失败:', error);
+                console.log('本地数据加载成功，房源数量:', housesData.length);
+            } catch (localError) {
+                console.error('本地数据加载失败:', localError);
+                return;
             }
+
+            // 然后尝试从Supabase同步数据
+            try {
+                const supabaseData = await loadFromSupabase();
+
+                if (supabaseData && Array.isArray(supabaseData) && supabaseData.length > 0) {
+                    // 合并数据：保留Supabase上的状态信息
+                    housesData = housesData.map(localHouse => {
+                        const cloudHouse = supabaseData.find(h => h.id === localHouse.id);
+                        if (cloudHouse) {
+                            return { ...localHouse, status: cloudHouse.status };
+                        }
+                        return localHouse;
+                    });
+                    console.log('Supabase数据合并成功');
+                    isOnline = true;
+                } else {
+                    // Supabase没有数据，上传本地数据
+                    console.log('Supabase无数据，准备上传本地数据');
+                    await saveToSupabase(housesData);
+                    isOnline = true;
+                }
+
+                // 设置定期同步（每10秒）
+                if (!syncInterval) {
+                    syncInterval = setInterval(syncFromSupabase, 10000);
+                }
+            } catch (error) {
+                console.error('Supabase同步失败，使用本地模式:', error.message);
+                isOnline = false;
+            }
+
+            // 初始化并渲染
+            initFloorFilter();
+            updateStats();
+            renderGridView();
+            renderListView();
+        }
+
+        // 从Supabase同步数据（不保存，只读取）
+        async function syncFromSupabase() {
+            if (!supabaseClient) return;
+
+            try {
+                const supabaseData = await loadFromSupabase();
+                if (supabaseData && Array.isArray(supabaseData)) {
+                    // 检查是否有变化
+                    const currentStatus = housesData.map(h => ({ id: h.id, status: h.status }));
+                    const cloudStatus = supabaseData.map(h => ({ id: h.id, status: h.status }));
+
+                    if (JSON.stringify(currentStatus) !== JSON.stringify(cloudStatus)) {
+                        // 有变化，更新本地数据
+                        housesData = housesData.map(localHouse => {
+                            const cloudHouse = supabaseData.find(h => h.id === localHouse.id);
+                            if (cloudHouse && cloudHouse.status !== localHouse.status) {
+                                return { ...localHouse, status: cloudHouse.status };
+                            }
+                            return localHouse;
+                        });
+
+                        updateStats();
+                        renderGridView();
+                        renderListView();
+                        console.log('数据已从Supabase同步更新');
+                    }
+                }
+            } catch (error) {
+                console.error('同步失败:', error);
+            }
+        }
+
+        // 保存数据到Supabase
+        async function saveToCloud() {
+            if (!isOnline || !supabaseClient) {
+                console.log('离线状态，数据仅保存在本地');
+                return;
+            }
+            await saveToSupabase(housesData);
         }
 
         // 初始化楼层筛选
@@ -1851,6 +2007,22 @@
 
         // OCR识别结果存储（包含房号和是否被划掉的状态）
         let ocrDetectedRooms = [];
+
+        // 处理导入文件
+        async function handleImportFile(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            try {
+                await importData(file);
+                alert('数据导入成功！');
+            } catch (error) {
+                alert('数据导入失败：' + error.message);
+            }
+
+            // 清空input，允许重复选择同一文件
+            event.target.value = '';
+        }
 
         // 处理OCR图片
         async function handleOCRImage(event) {
@@ -2104,7 +2276,7 @@
         }
 
         // 应用OCR识别结果
-        function applyOCRResults() {
+        async function applyOCRResults() {
             const checkboxes = document.querySelectorAll('.ocr-result-checkbox');
             let selectedCount = 0;
             let availableCount = 0;
@@ -2129,6 +2301,9 @@
                     }
                 }
             });
+
+            // 保存到GitHub
+            await saveToCloud();
 
             // 更新显示
             updateStats();
@@ -2181,10 +2356,10 @@
         }
 
         // 点击房源切换选择状态（多选）
-        function toggleHouseSelection(houseId) {
+        async function toggleHouseSelection(houseId) {
             const house = housesData.find(h => h.id === houseId);
             if (!house) return;
-            
+
             // 如果当前是已选状态，则取消选择
             if (house.status === 'selected') {
                 house.status = 'available';
@@ -2193,7 +2368,10 @@
                 house.status = 'selected';
             }
             // reserved状态的房源不能被选择
-            
+
+            // 保存到GitHub（异步，不阻塞UI更新）
+            saveToCloud();
+
             updateStats();
             renderGridView();
             renderListView();
