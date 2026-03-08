@@ -1689,8 +1689,7 @@
                 const { data, error } = await supabaseClient
                     .from('houses_data')
                     .select('*')
-                    .eq('id', 1)
-                    .single();
+                    .eq('id', 1);
 
                 if (error) {
                     console.error('Supabase查询错误:', error);
@@ -1699,10 +1698,12 @@
 
                 console.log('Supabase返回数据:', data);
 
-                if (data && data.data) {
+                // 检查是否有数据
+                if (data && data.length > 0 && data[0].data) {
                     console.log('从Supabase加载数据成功');
-                    return data.data;
+                    return data[0].data;
                 }
+                console.log('Supabase中没有数据');
                 return null;
             } catch (error) {
                 console.error('从Supabase加载失败:', error);
