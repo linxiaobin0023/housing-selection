@@ -1675,9 +1675,10 @@
         async function loadFromSupabase() {
             if (!supabaseClient) return null;
             try {
+                console.log('正在从Supabase加载数据...');
                 const { data, error } = await supabaseClient
                     .from('houses_data')
-                    .select('data')
+                    .select('*')
                     .eq('id', 1)
                     .single();
 
@@ -1685,6 +1686,8 @@
                     console.error('Supabase查询错误:', error);
                     return null;
                 }
+
+                console.log('Supabase返回数据:', data);
 
                 if (data && data.data) {
                     console.log('从Supabase加载数据成功');
@@ -1701,9 +1704,14 @@
         async function saveToSupabase(data) {
             if (!supabaseClient) return false;
             try {
+                console.log('正在保存数据到Supabase...');
                 const { error } = await supabaseClient
                     .from('houses_data')
-                    .upsert({ id: 1, data: data, updated_at: new Date().toISOString() });
+                    .upsert({ 
+                        id: 1, 
+                        data: data, 
+                        updated_at: new Date().toISOString() 
+                    });
 
                 if (error) {
                     console.error('保存到Supabase失败:', error);
@@ -2302,7 +2310,7 @@
                 }
             });
 
-            // 保存到GitHub
+            // 保存到Supabase
             await saveToCloud();
 
             // 更新显示
@@ -2369,8 +2377,8 @@
             }
             // reserved状态的房源不能被选择
 
-            // 保存到GitHub（异步，不阻塞UI更新）
-            saveToCloud();
+            // 保存到Supabase（异步，不阻塞UI更新）
+            await saveToCloud();
 
             updateStats();
             renderGridView();
