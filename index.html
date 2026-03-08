@@ -1659,7 +1659,17 @@
         // 初始化Supabase客户端
         let supabaseClient = null;
         try {
-            supabaseClient = supabase.createClient(SUPABASE_CONFIG.url, SUPABASE_CONFIG.anonKey);
+            supabaseClient = supabase.createClient(SUPABASE_CONFIG.url, SUPABASE_CONFIG.anonKey, {
+                auth: {
+                    autoRefreshToken: false,
+                    persistSession: false
+                },
+                global: {
+                    headers: {
+                        'Access-Control-Allow-Origin': '*'
+                    }
+                }
+            });
             console.log('Supabase初始化成功');
         } catch (e) {
             console.error('Supabase初始化失败:', e);
@@ -1702,23 +1712,30 @@
 
         // 保存数据到Supabase
         async function saveToSupabase(data) {
-            if (!supabaseClient) return false;
+            if (!supabaseClient) {
+                console.error('Supabase客户端未初始化');
+                return false;
+            }
             try {
                 console.log('正在保存数据到Supabase...');
-                const { error } = await supabaseClient
+                console.log('数据条数:', data.length);
+
+                const { data: result, error } = await supabaseClient
                     .from('houses_data')
                     .upsert({ 
                         id: 1, 
                         data: data, 
                         updated_at: new Date().toISOString() 
-                    });
+                    })
+                    .select();
 
                 if (error) {
                     console.error('保存到Supabase失败:', error);
+                    console.error('错误详情:', error.message, error.details);
                     return false;
                 }
 
-                console.log('数据已保存到Supabase');
+                console.log('数据已保存到Supabase:', result);
                 return true;
             } catch (error) {
                 console.error('保存到Supabase失败:', error);
