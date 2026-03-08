@@ -1681,27 +1681,30 @@
         let isOnline = false;
         let syncInterval = null;
 
-        // 从Supabase加载数据
+        // 从Supabase加载数据 - 新表结构：每行一个房源状态
         async function loadFromSupabase() {
             if (!supabaseClient) return null;
             try {
                 console.log('正在从Supabase加载数据...');
                 const { data, error } = await supabaseClient
                     .from('houses_data')
-                    .select('*')
-                    .eq('id', 1);
+                    .select('*');
 
                 if (error) {
                     console.error('Supabase查询错误:', error);
                     return null;
                 }
 
-                console.log('Supabase返回数据:', data);
+                console.log('Supabase返回数据条数:', data ? data.length : 0);
 
-                // 检查是否有数据
-                if (data && data.length > 0 && data[0].data) {
+                // 转换为 {id, status} 格式
+                if (data && data.length > 0) {
+                    const statusData = data.map(row => ({ 
+                        id: row.house_id, 
+                        status: row.status 
+                    }));
                     console.log('从Supabase加载数据成功');
-                    return data[0].data;
+                    return statusData;
                 }
                 console.log('Supabase中没有数据');
                 return null;
@@ -1711,7 +1714,7 @@
             }
         }
 
-        // 保存数据到Supabase - 只保存ID和状态，减少数据大小
+        // 保存数据到Supabase - 新表结构：每行一个房源状态
         async function saveToSupabase(data) {
             if (!supabaseClient) {
                 console.error('Supabase客户端未初始化');
@@ -1719,18 +1722,26 @@
             }
             try {
                 console.log('正在保存数据到Supabase...');
-                // 只提取id和status，减少数据大小
-                const statusData = data.map(h => ({ id: h.id, status: h.status }));
-                console.log('状态数据条数:', statusData.length);
+                // 只提取id和status
+                const statusData = data
+                    .filter(h => h.status === 'selected') // 只保存已选中的
+                    .map(h => ({ 
+                        house_id: h.id, 
+                        status: h.status,
+                        updated_at: new Date().toISOString()
+                    }));
+                
+                console.log('需要保存的已选房源数:', statusData.length);
 
+                if (statusData.length === 0) {
+                    console.log('没有需要保存的数据');
+                    return true;
+                }
+
+                // 使用upsert保存数据
                 const { data: result, error } = await supabaseClient
                     .from('houses_data')
-                    .upsert({ 
-                        id: 1, 
-                        data: statusData, 
-                        updated_at: new Date().toISOString() 
-                    })
-                    .select();
+                    .upsert(statusData, { onConflict: 'house_id' });
 
                 if (error) {
                     console.error('保存到Supabase失败:', error);
@@ -1738,7 +1749,7 @@
                     return false;
                 }
 
-                console.log('数据已保存到Supabase:', result);
+                console.log('数据已保存到Supabase');
                 return true;
             } catch (error) {
                 console.error('保存到Supabase失败:', error);
