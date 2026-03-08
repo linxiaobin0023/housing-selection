@@ -1839,19 +1839,6 @@
                     <input type="file" id="ocrFileInput" class="ocr-input" accept="image/*" onchange="handleOCRImage(event)">
                     <input type="file" id="ocrCameraInput" class="ocr-input" accept="image/*" capture="environment" onchange="handleOCRImage(event)">
                 </div>
-                <div class="fab-data-sync" style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #e8e8e8;">
-                    <h4>数据同步</h4>
-                    <div class="ocr-buttons">
-                        <button class="ocr-btn" onclick="exportData()">
-                            💾 导出数据
-                        </button>
-                        <button class="ocr-btn" onclick="document.getElementById('importFileInput').click()">
-                            📂 导入数据
-                        </button>
-                    </div>
-                    <input type="file" id="importFileInput" class="ocr-input" accept=".json" onchange="handleImportFile(event)">
-                    <p style="font-size: 12px; color: #666; margin-top: 8px;">导出数据文件可在其他设备导入</p>
-                </div>
             </div>
         </div>
     </div>
@@ -2461,22 +2448,6 @@
 
         // OCR识别结果存储（包含房号和是否被划掉的状态）
         let ocrDetectedRooms = [];
-
-        // 处理导入文件
-        async function handleImportFile(event) {
-            const file = event.target.files[0];
-            if (!file) return;
-
-            try {
-                await importData(file);
-                alert('数据导入成功！');
-            } catch (error) {
-                alert('数据导入失败：' + error.message);
-            }
-
-            // 清空input，允许重复选择同一文件
-            event.target.value = '';
-        }
 
         // 处理OCR图片
         async function handleOCRImage(event) {
