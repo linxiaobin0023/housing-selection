@@ -1722,31 +1722,41 @@
             }
             try {
                 console.log('正在保存数据到Supabase...');
-                // 只提取id和status
-                const statusData = data
-                    .filter(h => h.status === 'selected') // 只保存已选中的
-                    .map(h => ({ 
-                        house_id: h.id, 
-                        status: h.status,
-                        updated_at: new Date().toISOString()
-                    }));
                 
-                console.log('需要保存的已选房源数:', statusData.length);
+                // 获取当前选中的房源ID
+                const selectedIds = data
+                    .filter(h => h.status === 'selected')
+                    .map(h => h.id);
+                
+                console.log('当前选中房源数:', selectedIds.length);
 
-                if (statusData.length === 0) {
-                    console.log('没有需要保存的数据');
-                    return true;
+                // 先删除数据库中所有记录
+                const { error: deleteError } = await supabaseClient
+                    .from('houses_data')
+                    .delete()
+                    .neq('house_id', ''); // 删除所有记录
+
+                if (deleteError) {
+                    console.error('删除旧数据失败:', deleteError);
+                    return false;
                 }
 
-                // 使用upsert保存数据
-                const { data: result, error } = await supabaseClient
-                    .from('houses_data')
-                    .upsert(statusData, { onConflict: 'house_id' });
+                // 如果有选中的房源，插入新数据
+                if (selectedIds.length > 0) {
+                    const statusData = selectedIds.map(id => ({ 
+                        house_id: id, 
+                        status: 'selected',
+                        updated_at: new Date().toISOString()
+                    }));
 
-                if (error) {
-                    console.error('保存到Supabase失败:', error);
-                    console.error('错误详情:', error.message, error.details);
-                    return false;
+                    const { error: insertError } = await supabaseClient
+                        .from('houses_data')
+                        .insert(statusData);
+
+                    if (insertError) {
+                        console.error('插入新数据失败:', insertError);
+                        return false;
+                    }
                 }
 
                 console.log('数据已保存到Supabase');
