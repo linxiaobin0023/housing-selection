@@ -155,6 +155,19 @@
             transform: translateY(-2px);
         }
 
+        /* 移动端禁用hover效果 */
+        @media (hover: none) {
+            .btn-primary:hover {
+                transform: none;
+                box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            }
+
+            .btn-secondary:hover {
+                background: #f5f5f5;
+                transform: none;
+            }
+        }
+
         .preferred-section {
             background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
             border-radius: 20px;
@@ -217,6 +230,21 @@
             box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
         }
 
+        /* 移动端禁用hover效果，防止点击后状态断裂 */
+        @media (hover: none) {
+            .preferred-option:hover {
+                border-color: #d0d8f0;
+                background: white;
+                transform: none;
+            }
+
+            .preferred-option.selected:hover {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                border-color: #667eea;
+                box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            }
+        }
+
         .preferred-option .count {
             font-size: 12px;
             opacity: 0.7;
@@ -245,10 +273,15 @@
             box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3), 0 12px 35px rgba(102, 126, 234, 0.25);
         }
 
+        /* 视图切换容器 */
+        .view-toggle-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 16px;
+            padding: 0 4px;
+        }
+
         .view-toggle-inline {
-            position: absolute;
-            top: 28px;
-            right: 28px;
             display: flex;
             gap: 8px;
             z-index: 10;
@@ -277,6 +310,20 @@
             color: white;
             border-color: #667eea;
             box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        /* 移动端禁用hover效果 */
+        @media (hover: none) {
+            .view-toggle-inline button:hover {
+                border-color: #e0e0e0;
+                color: #666;
+                transform: none;
+            }
+
+            .view-toggle-inline button.active:hover {
+                border-color: #667eea;
+                color: white;
+            }
         }
 
         /* 悬浮统计按钮 */
@@ -314,6 +361,18 @@
             transform: rotate(45deg);
         }
 
+        /* 移动端禁用hover效果 */
+        @media (hover: none) {
+            .fab-button:hover {
+                transform: none;
+                box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+            }
+
+            .fab-button.active:hover {
+                transform: rotate(45deg);
+            }
+        }
+
         .fab-panel {
             position: fixed;
             bottom: 100px;
@@ -339,6 +398,17 @@
             visibility: visible;
         }
 
+        .fab-panel-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .fab-panel-left,
+        .fab-panel-right {
+            flex: 1;
+        }
+
         .fab-panel h3 {
             font-size: 1rem;
             color: #333;
@@ -355,7 +425,6 @@
         .fab-stats {
             display: flex;
             gap: 12px;
-            margin-bottom: 20px;
         }
 
         .fab-stat-card {
@@ -377,6 +446,18 @@
         .fab-stat-card.active {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
+        }
+
+        /* 移动端禁用hover效果 */
+        @media (hover: none) {
+            .fab-stat-card:hover {
+                transform: none;
+                border-color: transparent;
+            }
+
+            .fab-stat-card.active:hover {
+                border-color: #667eea;
+            }
         }
 
         .fab-stat-card .number {
@@ -440,6 +521,19 @@
             color: white;
         }
 
+        /* 移动端禁用hover效果 */
+        @media (hover: none) {
+            .fab-preferred-option:hover {
+                border-color: #e0e0e0;
+                background: white;
+            }
+
+            .fab-preferred-option.selected:hover {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                border-color: #667eea;
+            }
+        }
+
         .fab-preferred-option .count {
             font-size: 11px;
             opacity: 0.7;
@@ -447,9 +541,9 @@
 
         /* OCR功能样式 */
         .fab-ocr {
-            border-top: 1px solid #e8e8e8;
-            padding-top: 16px;
-            margin-top: 16px;
+            border-top: none;
+            padding-top: 0;
+            margin-top: 0;
         }
 
         .fab-ocr h4 {
@@ -491,6 +585,15 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border-style: solid;
+        }
+
+        /* 移动端禁用hover效果 */
+        @media (hover: none) {
+            .ocr-btn:hover {
+                background: linear-gradient(135deg, #f8f9ff 0%, #f0f3ff 100%);
+                color: #667eea;
+                border-style: dashed;
+            }
         }
 
         .ocr-input {
@@ -709,6 +812,68 @@
             position: relative;
         }
 
+        /* 楼栋切换器 */
+        .building-tabs {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .building-tab {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            background: white;
+            color: #666;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-width: 0;
+        }
+
+        .building-tab:hover {
+            border-color: #667eea;
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .building-tab.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: #667eea;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .building-tab .count {
+            font-size: 12px;
+            opacity: 0.8;
+            background: rgba(255,255,255,0.2);
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        /* 移动端禁用hover效果 */
+        @media (hover: none) {
+            .building-tab:hover {
+                border-color: #e0e0e0;
+                color: #666;
+                transform: none;
+            }
+
+            .building-tab.active:hover {
+                border-color: #667eea;
+                color: white;
+            }
+        }
+
         .remaining-btn {
             position: absolute;
             top: 28px;
@@ -741,6 +906,18 @@
 
         .remaining-btn.active:hover {
             box-shadow: 0 8px 25px rgba(82, 196, 26, 0.4);
+        }
+
+        /* 移动端禁用hover效果 */
+        @media (hover: none) {
+            .remaining-btn:hover {
+                transform: none;
+                box-shadow: 0 4px 15px rgba(255, 77, 79, 0.3);
+            }
+
+            .remaining-btn.active:hover {
+                box-shadow: 0 4px 15px rgba(82, 196, 26, 0.3);
+            }
         }
 
         .building-section {
@@ -852,6 +1029,28 @@
             box-shadow: 0 12px 30px rgba(250, 173, 20, 0.2);
         }
 
+        /* 移动端禁用hover效果 */
+        @media (hover: none) {
+            .house-card:hover {
+                transform: none;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            }
+
+            .house-card.available:hover {
+                border-color: #95de64;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            }
+
+            .house-card.selected:hover {
+                box-shadow: 0 8px 25px rgba(255, 77, 79, 0.4);
+            }
+
+            .house-card.reserved:hover {
+                border-color: #ffc53d;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            }
+        }
+
         .house-card .room-number {
             font-weight: 800;
             font-size: 15px;
@@ -945,6 +1144,125 @@
             color: #ff4d4f;
         }
 
+        /* 移动端列表视图 - 卡片式布局 */
+        .houses-list-mobile {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .houses-list-mobile {
+                display: block;
+            }
+
+            .houses-list-mobile .house-list-item {
+                background: white;
+                border-radius: 12px;
+                padding: 16px;
+                margin-bottom: 12px;
+                border: 1px solid #e8e8e8;
+                cursor: pointer;
+                transition: all 0.2s;
+            }
+
+            .houses-list-mobile .house-list-item:hover {
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            }
+
+            .houses-list-mobile .house-list-item.selected {
+                background: linear-gradient(135deg, #ff4d4f 0%, #ff7875 100%);
+                color: white;
+                border-color: #ff4d4f;
+            }
+
+            .houses-list-mobile .house-list-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 12px;
+            }
+
+            .houses-list-mobile .house-list-title {
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+            .houses-list-mobile .house-list-status {
+                padding: 4px 10px;
+                border-radius: 12px;
+                font-size: 12px;
+                font-weight: 500;
+            }
+
+            .houses-list-mobile .house-list-item.selected .house-list-status.available {
+                background: rgba(255,255,255,0.9);
+                color: #52c41a;
+            }
+
+            .houses-list-mobile .house-list-item.selected .house-list-status.selected {
+                background: rgba(255,255,255,0.9);
+                color: #ff4d4f;
+            }
+
+            .houses-list-mobile .house-list-item.selected .house-list-status.reserved {
+                background: rgba(255,255,255,0.9);
+                color: #faad14;
+            }
+
+            .houses-list-mobile .house-list-info {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+                font-size: 13px;
+            }
+
+            .houses-list-mobile .house-list-info-item {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .houses-list-mobile .house-list-info-label {
+                color: #999;
+                font-size: 11px;
+            }
+
+            .houses-list-mobile .house-list-info-value {
+                font-weight: 500;
+                color: #333;
+            }
+
+            .houses-list-mobile .house-list-item.selected .house-list-info-label,
+            .houses-list-mobile .house-list-item.selected .house-list-info-value {
+                color: white;
+            }
+
+            .houses-list-mobile .house-list-price {
+                margin-top: 12px;
+                padding-top: 12px;
+                border-top: 1px solid #e8e8e8;
+                font-size: 16px;
+                font-weight: 700;
+                color: #667eea;
+            }
+
+            .houses-list-mobile .house-list-item.selected .house-list-price {
+                border-top-color: rgba(255,255,255,0.3);
+                color: white;
+            }
+
+            /* 在移动端隐藏表格 */
+            .houses-table {
+                display: none;
+            }
+        }
+
+        /* 横屏优化 */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .houses-list-mobile .house-list-info {
+                grid-template-columns: repeat(6, 1fr);
+            }
+        }
+
         .empty-state {
             text-align: center;
             padding: 60px 20px;
@@ -984,6 +1302,34 @@
             .filter-group select,
             .filter-group input {
                 width: 100%;
+            }
+
+            .view-toggle-container {
+                justify-content: center;
+                margin-bottom: 12px;
+            }
+
+            .view-toggle-inline button {
+                padding: 8px 16px;
+                font-size: 12px;
+            }
+
+            .building-tabs {
+                gap: 8px;
+                margin-bottom: 16px;
+                padding-bottom: 12px;
+            }
+
+            .building-tab {
+                padding: 10px 8px;
+                font-size: 13px;
+                gap: 4px;
+                flex-direction: column;
+            }
+
+            .building-tab .count {
+                font-size: 10px;
+                padding: 1px 6px;
             }
 
             .remaining-btn {
@@ -1037,6 +1383,93 @@
             .house-card .price {
                 font-size: 11px;
                 font-weight: 600;
+            }
+
+            /* 移动端悬浮面板适配 */
+            .fab-panel {
+                bottom: 80px;
+                right: 16px;
+                left: 16px;
+                min-width: auto;
+                max-width: none;
+                padding: 16px;
+            }
+
+            .fab-panel-content {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .fab-stats {
+                gap: 8px;
+            }
+
+            .fab-stat-card {
+                padding: 10px 6px;
+            }
+
+            .fab-stat-card .number {
+                font-size: 1.2rem;
+            }
+
+            .fab-stat-card .label {
+                font-size: 0.7rem;
+            }
+
+            .ocr-buttons {
+                flex-direction: column;
+            }
+
+            .ocr-btn {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+        }
+
+        /* 横屏适配 - 当高度小于宽度时（横屏） */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .fab-panel {
+                bottom: 70px;
+                right: 16px;
+                left: auto;
+                min-width: 400px;
+                max-width: 500px;
+                padding: 16px;
+                max-height: 70vh;
+                overflow-y: auto;
+            }
+
+            .fab-panel-content {
+                flex-direction: row;
+                gap: 20px;
+            }
+
+            .fab-panel-left {
+                flex: 1;
+            }
+
+            .fab-panel-right {
+                flex: 1;
+                border-left: 1px solid #e8e8e8;
+                padding-left: 20px;
+            }
+
+            .fab-stats {
+                gap: 8px;
+            }
+
+            .fab-stat-card {
+                padding: 10px 6px;
+            }
+
+            .ocr-buttons {
+                flex-direction: column;
+                gap: 6px;
+            }
+
+            .ocr-btn {
+                padding: 8px 10px;
+                font-size: 12px;
             }
         }
     </style>
@@ -1109,10 +1542,29 @@
             </div>
         </div>
 
-        <div class="houses-container">
+        <!-- 视图切换按钮 -->
+        <div class="view-toggle-container">
             <div class="view-toggle-inline">
                 <button class="active" onclick="switchView('grid')">🏢 楼栋视图</button>
                 <button onclick="switchView('list')">📋 列表视图</button>
+            </div>
+        </div>
+
+        <div class="houses-container">
+            <!-- 楼栋切换器 -->
+            <div class="building-tabs">
+                <div class="building-tab active" onclick="switchBuilding('嘉禧苑A栋')">
+                    <span>A栋</span>
+                    <span class="count" id="buildingCountA">0套</span>
+                </div>
+                <div class="building-tab" onclick="switchBuilding('嘉禧苑B栋')">
+                    <span>B栋</span>
+                    <span class="count" id="buildingCountB">0套</span>
+                </div>
+                <div class="building-tab" onclick="switchBuilding('嘉禧苑C栋')">
+                    <span>C栋</span>
+                    <span class="count" id="buildingCountC">0套</span>
+                </div>
             </div>
             <div id="gridView" class="houses-grid active"></div>
             <div id="listView" class="list-view"></div>
@@ -1121,58 +1573,39 @@
 
     <!-- 悬浮统计面板 -->
     <div class="fab-panel" id="fabPanel">
-        <h3>房源统计</h3>
-        <div class="fab-stats">
-            <div class="fab-stat-card" onclick="fabShowStatHouses('all')" id="fabStatAll">
-                <div class="number" id="fabAllCount">0</div>
-                <div class="label">全部</div>
-            </div>
-            <div class="fab-stat-card" onclick="fabShowStatHouses('selected')" id="fabStatSelected">
-                <div class="number" id="fabSelectedCount">0</div>
-                <div class="label">已选</div>
-            </div>
-            <div class="fab-stat-card" onclick="fabShowStatHouses('remaining')" id="fabStatRemaining">
-                <div class="number" id="fabRemainingCount">0</div>
-                <div class="label">剩余</div>
-            </div>
-        </div>
-        <div class="fab-preferred">
-            <h4>意向房型</h4>
-            <div class="fab-preferred-options">
-                <div class="fab-preferred-option" onclick="fabTogglePreferredType('01房')" id="fabPref01">
-                    <span>01房</span>
-                    <span class="count" id="fabCount01">0套</span>
-                </div>
-                <div class="fab-preferred-option" onclick="fabTogglePreferredType('02房')" id="fabPref02">
-                    <span>02房</span>
-                    <span class="count" id="fabCount02">0套</span>
-                </div>
-                <div class="fab-preferred-option" onclick="fabTogglePreferredType('03房')" id="fabPref03">
-                    <span>03房</span>
-                    <span class="count" id="fabCount03">0套</span>
-                </div>
-                <div class="fab-preferred-option" onclick="fabTogglePreferredType('04房')" id="fabPref04">
-                    <span>04房</span>
-                    <span class="count" id="fabCount04">0套</span>
-                </div>
-                <div class="fab-preferred-option" onclick="fabTogglePreferredType('05房')" id="fabPref05">
-                    <span>05房</span>
-                    <span class="count" id="fabCount05">0套</span>
+        <div class="fab-panel-content">
+            <div class="fab-panel-left">
+                <h3>房源统计</h3>
+                <div class="fab-stats">
+                    <div class="fab-stat-card" onclick="fabShowStatHouses('all')" id="fabStatAll">
+                        <div class="number" id="fabAllCount">0</div>
+                        <div class="label">全部</div>
+                    </div>
+                    <div class="fab-stat-card" onclick="fabShowStatHouses('selected')" id="fabStatSelected">
+                        <div class="number" id="fabSelectedCount">0</div>
+                        <div class="label">已选</div>
+                    </div>
+                    <div class="fab-stat-card" onclick="fabShowStatHouses('remaining')" id="fabStatRemaining">
+                        <div class="number" id="fabRemainingCount">0</div>
+                        <div class="label">剩余</div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="fab-ocr">
-            <h4>OCR识别已选房源</h4>
-            <div class="ocr-buttons">
-                <button class="ocr-btn" onclick="document.getElementById('ocrFileInput').click()">
-                    📁 上传照片
-                </button>
-                <button class="ocr-btn" onclick="document.getElementById('ocrCameraInput').click()">
-                    📷 拍照识别
-                </button>
+            <div class="fab-panel-right">
+                <div class="fab-ocr">
+                    <h4>OCR识别已选房源</h4>
+                    <div class="ocr-buttons">
+                        <button class="ocr-btn" onclick="document.getElementById('ocrFileInput').click()">
+                            📁 上传照片
+                        </button>
+                        <button class="ocr-btn" onclick="document.getElementById('ocrCameraInput').click()">
+                            📷 拍照识别
+                        </button>
+                    </div>
+                    <input type="file" id="ocrFileInput" class="ocr-input" accept="image/*" onchange="handleOCRImage(event)">
+                    <input type="file" id="ocrCameraInput" class="ocr-input" accept="image/*" capture="environment" onchange="handleOCRImage(event)">
+                </div>
             </div>
-            <input type="file" id="ocrFileInput" class="ocr-input" accept="image/*" onchange="handleOCRImage(event)">
-            <input type="file" id="ocrCameraInput" class="ocr-input" accept="image/*" capture="environment" onchange="handleOCRImage(event)">
         </div>
     </div>
 
@@ -1261,10 +1694,18 @@
             document.getElementById('fabAllCount').textContent = all;
             document.getElementById('fabSelectedCount').textContent = selected;
             document.getElementById('fabRemainingCount').textContent = available + reserved;
+
+            // 更新楼栋切换器中的数量
+            document.getElementById('buildingCountA').textContent = `${housesData.filter(h => h.building === '嘉禧苑A栋').length}套`;
+            document.getElementById('buildingCountB').textContent = `${housesData.filter(h => h.building === '嘉禧苑B栋').length}套`;
+            document.getElementById('buildingCountC').textContent = `${housesData.filter(h => h.building === '嘉禧苑C栋').length}套`;
         }
 
         // 当前统计筛选状态
         let currentStatFilter = null;
+
+        // 当前选中的楼栋
+        let currentBuilding = '嘉禧苑A栋';
 
         // 意向房型
         let preferredRoomTypes = [];
@@ -1721,14 +2162,17 @@
                 if (showRemainingOnly && h.status === 'selected') {
                     return false;
                 }
-                
+
                 // 根据统计卡片筛选
                 if (currentStatFilter) {
                     if (currentStatFilter === 'all') return true; // 显示全部
                     if (currentStatFilter === 'selected' && h.status !== 'selected') return false;
                     if (currentStatFilter === 'remaining' && (h.status === 'selected')) return false;
                 }
-                
+
+                // 根据楼栋切换器筛选
+                if (h.building !== currentBuilding) return false;
+
                 if (building && h.building !== building) return false;
                 if (floor && h.floor !== parseInt(floor)) return false;
                 if (roomType && h.room_type !== roomType) return false;
@@ -1811,7 +2255,7 @@
         function renderListView() {
             const data = getFilteredData();
             const container = document.getElementById('listView');
-            
+
             if (data.length === 0) {
                 container.innerHTML = `
                     <div class="empty-state">
@@ -1828,6 +2272,7 @@
                 'reserved': '已预订'
             };
 
+            // 桌面端表格视图
             let html = `
                 <table class="houses-table">
                     <thead>
@@ -1860,6 +2305,50 @@
                 </table>
             `;
 
+            // 移动端卡片视图
+            html += `
+                <div class="houses-list-mobile">
+                    ${data.map(h => {
+                        const isPreferred = preferredRoomTypes.includes(h.room_type);
+                        const preferredBadge = isPreferred ? '⭐ ' : '';
+                        return `
+                        <div class="house-list-item ${h.status}" onclick="toggleHouseSelection('${h.id}')">
+                            <div class="house-list-header">
+                                <div class="house-list-title">${preferredBadge}${h.room_number}</div>
+                                <div class="house-list-status ${h.status}">${statusText[h.status]}</div>
+                            </div>
+                            <div class="house-list-info">
+                                <div class="house-list-info-item">
+                                    <span class="house-list-info-label">楼栋</span>
+                                    <span class="house-list-info-value">${h.building.replace('嘉禧苑', '')}</span>
+                                </div>
+                                <div class="house-list-info-item">
+                                    <span class="house-list-info-label">楼层</span>
+                                    <span class="house-list-info-value">${h.floor}层</span>
+                                </div>
+                                <div class="house-list-info-item">
+                                    <span class="house-list-info-label">房型</span>
+                                    <span class="house-list-info-value">${h.room_type}</span>
+                                </div>
+                                <div class="house-list-info-item">
+                                    <span class="house-list-info-label">朝向</span>
+                                    <span class="house-list-info-value">${h.direction}</span>
+                                </div>
+                                <div class="house-list-info-item">
+                                    <span class="house-list-info-label">面积</span>
+                                    <span class="house-list-info-value">${h.area || '-'}㎡</span>
+                                </div>
+                                <div class="house-list-info-item">
+                                    <span class="house-list-info-label">户型</span>
+                                    <span class="house-list-info-value">${h.layout || '-'}</span>
+                                </div>
+                            </div>
+                            <div class="house-list-price">¥${h.price}/月</div>
+                        </div>
+                    `}).join('')}
+                </div>
+            `;
+
             container.innerHTML = html;
         }
 
@@ -1880,6 +2369,21 @@
             }
         }
 
+        // 切换楼栋
+        function switchBuilding(building) {
+            currentBuilding = building;
+
+            // 更新标签样式
+            document.querySelectorAll('.building-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.target.closest('.building-tab').classList.add('active');
+
+            // 重新渲染视图
+            renderGridView();
+            renderListView();
+        }
+
         // 应用筛选
         function applyFilters() {
             renderGridView();
@@ -1891,12 +2395,12 @@
             document.getElementById('buildingFilter').value = '';
             document.getElementById('floorFilter').value = '';
             document.getElementById('roomTypeFilter').value = '';
-            
+
             // 如果处于剩余房源视图，也重置
             if (showRemainingOnly) {
                 toggleRemainingView();
             }
-            
+
             // 如果处于统计卡片筛选状态，也重置
             if (currentStatFilter) {
                 document.querySelectorAll('.stat-card').forEach(card => {
@@ -1904,13 +2408,20 @@
                 });
                 currentStatFilter = null;
             }
-            
+
+            // 重置楼栋选择（默认选中A栋）
+            currentBuilding = '嘉禧苑A栋';
+            document.querySelectorAll('.building-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelector('.building-tab[onclick="switchBuilding(\'嘉禧苑A栋\')"]').classList.add('active');
+
             // 重置意向房型
             preferredRoomTypes = [];
             document.querySelectorAll('.preferred-option').forEach(option => {
                 option.classList.remove('selected');
             });
-            
+
             renderGridView();
             renderListView();
         }
