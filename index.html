@@ -1824,20 +1824,31 @@
             try {
                 const supabaseData = await loadFromSupabase();
                 if (supabaseData && Array.isArray(supabaseData)) {
-                    // 检查是否有变化
-                    const currentStatus = housesData.map(h => ({ id: h.id, status: h.status }));
-                    const cloudStatus = supabaseData.map(h => ({ id: h.id, status: h.status }));
+                    // 获取云端选中的房源ID集合
+                    const cloudSelectedIds = new Set(supabaseData.map(h => h.id));
+                    
+                    // 检查是否有变化：
+                    // 1. 本地选中但云端没有（被取消）
+                    // 2. 云端选中但本地没有（新选中）
+                    let hasChanges = false;
+                    
+                    housesData = housesData.map(localHouse => {
+                        const isCloudSelected = cloudSelectedIds.has(localHouse.id);
+                        const isLocalSelected = localHouse.status === 'selected';
+                        
+                        if (isCloudSelected && !isLocalSelected) {
+                            // 云端选中，本地未选中 -> 更新为选中
+                            hasChanges = true;
+                            return { ...localHouse, status: 'selected' };
+                        } else if (!isCloudSelected && isLocalSelected) {
+                            // 云端未选中，本地选中 -> 更新为可选
+                            hasChanges = true;
+                            return { ...localHouse, status: 'available' };
+                        }
+                        return localHouse;
+                    });
 
-                    if (JSON.stringify(currentStatus) !== JSON.stringify(cloudStatus)) {
-                        // 有变化，更新本地数据
-                        housesData = housesData.map(localHouse => {
-                            const cloudHouse = supabaseData.find(h => h.id === localHouse.id);
-                            if (cloudHouse && cloudHouse.status !== localHouse.status) {
-                                return { ...localHouse, status: cloudHouse.status };
-                            }
-                            return localHouse;
-                        });
-
+                    if (hasChanges) {
                         updateStats();
                         renderGridView();
                         renderListView();
