@@ -284,11 +284,9 @@
             position: fixed;
             bottom: 30px;
             right: 30px;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 12px;
+            z-index: 100;
+            width: 56px;
+            height: 56px;
         }
 
         .fab-button {
@@ -317,6 +315,9 @@
         }
 
         .fab-panel {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
             background: white;
             border-radius: 20px;
             padding: 24px;
@@ -327,12 +328,15 @@
             transform: translateY(20px) scale(0.95);
             pointer-events: none;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            visibility: hidden;
+            z-index: 101;
         }
 
         .fab-panel.open {
             opacity: 1;
             transform: translateY(0) scale(1);
             pointer-events: auto;
+            visibility: visible;
         }
 
         .fab-panel h3 {
@@ -783,16 +787,13 @@
             padding: 14px 18px;
             border-radius: 14px;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s, border-color 0.2s;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             min-width: 110px;
             text-align: center;
             border: 2px solid transparent;
             user-select: none;
             position: relative;
             overflow: hidden;
-            will-change: transform;
-            -webkit-tap-highlight-color: transparent;
-            touch-action: manipulation;
         }
 
         .house-card::after {
@@ -957,297 +958,57 @@
             opacity: 0.3;
         }
 
-        /* 移动端优化 */
         @media (max-width: 768px) {
-            body {
-                padding: 8px;
-                padding-top: max(8px, env(safe-area-inset-top));
-                padding-bottom: max(8px, env(safe-area-inset-bottom));
-            }
-
-            header {
-                margin-bottom: 12px;
-                padding: 0 4px;
-            }
-
             header h1 {
-                font-size: 1.2rem;
-                line-height: 1.3;
-                margin-bottom: 4px;
+                font-size: 1.8rem;
             }
 
-            header p {
-                font-size: 0.8rem;
+            .stat-card {
+                padding: 15px 20px;
+                min-width: 120px;
             }
 
-            .filters {
-                padding: 12px;
-                margin-bottom: 12px;
-                border-radius: 12px;
+            .stat-card .number {
+                font-size: 2rem;
             }
 
             .filter-row {
-                display: flex;
                 flex-direction: column;
-                gap: 12px;
+                align-items: stretch;
             }
 
             .filter-group {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 8px;
                 width: 100%;
             }
 
-            .filter-group label {
-                font-size: 0.85rem;
-                min-width: 50px;
-                flex-shrink: 0;
-                margin: 0;
-            }
-
-            .filter-group select {
-                flex: 1;
-                padding: 10px 12px;
-                font-size: 14px;
-                border-radius: 8px;
-            }
-
-            .filter-actions {
-                display: flex;
-                gap: 10px;
-                margin-top: 4px;
+            .filter-group select,
+            .filter-group input {
                 width: 100%;
             }
 
-            .filter-actions .btn {
-                flex: 1;
-                padding: 10px 16px;
-                font-size: 14px;
-                border-radius: 8px;
-            }
-
-            .preferred-section {
-                padding: 12px;
-                margin-bottom: 12px;
-                border-radius: 12px;
-            }
-
-            .preferred-section h3 {
-                font-size: 0.9rem;
-                margin-bottom: 10px;
-            }
-
-            .preferred-options {
-                gap: 6px;
-            }
-
-            .preferred-option {
-                padding: 8px 12px;
-                font-size: 12px;
-                min-width: 60px;
-                border-radius: 8px;
-            }
-
-            .preferred-option .count {
-                font-size: 10px;
-            }
-
-            .houses-container {
-                padding: 12px;
-                border-radius: 12px;
-            }
-
-            .view-toggle-inline {
+            .remaining-btn {
                 position: static;
+                margin-bottom: 15px;
+                display: block;
                 width: 100%;
-                display: flex;
-                gap: 8px;
-                margin-bottom: 16px;
-            }
-
-            .view-toggle-inline button {
-                flex: 1;
-                padding: 10px 12px;
-                font-size: 13px;
-                text-align: center;
-                border-radius: 10px;
-            }
-
-            .building-title {
-                font-size: 1.2rem;
-                margin-bottom: 12px;
-                padding-bottom: 8px;
             }
 
             .floor-row {
                 flex-direction: column;
-                gap: 8px;
-                padding: 10px 12px;
-                margin-bottom: 8px;
+                align-items: flex-start;
             }
 
             .floor-label {
-                font-size: 0.85rem;
-                padding: 4px 10px;
-                min-width: auto;
-                align-self: flex-start;
-                border-radius: 6px;
+                margin-bottom: 10px;
             }
 
             .rooms-row {
                 width: 100%;
-                gap: 6px;
             }
 
             .house-card {
                 flex: 1;
-                min-width: calc(50% - 3px);
-                padding: 10px 6px;
-                border-radius: 10px;
-                transition: none;
-                transform: none !important;
-            }
-
-            .house-card:active {
-                transform: scale(0.95) !important;
-                transition: transform 0.1s;
-            }
-
-            .house-card::after {
-                display: none;
-            }
-
-            .house-card .room-number {
-                font-size: 0.95rem;
-            }
-
-            .house-card .room-info {
-                font-size: 0.7rem;
-            }
-
-            .house-card .room-price {
-                font-size: 0.75rem;
-            }
-
-            .list-view .house-card {
-                padding: 10px 12px;
-            }
-
-            .list-view .house-card .room-number {
-                font-size: 0.95rem;
-                min-width: 50px;
-            }
-
-            .fab-container {
-                bottom: 16px;
-                right: 12px;
-            }
-
-            .fab-button {
-                width: 48px;
-                height: 48px;
-                font-size: 18px;
-            }
-
-            .fab-panel {
-                min-width: 260px;
-                max-width: calc(100vw - 32px);
-                padding: 12px;
-                border-radius: 12px;
-                right: 0;
-            }
-
-            .fab-stats {
-                flex-direction: row;
-                gap: 6px;
-            }
-
-            .fab-stat-card {
-                flex: 1;
-                padding: 10px 8px;
-            }
-
-            .fab-stat-card .number {
-                font-size: 1.2rem;
-            }
-
-            .fab-stat-card .label {
-                font-size: 0.75rem;
-            }
-
-            .fab-preferred-options {
-                gap: 6px;
-            }
-
-            .fab-preferred-option {
-                padding: 6px 10px;
-                font-size: 12px;
-            }
-
-            .ocr-buttons {
-                flex-direction: column;
-                gap: 8px;
-            }
-
-            .ocr-btn {
-                width: 100%;
-                padding: 10px;
-                font-size: 13px;
-            }
-
-            .modal-content {
-                margin: 16px;
-                max-height: calc(100vh - 32px);
-                border-radius: 12px;
-            }
-
-            .modal-header {
-                padding: 14px 16px;
-            }
-
-            .modal-header h2 {
-                font-size: 1rem;
-            }
-
-            .modal-body {
-                padding: 14px 16px;
-            }
-
-            .ocr-actions {
-                flex-direction: column;
-                gap: 8px;
-            }
-
-            .ocr-actions button {
-                width: 100%;
-                padding: 10px;
-            }
-        }
-
-        /* 超小屏幕优化 */
-        @media (max-width: 375px) {
-            header h1 {
-                font-size: 1.1rem;
-            }
-
-            .filter-row {
-                grid-template-columns: 1fr;
-            }
-
-            .house-card {
-                min-width: calc(50% - 3px);
-                padding: 8px 4px;
-            }
-
-            .house-card .room-number {
-                font-size: 0.85rem;
-            }
-
-            .preferred-option {
-                padding: 6px 10px;
-                font-size: 11px;
+                min-width: calc(50% - 5px);
             }
         }
     </style>
@@ -1330,63 +1091,65 @@
         </div>
     </div>
 
-    <!-- 悬浮统计按钮 -->
-    <div class="fab-container">
-        <div class="fab-panel" id="fabPanel">
-            <h3>房源统计</h3>
-            <div class="fab-stats">
-                <div class="fab-stat-card" onclick="fabShowStatHouses('all')" id="fabStatAll">
-                    <div class="number" id="fabAllCount">0</div>
-                    <div class="label">全部</div>
-                </div>
-                <div class="fab-stat-card" onclick="fabShowStatHouses('selected')" id="fabStatSelected">
-                    <div class="number" id="fabSelectedCount">0</div>
-                    <div class="label">已选</div>
-                </div>
-                <div class="fab-stat-card" onclick="fabShowStatHouses('remaining')" id="fabStatRemaining">
-                    <div class="number" id="fabRemainingCount">0</div>
-                    <div class="label">剩余</div>
-                </div>
+    <!-- 悬浮统计面板 -->
+    <div class="fab-panel" id="fabPanel">
+        <h3>房源统计</h3>
+        <div class="fab-stats">
+            <div class="fab-stat-card" onclick="fabShowStatHouses('all')" id="fabStatAll">
+                <div class="number" id="fabAllCount">0</div>
+                <div class="label">全部</div>
             </div>
-            <div class="fab-preferred">
-                <h4>意向房型</h4>
-                <div class="fab-preferred-options">
-                    <div class="fab-preferred-option" onclick="fabTogglePreferredType('01房')" id="fabPref01">
-                        <span>01房</span>
-                        <span class="count" id="fabCount01">0套</span>
-                    </div>
-                    <div class="fab-preferred-option" onclick="fabTogglePreferredType('02房')" id="fabPref02">
-                        <span>02房</span>
-                        <span class="count" id="fabCount02">0套</span>
-                    </div>
-                    <div class="fab-preferred-option" onclick="fabTogglePreferredType('03房')" id="fabPref03">
-                        <span>03房</span>
-                        <span class="count" id="fabCount03">0套</span>
-                    </div>
-                    <div class="fab-preferred-option" onclick="fabTogglePreferredType('04房')" id="fabPref04">
-                        <span>04房</span>
-                        <span class="count" id="fabCount04">0套</span>
-                    </div>
-                    <div class="fab-preferred-option" onclick="fabTogglePreferredType('05房')" id="fabPref05">
-                        <span>05房</span>
-                        <span class="count" id="fabCount05">0套</span>
-                    </div>
-                </div>
+            <div class="fab-stat-card" onclick="fabShowStatHouses('selected')" id="fabStatSelected">
+                <div class="number" id="fabSelectedCount">0</div>
+                <div class="label">已选</div>
             </div>
-            <div class="fab-ocr">
-                <h4>OCR识别已选房源</h4>
-                <div class="ocr-buttons">
-                    <button class="ocr-btn" onclick="document.getElementById('ocrFileInput').click()">
-                        📁 上传照片
-                    </button>
-                    <button class="ocr-btn" onclick="document.getElementById('ocrCameraInput').click()">
-                        📷 拍照识别
-                    </button>
-                </div>
-                <input type="file" id="ocrFileInput" class="ocr-input" accept="image/*" onchange="handleOCRImage(event)">
-                <input type="file" id="ocrCameraInput" class="ocr-input" accept="image/*" capture="environment" onchange="handleOCRImage(event)">
+            <div class="fab-stat-card" onclick="fabShowStatHouses('remaining')" id="fabStatRemaining">
+                <div class="number" id="fabRemainingCount">0</div>
+                <div class="label">剩余</div>
             </div>
         </div>
+        <div class="fab-preferred">
+            <h4>意向房型</h4>
+            <div class="fab-preferred-options">
+                <div class="fab-preferred-option" onclick="fabTogglePreferredType('01房')" id="fabPref01">
+                    <span>01房</span>
+                    <span class="count" id="fabCount01">0套</span>
+                </div>
+                <div class="fab-preferred-option" onclick="fabTogglePreferredType('02房')" id="fabPref02">
+                    <span>02房</span>
+                    <span class="count" id="fabCount02">0套</span>
+                </div>
+                <div class="fab-preferred-option" onclick="fabTogglePreferredType('03房')" id="fabPref03">
+                    <span>03房</span>
+                    <span class="count" id="fabCount03">0套</span>
+                </div>
+                <div class="fab-preferred-option" onclick="fabTogglePreferredType('04房')" id="fabPref04">
+                    <span>04房</span>
+                    <span class="count" id="fabCount04">0套</span>
+                </div>
+                <div class="fab-preferred-option" onclick="fabTogglePreferredType('05房')" id="fabPref05">
+                    <span>05房</span>
+                    <span class="count" id="fabCount05">0套</span>
+                </div>
+            </div>
+        </div>
+        <div class="fab-ocr">
+            <h4>OCR识别已选房源</h4>
+            <div class="ocr-buttons">
+                <button class="ocr-btn" onclick="document.getElementById('ocrFileInput').click()">
+                    📁 上传照片
+                </button>
+                <button class="ocr-btn" onclick="document.getElementById('ocrCameraInput').click()">
+                    📷 拍照识别
+                </button>
+            </div>
+            <input type="file" id="ocrFileInput" class="ocr-input" accept="image/*" onchange="handleOCRImage(event)">
+            <input type="file" id="ocrCameraInput" class="ocr-input" accept="image/*" capture="environment" onchange="handleOCRImage(event)">
+        </div>
+    </div>
+
+    <!-- 悬浮统计按钮 -->
+    <div class="fab-container">
         <button class="fab-button" id="fabButton" onclick="toggleFabPanel()">+</button>
     </div>
 
@@ -1959,28 +1722,9 @@
             }
             // reserved状态的房源不能被选择
             
-            // 优化：只更新被点击的卡片，而不是重新渲染整个视图
-            updateHouseCardUI(houseId);
             updateStats();
-        }
-
-        // 更新单个房源卡片的UI
-        function updateHouseCardUI(houseId) {
-            const house = housesData.find(h => h.id === houseId);
-            if (!house) return;
-
-            // 更新楼梯视图中的卡片
-            const gridCards = document.querySelectorAll(`#gridView .house-card[onclick*="${houseId}"]`);
-            gridCards.forEach(card => {
-                card.className = card.className.replace(/available|selected|reserved/g, '').trim();
-                card.classList.add(house.status);
-            });
-
-            // 更新列表视图中的行
-            const listRows = document.querySelectorAll(`#listView tr[onclick*="${houseId}"]`);
-            listRows.forEach(row => {
-                row.className = house.status;
-            });
+            renderGridView();
+            renderListView();
         }
 
         // 渲染楼栋视图
