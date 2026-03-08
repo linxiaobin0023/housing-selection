@@ -1710,7 +1710,7 @@
             }
         }
 
-        // 保存数据到Supabase
+        // 保存数据到Supabase - 只保存ID和状态，减少数据大小
         async function saveToSupabase(data) {
             if (!supabaseClient) {
                 console.error('Supabase客户端未初始化');
@@ -1718,13 +1718,15 @@
             }
             try {
                 console.log('正在保存数据到Supabase...');
-                console.log('数据条数:', data.length);
+                // 只提取id和status，减少数据大小
+                const statusData = data.map(h => ({ id: h.id, status: h.status }));
+                console.log('状态数据条数:', statusData.length);
 
                 const { data: result, error } = await supabaseClient
                     .from('houses_data')
                     .upsert({ 
                         id: 1, 
-                        data: data, 
+                        data: statusData, 
                         updated_at: new Date().toISOString() 
                     })
                     .select();
