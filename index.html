@@ -291,6 +291,84 @@
             font-weight: 500;
         }
 
+        /* 楼栋头部 */
+        .building-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .reset-all-btn {
+            padding: 8px 16px;
+            font-size: 13px;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+            color: white;
+            border: none;
+        }
+
+        .reset-all-btn:hover {
+            background: linear-gradient(135deg, #ee5a5a 0%, #dd4848 100%);
+            transform: translateY(-2px);
+        }
+
+        /* 确认弹框 */
+        .confirm-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+        }
+
+        .confirm-content {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .confirm-content h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .confirm-content p {
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .confirm-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .confirm-buttons .btn {
+            padding: 12px 30px;
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: linear-gradient(135deg, #ee5a5a 0%, #dd4848 100%);
+        }
+
         .preferred-section {
             background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
             border-radius: 20px;
@@ -1931,6 +2009,72 @@
             return !isReadOnly && currentUser && currentUser.role === 'admin';
         }
 
+        // 显示重置确认弹框
+        function showResetConfirm() {
+            // 检查权限
+            if (!canEdit()) {
+                alert('您没有权限重置房源数据');
+                return;
+            }
+
+            // 创建弹框
+            const modal = document.createElement('div');
+            modal.className = 'confirm-modal';
+            modal.id = 'resetConfirmModal';
+            modal.innerHTML = `
+                <div class="confirm-content">
+                    <h3>⚠️ 确认重置</h3>
+                    <p>是否重置所有房源数据？<br>此操作将所有房源状态设为未选，且不可撤销。</p>
+                    <div class="confirm-buttons">
+                        <button class="btn btn-secondary" onclick="closeResetConfirm()">取消</button>
+                        <button class="btn btn-danger" onclick="resetAllHouses()">确定重置</button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        // 关闭重置确认弹框
+        function closeResetConfirm() {
+            const modal = document.getElementById('resetConfirmModal');
+            if (modal) {
+                modal.remove();
+            }
+        }
+
+        // 重置所有房源
+        async function resetAllHouses() {
+            if (!canEdit()) {
+                alert('您没有权限执行此操作');
+                return;
+            }
+
+            try {
+                // 将所有房源状态设为 available
+                housesData.forEach(house => {
+                    if (house.status === 'selected') {
+                        house.status = 'available';
+                    }
+                });
+
+                // 保存到云端
+                await saveToCloud();
+
+                // 更新显示
+                updateStats();
+                renderGridView();
+                renderListView();
+
+                // 关闭弹框
+                closeResetConfirm();
+
+                alert('所有房源已重置为未选状态');
+            } catch (error) {
+                console.error('重置失败:', error);
+                alert('重置失败，请稍后重试');
+            }
+        }
+
         // 从Supabase加载数据 - 新表结构：每行一个房源状态
         async function loadFromSupabase() {
             if (!supabaseClient) return null;
@@ -2711,13 +2855,23 @@
             const buildings = [...new Set(data.map(h => h.building))];
             let html = '';
 
+            // 添加重置按钮（仅管理员可见）
+            const resetButton = canEdit() ? `
+                <button class="btn btn-secondary reset-all-btn" onclick="showResetConfirm()">
+                    🔄 重置所有房源
+                </button>
+            ` : '';
+
             buildings.forEach(building => {
                 const buildingHouses = data.filter(h => h.building === building);
                 const floors = [...new Set(buildingHouses.map(h => h.floor))].sort((a, b) => b - a);
 
                 html += `
                     <div class="building-section">
-                        <h2 class="building-title">${building}</h2>
+                        <div class="building-header">
+                            <h2 class="building-title">${building}</h2>
+                            ${resetButton}
+                        </div>
                         ${floors.map(floor => {
                             const floorHouses = buildingHouses.filter(h => h.floor === floor);
                             return `
