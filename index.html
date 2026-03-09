@@ -466,6 +466,23 @@
                 border-color: #667eea;
                 box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
             }
+
+            /* 移动端激活筛选状态保持 */
+            .preferred-option.active-filter:hover {
+                background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+                border-color: #4ecdc4;
+                color: white !important;
+                box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+                transform: scale(1.05);
+            }
+
+            .preferred-option.active-filter:hover span {
+                color: white !important;
+            }
+
+            .preferred-option.active-filter:hover .count {
+                color: white !important;
+            }
         }
 
         .preferred-option .count {
