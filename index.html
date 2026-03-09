@@ -812,6 +812,47 @@
             opacity: 0.8;
         }
 
+        /* 主图表区域样式 */
+        .stats-section {
+            background: white;
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+        }
+
+        .stats-title {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .main-chart-wrapper {
+            width: 100%;
+            background: #fafafa;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .main-chart-wrapper canvas {
+            width: 100% !important;
+            height: auto !important;
+            max-height: 400px;
+        }
+
+        @media (max-width: 768px) {
+            .main-chart-wrapper {
+                padding: 15px;
+            }
+
+            .main-chart-wrapper canvas {
+                max-height: 300px;
+            }
+        }
+
         .fab-preferred {
             border-top: 1px solid #e8e8e8;
             padding-top: 16px;
@@ -1864,6 +1905,7 @@
             <div class="ticker-count" id="tickerCount">0套</div>
         </div>
 
+        <!-- 筛选功能模块（已临时隐藏）
         <div class="filters">
             <div class="filter-row">
                 <div class="filter-group">
@@ -1898,9 +1940,10 @@
                 </div>
             </div>
         </div>
+        -->
 
         <div class="preferred-section">
-            <h3>意向房型</h3>
+            <h3>剩余意向房型</h3>
             <div class="preferred-options">
                 <div class="preferred-option" onclick="togglePreferredType('01房')">
                     <span>01房</span>
@@ -1930,6 +1973,14 @@
             <div class="view-toggle-inline">
                 <button class="active" onclick="switchView('grid')">🏢 楼栋视图</button>
                 <button onclick="switchView('list')">📋 列表视图</button>
+            </div>
+        </div>
+
+        <!-- 数据可视化图表区域 -->
+        <div class="stats-section" id="statsSection">
+            <h3 class="stats-title">📊 户型分布统计</h3>
+            <div class="main-chart-wrapper">
+                <canvas id="mainRoomTypeChart"></canvas>
             </div>
         </div>
 
@@ -2014,6 +2065,8 @@
         </div>
     </div>
 
+    <!-- 引入Chart.js图表库 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <!-- 引入Tesseract.js OCR库 -->
     <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
     <!-- 引入Supabase SDK -->
@@ -2345,6 +2398,10 @@
             updateStats();
             renderGridView();
             renderListView();
+            
+            console.log('数据加载完成，房源总数:', housesData.length);
+            console.log('当前楼栋:', currentBuilding);
+            console.log('筛选后数据:', getFilteredData().length);
         }
 
         // 从Supabase同步数据（不保存，只读取）
@@ -2401,8 +2458,10 @@
 
         // 初始化楼层筛选
         function initFloorFilter() {
-            const floors = [...new Set(housesData.map(h => h.floor))].sort((a, b) => b - a);
             const floorFilter = document.getElementById('floorFilter');
+            if (!floorFilter) return; // 如果元素不存在则跳过
+
+            const floors = [...new Set(housesData.map(h => h.floor))].sort((a, b) => b - a);
             floors.forEach(floor => {
                 const option = document.createElement('option');
                 option.value = floor;
@@ -2969,9 +3028,14 @@
 
         // 获取筛选后的数据
         function getFilteredData() {
-            const building = document.getElementById('buildingFilter').value;
-            const floor = document.getElementById('floorFilter').value;
-            const roomType = document.getElementById('roomTypeFilter').value;
+            // 获取筛选器值（如果元素存在）
+            const buildingFilter = document.getElementById('buildingFilter');
+            const floorFilter = document.getElementById('floorFilter');
+            const roomTypeFilter = document.getElementById('roomTypeFilter');
+
+            const building = buildingFilter ? buildingFilter.value : '';
+            const floor = floorFilter ? floorFilter.value : '';
+            const roomType = roomTypeFilter ? roomTypeFilter.value : '';
 
             return housesData.filter(h => {
                 // 如果开启剩余房源视图，只显示available和reserved
@@ -3227,9 +3291,14 @@
 
         // 重置筛选
         function resetFilters() {
-            document.getElementById('buildingFilter').value = '';
-            document.getElementById('floorFilter').value = '';
-            document.getElementById('roomTypeFilter').value = '';
+            // 重置筛选器值（如果元素存在）
+            const buildingFilter = document.getElementById('buildingFilter');
+            const floorFilter = document.getElementById('floorFilter');
+            const roomTypeFilter = document.getElementById('roomTypeFilter');
+
+            if (buildingFilter) buildingFilter.value = '';
+            if (floorFilter) floorFilter.value = '';
+            if (roomTypeFilter) roomTypeFilter.value = '';
 
             // 如果处于剩余房源视图，也重置
             if (showRemainingOnly) {
@@ -3295,6 +3364,122 @@
         window.addEventListener('appinstalled', () => {
             console.log('PWA 已安装');
             deferredPrompt = null;
+        });
+
+        // ==================== 图表功能 ====================
+        let mainRoomTypeChart = null;
+
+        // 初始化图表
+        function initCharts() {
+            // 主区域 - 户型分布柱状图
+            const mainRoomTypeCtx = document.getElementById('mainRoomTypeChart');
+            if (mainRoomTypeCtx) {
+                mainRoomTypeChart = new Chart(mainRoomTypeCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: [],
+                        datasets: [{
+                            label: '已选',
+                            data: [],
+                            backgroundColor: '#ff6b6b',
+                            borderRadius: 4
+                        }, {
+                            label: '未选',
+                            data: [],
+                            backgroundColor: '#4ecdc4',
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                                labels: {
+                                    padding: 15,
+                                    font: { size: 14 }
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    stepSize: 1,
+                                    font: { size: 12 }
+                                }
+                            },
+                            x: {
+                                ticks: {
+                                    font: { size: 12 }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        // 更新图表数据
+        function updateCharts() {
+            if (!housesData || housesData.length === 0) return;
+
+            // 统计各户型的已选和未选数量
+            const roomTypeStats = {};
+            housesData.forEach(house => {
+                const roomType = house.room_type || '未知';
+                if (!roomTypeStats[roomType]) {
+                    roomTypeStats[roomType] = { selected: 0, available: 0 };
+                }
+                if (house.status === 'selected') {
+                    roomTypeStats[roomType].selected++;
+                } else {
+                    roomTypeStats[roomType].available++;
+                }
+            });
+
+            const labels = Object.keys(roomTypeStats).sort();
+            const selectedData = labels.map(type => roomTypeStats[type].selected);
+            const availableData = labels.map(type => roomTypeStats[type].available);
+
+            // 更新主区域 - 户型分布柱状图
+            if (mainRoomTypeChart) {
+                mainRoomTypeChart.data.labels = labels;
+                mainRoomTypeChart.data.datasets[0].data = selectedData;
+                mainRoomTypeChart.data.datasets[1].data = availableData;
+                mainRoomTypeChart.update();
+            }
+        }
+
+        // 在数据加载完成后初始化图表
+        const originalLoadData = loadData;
+        loadData = async function() {
+            await originalLoadData();
+            // 数据加载完成后初始化并更新图表
+            setTimeout(() => {
+                if (!mainRoomTypeChart) {
+                    initCharts();
+                }
+                updateCharts();
+            }, 500);
+        };
+
+        // 在房源状态改变时更新图表
+        const originalToggleHouseSelection = toggleHouseSelection;
+        toggleHouseSelection = async function(houseId) {
+            await originalToggleHouseSelection(houseId);
+            updateCharts();
+        };
+
+        // 页面加载完成后初始化图表
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                if (!mainRoomTypeChart && housesData.length > 0) {
+                    initCharts();
+                    updateCharts();
+                }
+            }, 1000);
         });
     </script>
 </body>
