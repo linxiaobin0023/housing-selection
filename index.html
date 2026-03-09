@@ -1242,6 +1242,47 @@
             border-radius: 10px;
         }
 
+        /* 楼栋统计信息样式 */
+        .building-tab .building-name {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .building-tab .building-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            font-size: 11px;
+            margin-left: 8px;
+        }
+
+        .building-tab .stat {
+            padding: 2px 8px;
+            border-radius: 8px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .building-tab .stat.selected {
+            background: rgba(255, 107, 107, 0.15);
+            color: #ff6b6b;
+        }
+
+        .building-tab .stat.remaining {
+            background: rgba(78, 205, 196, 0.15);
+            color: #4ecdc4;
+        }
+
+        .building-tab.active .stat.selected {
+            background: rgba(255, 255, 255, 0.25);
+            color: #fff;
+        }
+
+        .building-tab.active .stat.remaining {
+            background: rgba(255, 255, 255, 0.25);
+            color: #fff;
+        }
+
         /* 移动端禁用hover效果 */
         @media (hover: none) {
             .building-tab:hover {
@@ -1988,16 +2029,25 @@
             <!-- 楼栋切换器 -->
             <div class="building-tabs">
                 <div class="building-tab active" onclick="switchBuilding('嘉禧苑A栋')">
-                    <span>A栋</span>
-                    <span class="count" id="buildingCountA">0套</span>
+                    <span class="building-name">A栋</span>
+                    <div class="building-stats">
+                        <span class="stat selected" id="buildingASelected">已选: 0</span>
+                        <span class="stat remaining" id="buildingARemaining">剩余: 0</span>
+                    </div>
                 </div>
                 <div class="building-tab" onclick="switchBuilding('嘉禧苑B栋')">
-                    <span>B栋</span>
-                    <span class="count" id="buildingCountB">0套</span>
+                    <span class="building-name">B栋</span>
+                    <div class="building-stats">
+                        <span class="stat selected" id="buildingBSelected">已选: 0</span>
+                        <span class="stat remaining" id="buildingBRemaining">剩余: 0</span>
+                    </div>
                 </div>
                 <div class="building-tab" onclick="switchBuilding('嘉禧苑C栋')">
-                    <span>C栋</span>
-                    <span class="count" id="buildingCountC">0套</span>
+                    <span class="building-name">C栋</span>
+                    <div class="building-stats">
+                        <span class="stat selected" id="buildingCSelected">已选: 0</span>
+                        <span class="stat remaining" id="buildingCRemaining">剩余: 0</span>
+                    </div>
                 </div>
             </div>
             <div id="gridView" class="houses-grid active"></div>
@@ -2516,10 +2566,21 @@
             document.getElementById('fabSelectedCount').textContent = selected;
             document.getElementById('fabRemainingCount').textContent = available + reserved;
 
-            // 更新楼栋切换器中的数量
-            document.getElementById('buildingCountA').textContent = `${housesData.filter(h => h.building === '嘉禧苑A栋').length}套`;
-            document.getElementById('buildingCountB').textContent = `${housesData.filter(h => h.building === '嘉禧苑B栋').length}套`;
-            document.getElementById('buildingCountC').textContent = `${housesData.filter(h => h.building === '嘉禧苑C栋').length}套`;
+            // 更新楼栋切换器中的统计
+            const buildings = ['嘉禧苑A栋', '嘉禧苑B栋', '嘉禧苑C栋'];
+            const buildingIds = ['A', 'B', 'C'];
+
+            buildings.forEach((building, index) => {
+                const buildingHouses = housesData.filter(h => h.building === building);
+                const selectedCount = buildingHouses.filter(h => h.status === 'selected').length;
+                const remainingCount = buildingHouses.filter(h => h.status === 'available' || h.status === 'reserved').length;
+
+                const selectedEl = document.getElementById(`building${buildingIds[index]}Selected`);
+                const remainingEl = document.getElementById(`building${buildingIds[index]}Remaining`);
+
+                if (selectedEl) selectedEl.textContent = `已选: ${selectedCount}`;
+                if (remainingEl) remainingEl.textContent = `剩余: ${remainingCount}`;
+            });
 
             // 更新已选房源滚动显示
             updateSelectedHousesTicker();
