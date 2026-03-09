@@ -2297,7 +2297,7 @@
             }
         }
 
-        // 保存数据到Supabase - 新表结构：每行一个房源状态
+        // 保存数据到Supabase - 使用upsert避免数据丢失
         async function saveToSupabase(data) {
             if (!supabaseClient) {
                 console.error('Supabase客户端未初始化');
@@ -2313,20 +2313,36 @@
                 
                 console.log('当前选中房源数:', selectedIds.length);
 
-                // 先删除数据库中所有记录
-                const { error: deleteError } = await supabaseClient
+                // 获取数据库中已有的记录
+                const { data: existingData, error: fetchError } = await supabaseClient
                     .from('houses_data')
-                    .delete()
-                    .neq('house_id', ''); // 删除所有记录
+                    .select('house_id');
 
-                if (deleteError) {
-                    console.error('删除旧数据失败:', deleteError);
+                if (fetchError) {
+                    console.error('获取现有数据失败:', fetchError);
                     return false;
                 }
 
-                // 如果有选中的房源，插入新数据
-                if (selectedIds.length > 0) {
-                    const statusData = selectedIds.map(id => ({ 
+                const existingIds = new Set(existingData.map(h => h.house_id));
+                const newSelectedIds = new Set(selectedIds);
+
+                // 1. 取消选中的房源（在数据库中但不在新选中列表中的）
+                const idsToDelete = [...existingIds].filter(id => !newSelectedIds.has(id));
+                if (idsToDelete.length > 0) {
+                    const { error: deleteError } = await supabaseClient
+                        .from('houses_data')
+                        .delete()
+                        .in('house_id', idsToDelete);
+
+                    if (deleteError) {
+                        console.error('删除取消选中的房源失败:', deleteError);
+                    }
+                }
+
+                // 2. 新增选中的房源（在新选中列表中但不在数据库中的）
+                const idsToInsert = selectedIds.filter(id => !existingIds.has(id));
+                if (idsToInsert.length > 0) {
+                    const statusData = idsToInsert.map(id => ({ 
                         house_id: id, 
                         status: 'selected',
                         updated_at: new Date().toISOString()
@@ -2337,7 +2353,7 @@
                         .insert(statusData);
 
                     if (insertError) {
-                        console.error('插入新数据失败:', insertError);
+                        console.error('插入新选中房源失败:', insertError);
                         return false;
                     }
                 }
