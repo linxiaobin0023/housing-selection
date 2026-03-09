@@ -474,6 +474,146 @@
             box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3), 0 12px 35px rgba(102, 126, 234, 0.25);
         }
 
+        /* 已选房源滚动显示 */
+        .selected-houses-ticker {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe6e6 100%);
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(255, 77, 79, 0.15);
+            border: 2px solid rgba(255, 77, 79, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            overflow: hidden;
+        }
+
+        .ticker-label {
+            font-weight: 600;
+            color: #ff4d4f;
+            font-size: 0.95rem;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .ticker-content {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+            mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent);
+        }
+
+        .ticker-scroll {
+            display: flex;
+            gap: 12px;
+            animation: tickerScroll 20s linear infinite;
+            white-space: nowrap;
+        }
+
+        .ticker-scroll:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes tickerScroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .ticker-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            background: white;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #333;
+            border: 1px solid #ffcdd2;
+            box-shadow: 0 2px 8px rgba(255, 77, 79, 0.1);
+            cursor: pointer;
+            transition: all 0.3s;
+            flex-shrink: 0;
+        }
+
+        .ticker-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 77, 79, 0.2);
+            border-color: #ff4d4f;
+        }
+
+        .ticker-item .building {
+            font-weight: 600;
+            color: #ff4d4f;
+        }
+
+        .ticker-item .room {
+            font-weight: 500;
+        }
+
+        .ticker-count {
+            font-weight: 700;
+            color: #ff4d4f;
+            font-size: 1rem;
+            white-space: nowrap;
+            flex-shrink: 0;
+            padding: 6px 12px;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #ffcdd2;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .selected-houses-ticker {
+                padding: 12px 16px;
+                gap: 10px;
+            }
+
+            .ticker-label {
+                font-size: 0.85rem;
+            }
+
+            .ticker-item {
+                padding: 6px 10px;
+                font-size: 0.8rem;
+            }
+
+            .ticker-count {
+                font-size: 0.9rem;
+                padding: 4px 8px;
+            }
+        }
+
+        /* 移动端禁用hover效果 */
+        @media (hover: none) {
+            .ticker-item:hover {
+                transform: none;
+                box-shadow: 0 2px 8px rgba(255, 77, 79, 0.1);
+                border-color: #ffcdd2;
+            }
+        }
+
+        /* 房源高亮动画 */
+        @keyframes highlightPulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 77, 79, 0.7);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 0 15px rgba(255, 77, 79, 0);
+                transform: scale(1.05);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 77, 79, 0);
+                transform: scale(1);
+            }
+        }
+
         /* 视图切换容器 */
         .view-toggle-container {
             display: flex;
@@ -1715,6 +1855,15 @@
             </div>
         </header>
 
+        <!-- 已选房源滚动显示 -->
+        <div id="selectedHousesTicker" class="selected-houses-ticker" style="display: none;">
+            <div class="ticker-label">📋 已选房源:</div>
+            <div class="ticker-content">
+                <div class="ticker-scroll" id="tickerScroll"></div>
+            </div>
+            <div class="ticker-count" id="tickerCount">0套</div>
+        </div>
+
         <div class="filters">
             <div class="filter-row">
                 <div class="filter-group">
@@ -2296,6 +2445,73 @@
             document.getElementById('buildingCountA').textContent = `${housesData.filter(h => h.building === '嘉禧苑A栋').length}套`;
             document.getElementById('buildingCountB').textContent = `${housesData.filter(h => h.building === '嘉禧苑B栋').length}套`;
             document.getElementById('buildingCountC').textContent = `${housesData.filter(h => h.building === '嘉禧苑C栋').length}套`;
+
+            // 更新已选房源滚动显示
+            updateSelectedHousesTicker();
+        }
+
+        // 更新已选房源滚动显示
+        function updateSelectedHousesTicker() {
+            const selectedHouses = housesData.filter(h => h.status === 'selected');
+            const ticker = document.getElementById('selectedHousesTicker');
+            const tickerScroll = document.getElementById('tickerScroll');
+            const tickerCount = document.getElementById('tickerCount');
+
+            if (!ticker || !tickerScroll || !tickerCount) return;
+
+            if (selectedHouses.length === 0) {
+                ticker.style.display = 'none';
+                return;
+            }
+
+            ticker.style.display = 'flex';
+            tickerCount.textContent = `${selectedHouses.length}套`;
+
+            // 按楼栋和房号排序
+            selectedHouses.sort((a, b) => {
+                if (a.building !== b.building) {
+                    return a.building.localeCompare(b.building);
+                }
+                return a.room_number.localeCompare(b.room_number);
+            });
+
+            // 生成滚动内容（复制一份以实现无缝滚动）
+            const generateItems = () => {
+                return selectedHouses.map(house => {
+                    const buildingShort = house.building.replace('嘉禧苑', '').replace('栋', '');
+                    return `
+                        <div class="ticker-item" onclick="scrollToHouse('${house.id}')" title="点击跳转到该房源">
+                            <span class="building">${buildingShort}栋</span>
+                            <span class="room">${house.room_number}</span>
+                        </div>
+                    `;
+                }).join('');
+            };
+
+            const itemsHtml = generateItems();
+            tickerScroll.innerHTML = itemsHtml + itemsHtml; // 复制一份实现无缝滚动
+        }
+
+        // 滚动到指定房源
+        function scrollToHouse(houseId) {
+            const house = housesData.find(h => h.id === houseId);
+            if (!house) return;
+
+            // 切换到对应楼栋
+            switchBuilding(house.building);
+
+            // 等待渲染完成后滚动
+            setTimeout(() => {
+                const houseCard = document.querySelector(`[data-house-id="${houseId}"]`);
+                if (houseCard) {
+                    houseCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    // 添加高亮效果
+                    houseCard.style.animation = 'none';
+                    setTimeout(() => {
+                        houseCard.style.animation = 'highlightPulse 1s ease';
+                    }, 10);
+                }
+            }, 300);
         }
 
         // 当前统计筛选状态
@@ -2853,7 +3069,7 @@
                                             const isPreferred = preferredRoomTypes.includes(h.room_type);
                                             const preferredClass = isPreferred ? 'preferred' : '';
                                             return `
-                                            <div class="house-card ${h.status} ${preferredClass}" onclick="toggleHouseSelection('${h.id}')">
+                                            <div class="house-card ${h.status} ${preferredClass}" data-house-id="${h.id}" onclick="toggleHouseSelection('${h.id}')">
                                                 <div class="room-number">${h.room_number}</div>
                                                 <div class="room-info">${h.room_type} · ${h.direction}</div>
                                                 <div class="price">¥${h.price}</div>
@@ -2910,7 +3126,7 @@
                             const isPreferred = preferredRoomTypes.includes(h.room_type);
                             const preferredBadge = isPreferred ? ' ⭐' : '';
                             return `
-                            <tr class="${h.status}" onclick="toggleHouseSelection('${h.id}')" style="cursor: pointer;">
+                            <tr class="${h.status}" data-house-id="${h.id}" onclick="toggleHouseSelection('${h.id}')" style="cursor: pointer;">
                                 <td>${h.building}</td>
                                 <td>${h.floor}层</td>
                                 <td>${h.room_number}</td>
@@ -2931,7 +3147,7 @@
                         const isPreferred = preferredRoomTypes.includes(h.room_type);
                         const preferredBadge = isPreferred ? '⭐ ' : '';
                         return `
-                        <div class="house-list-item ${h.status}" onclick="toggleHouseSelection('${h.id}')">
+                        <div class="house-list-item ${h.status}" data-house-id="${h.id}" onclick="toggleHouseSelection('${h.id}')">
                             <div class="house-list-header">
                                 <div class="house-list-title">${preferredBadge}${h.room_number}</div>
                                 <div class="house-list-status ${h.status}">${statusText[h.status]}</div>
